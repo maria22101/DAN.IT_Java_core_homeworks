@@ -81,13 +81,13 @@ public class Homework_2_AreaShooting {
         int entry;
 
         if (!scan.hasNextInt()) {
-            System.out.print("Your entry is invalid. Enter a number from 1 to 5 once more, please: ");
+            System.out.print("Your entry is invalid. Enter a number from 1 to 5 once more, this is your LAST try: ");
             scan = new Scanner(System.in);
             entry = scan.nextInt();
         } else {
             entry = scan.nextInt();
             if (entry < 1 || entry > 5) {
-                System.out.print("Your entry is invalid. Enter a number from 1 to 5 once more, please: ");
+                System.out.print("Your entry is invalid. Enter a number from 1 to 5 once more, this is your LAST try: ");
                 scan = new Scanner(System.in);
                 entry = scan.nextInt();
             }
@@ -127,6 +127,5 @@ public class Homework_2_AreaShooting {
 
         congrats();
         displayTarget(userX, userY, shootingArea);
-
     }
 }

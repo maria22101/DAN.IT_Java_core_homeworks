@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a6cfef6-0c35-4cc2-8150-160c48de1dc8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Homeworks_single_tasks/Homework_2_AreaShooting.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Homeworks_single_tasks/Homework_2_AreaShooting.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Homeworks_single_tasks/Homework_2_AreaShooting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Homeworks_single_tasks/Homework_2_AreaShooting.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,12 +44,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="4247" />
+          <entry key="java" value="4280" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4247" />
+          <entry key="JAVA" value="4280" />
         </counts>
       </usages-collector>
     </session>
@@ -80,14 +77,18 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Homeworks_single_tasks/Homework_2_AreaShooting.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="92" column="9" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
+            <state relative-caret-position="235">
+              <caret line="89" column="117" selection-start-line="89" selection-start-column="117" selection-end-line="89" selection-end-column="117" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#generateShootingArea#0;class#Homework_2_AreaShooting#0" />
                 <element signature="method#printShootingArea#0;class#Homework_2_AreaShooting#0" />
                 <element signature="method#setTargetLine#0;class#Homework_2_AreaShooting#0" />
                 <element signature="method#setTargetRow#0;class#Homework_2_AreaShooting#0" />
+                <element signature="method#chooseShootingLine#0;class#Homework_2_AreaShooting#0" />
+                <element signature="method#chooseShootingRow#0;class#Homework_2_AreaShooting#0" />
+                <element signature="method#displayMissedShot#0;class#Homework_2_AreaShooting#0" />
+                <element signature="method#displayTarget#0;class#Homework_2_AreaShooting#0" />
               </folding>
             </state>
           </provider>
@@ -251,7 +252,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18305598" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09984872" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -323,14 +324,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Homeworks_single_tasks/Homework_2_AreaShooting.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="92" column="9" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
+        <state relative-caret-position="235">
+          <caret line="89" column="117" selection-start-line="89" selection-start-column="117" selection-end-line="89" selection-end-column="117" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#generateShootingArea#0;class#Homework_2_AreaShooting#0" />
             <element signature="method#printShootingArea#0;class#Homework_2_AreaShooting#0" />
             <element signature="method#setTargetLine#0;class#Homework_2_AreaShooting#0" />
             <element signature="method#setTargetRow#0;class#Homework_2_AreaShooting#0" />
+            <element signature="method#chooseShootingLine#0;class#Homework_2_AreaShooting#0" />
+            <element signature="method#chooseShootingRow#0;class#Homework_2_AreaShooting#0" />
+            <element signature="method#displayMissedShot#0;class#Homework_2_AreaShooting#0" />
+            <element signature="method#displayTarget#0;class#Homework_2_AreaShooting#0" />
           </folding>
         </state>
       </provider>
