@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5a6cfef6-0c35-4cc2-8150-160c48de1dc8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Homeworks_single_tasks/Homework_2_AreaShooting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Homeworks_single_tasks/Homework_2_AreaShooting.java" afterDir="false" />
-    </list>
+    <list default="true" id="5a6cfef6-0c35-4cc2-8150-160c48de1dc8" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -77,8 +75,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Homeworks_single_tasks/Homework_2_AreaShooting.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="89" column="117" selection-start-line="89" selection-start-column="117" selection-end-line="89" selection-end-column="117" />
+            <state relative-caret-position="646">
+              <caret line="78" column="37" selection-start-line="78" selection-start-column="37" selection-end-line="78" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#generateShootingArea#0;class#Homework_2_AreaShooting#0" />
@@ -87,6 +85,7 @@
                 <element signature="method#setTargetRow#0;class#Homework_2_AreaShooting#0" />
                 <element signature="method#chooseShootingLine#0;class#Homework_2_AreaShooting#0" />
                 <element signature="method#chooseShootingRow#0;class#Homework_2_AreaShooting#0" />
+                <element signature="method#checkedEntry#0;class#Homework_2_AreaShooting#0" />
                 <element signature="method#displayMissedShot#0;class#Homework_2_AreaShooting#0" />
                 <element signature="method#displayTarget#0;class#Homework_2_AreaShooting#0" />
               </folding>
@@ -115,7 +114,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1346" />
@@ -252,14 +251,14 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09984872" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19062027" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.36734694" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.36734694" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -324,8 +323,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Homeworks_single_tasks/Homework_2_AreaShooting.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="89" column="117" selection-start-line="89" selection-start-column="117" selection-end-line="89" selection-end-column="117" />
+        <state relative-caret-position="646">
+          <caret line="78" column="37" selection-start-line="78" selection-start-column="37" selection-end-line="78" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#generateShootingArea#0;class#Homework_2_AreaShooting#0" />
@@ -334,6 +333,7 @@
             <element signature="method#setTargetRow#0;class#Homework_2_AreaShooting#0" />
             <element signature="method#chooseShootingLine#0;class#Homework_2_AreaShooting#0" />
             <element signature="method#chooseShootingRow#0;class#Homework_2_AreaShooting#0" />
+            <element signature="method#checkedEntry#0;class#Homework_2_AreaShooting#0" />
             <element signature="method#displayMissedShot#0;class#Homework_2_AreaShooting#0" />
             <element signature="method#displayTarget#0;class#Homework_2_AreaShooting#0" />
           </folding>

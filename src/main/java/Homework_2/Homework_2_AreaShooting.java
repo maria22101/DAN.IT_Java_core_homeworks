@@ -1,4 +1,4 @@
-package Homeworks_single_tasks;
+package Homework_2;
 
 //Дан квадрат 5х5, где программа случайным образом ставит цель.
 //Перед началом игры на экран выводится текст: All set. Get ready to rumble!.
