@@ -28,7 +28,7 @@ import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Homework_1_Numbers {
+public class RandomNumbers {
 
     public static int geterateRandomNum() {
         Random rand = new Random();

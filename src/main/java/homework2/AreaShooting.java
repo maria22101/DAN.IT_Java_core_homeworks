@@ -20,7 +20,7 @@ package homework2;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Homework_2_AreaShooting {
+public class AreaShooting {
 
     public static void intro() {
         System.out.println("All set. Get ready to rumble!");
@@ -56,14 +56,12 @@ public class Homework_2_AreaShooting {
 
     public static int setTargetLine() {
         Random rand = new Random();
-        int line = rand.nextInt(4) + 1;
-        return line;
+        return rand.nextInt(4) + 1;
     }
 
     public static int setTargetRow() {
         Random rand = new Random();
-        int row = rand.nextInt(4) + 1;
-        return row;
+        return rand.nextInt(4) + 1;
     }
 
     public static int chooseShootingLine() {
