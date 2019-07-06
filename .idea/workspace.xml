@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a6cfef6-0c35-4cc2-8150-160c48de1dc8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/homework1/RandNumAdvanced.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/DAN.IT_Java_core_homeworks.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DAN.IT_Java_core_homeworks.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/homework3/Planner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homework3/Planner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/homework1/RandomNumbers.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homework1/RandomNumbers.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/homework2/AreaShooting.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homework2/AreaShooting.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/homework3/Planner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homework3/Planner.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,6 +10,11 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/DAN_IT_Java_core_homeworks$Planner.ic" NAME="Planner Coverage Results" MODIFIED="1562437014690" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>homework3.*</FILTER>
+    </SUITE>
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="1494104757">
@@ -44,7 +41,7 @@
         <counts>
           <entry key="gitignore" value="1" />
           <entry key="iml" value="1" />
-          <entry key="java" value="6" />
+          <entry key="java" value="8" />
           <entry key="txt" value="2" />
           <entry key="xml" value="3" />
         </counts>
@@ -52,7 +49,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="6" />
+          <entry key="JAVA" value="8" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="XML" value="3" />
         </counts>
@@ -60,12 +57,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="11" />
-          <entry key="java" value="8326" />
+          <entry key="java" value="8519" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="8326" />
+          <entry key="JAVA" value="8519" />
           <entry key="PLAIN_TEXT" value="11" />
         </counts>
       </usages-collector>
@@ -73,45 +70,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/homework3/Planner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+            <state relative-caret-position="809">
+              <caret line="77" column="5" selection-start-line="77" selection-start-column="5" selection-end-line="77" selection-end-column="5" />
               <folding>
-                <marker date="1562386066972" expanded="true" signature="1314:2338" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/homework1/RandomNumbers.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="73" column="49" selection-start-line="73" selection-start-column="49" selection-end-line="73" selection-end-column="49" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#geterateRandomNum#0;class#RandomNumbers#0" />
-                <element signature="method#enterUserName#0;class#RandomNumbers#0" />
-                <element signature="method#showUserNumArray#0;class#RandomNumbers#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/homework1/RandNumAdvanced.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-136">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#genrateEventArray#0;class#RandNumAdvanced#0" />
-                <element signature="method#generateRandomEventYear#0;class#RandNumAdvanced#0" />
-                <element signature="method#askEventYear#0;class#RandNumAdvanced#0" />
-                <element signature="method#giveAnswer#1;class#RandNumAdvanced#0" />
-                <element signature="method#sayCongrats#0;class#RandNumAdvanced#0" />
+                <element signature="method#createArray#0;class#Planner#0" />
+                <marker date="1562436986110" expanded="true" signature="1392:2640" ph="..." />
               </folding>
             </state>
           </provider>
@@ -122,18 +88,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="697">
               <caret line="41" column="90" selection-start-line="41" selection-start-column="90" selection-end-line="41" selection-end-column="90" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/homework2/AreaShooting.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1037">
-              <caret line="64" column="5" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -160,9 +114,9 @@
         <option value="$PROJECT_DIR$/src/main/java/homework2/Homework_2_AreaShooting.java" />
         <option value="$PROJECT_DIR$/src/main/java/ArrayList002.java" />
         <option value="$PROJECT_DIR$/src/main/java/homework3/PlannerAdvanced.java" />
-        <option value="$PROJECT_DIR$/src/main/java/homework3/Planner.java" />
         <option value="$PROJECT_DIR$/src/main/java/homework1/RandomNumbers.java" />
         <option value="$PROJECT_DIR$/src/main/java/homework1/RandNumAdvanced.java" />
+        <option value="$PROJECT_DIR$/src/main/java/homework3/Planner.java" />
       </list>
     </option>
   </component>
@@ -208,14 +162,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="homework1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DAN.IT_Java_core_homeworks" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DAN.IT_Java_core_homeworks" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="homework3" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -250,7 +196,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.RandNumAdvanced">
+  <component name="RunManager" selected="Application.Planner">
     <configuration name="AreaShooting" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="homework2.AreaShooting" />
       <module name="DAN.IT_Java_core_homeworks" />
@@ -319,8 +265,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.RandNumAdvanced" />
         <item itemvalue="Application.Planner" />
+        <item itemvalue="Application.RandNumAdvanced" />
         <item itemvalue="Application.ArrayList002" />
         <item itemvalue="Application.RandomNumbers" />
       </list>
@@ -341,9 +287,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20121029" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15960665" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -351,7 +296,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.28911564" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39965987" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -392,16 +337,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore.txt" />
     <entry file="file://$PROJECT_DIR$/src/main/java/ArrayList002.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/homework3/Planner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
-          <folding>
-            <marker date="1562386066972" expanded="true" signature="1314:2338" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/homework3/PlannerAdvanced.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
@@ -419,6 +354,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homework1/RandNumAdvanced.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#genrateEventArray#0;class#RandNumAdvanced#0" />
+            <element signature="method#generateRandomEventYear#0;class#RandNumAdvanced#0" />
+            <element signature="method#askEventYear#0;class#RandNumAdvanced#0" />
+            <element signature="method#giveAnswer#1;class#RandNumAdvanced#0" />
+            <element signature="method#sayCongrats#0;class#RandNumAdvanced#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/homework1/RandomNumbers.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
@@ -432,17 +382,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/homework1/RandNumAdvanced.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/io/FileInputStream.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-136">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="465">
+          <caret line="218" column="23" selection-start-line="218" selection-start-column="23" selection-end-line="218" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homework3/Planner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="809">
+          <caret line="77" column="5" selection-start-line="77" selection-start-column="5" selection-end-line="77" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#genrateEventArray#0;class#RandNumAdvanced#0" />
-            <element signature="method#generateRandomEventYear#0;class#RandNumAdvanced#0" />
-            <element signature="method#askEventYear#0;class#RandNumAdvanced#0" />
-            <element signature="method#giveAnswer#1;class#RandNumAdvanced#0" />
-            <element signature="method#sayCongrats#0;class#RandNumAdvanced#0" />
+            <element signature="method#createArray#0;class#Planner#0" />
+            <marker date="1562436986110" expanded="true" signature="1392:2640" ph="..." />
           </folding>
         </state>
       </provider>

@@ -44,36 +44,35 @@ public class Planner {
 
     public static void main(String[] args) {
         String[][] arr = createArray();
-        String day;
+        String day = dayBeautified(enterDay());
 
         do {
-            day = dayBeautified(enterDay());
             switch (day) {
                 case "Sunday":
-                    System.out.println(arr[0][1]);
+                    System.out.println("Your task for Sunday: " + arr[0][1]);
                     break;
                 case "Monday":
-                    System.out.println(arr[1][1]);
+                    System.out.println("Your task for Monday: " + arr[1][1]);
                     break;
                 case "Tuesday":
-                    System.out.println(arr[2][1]);
+                    System.out.println("Your task for Thursday: " + arr[2][1]);
                     break;
                 case "Wednesday":
-                    System.out.println(arr[3][1]);
+                    System.out.println("Your task for Wednesday: " + arr[3][1]);
                     break;
                 case "Thursday":
-                    System.out.println(arr[4][1]);
+                    System.out.println("Your task for Thursday: " + arr[4][1]);
                     break;
                 case "Friday":
-                    System.out.println(arr[5][1]);
+                    System.out.println("Your task for Friday: " + arr[5][1]);
                     break;
                 case "Saturday":
-                    System.out.println(arr[6][1]);
+                    System.out.println("Your task for Saturday: " + arr[6][1]);
                     break;
                 default:
                     System.out.println("Sorry, I don't understand you, please try again.");
             }
-        } while (day.equals("exit"));
+            day = dayBeautified(enterDay());
+        } while (!(day.equals("Exit")));
     }
-
 }
