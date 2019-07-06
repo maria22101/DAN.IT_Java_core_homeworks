@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Planner {
 
-    private static String[][] createArray() {
+    public static String[][] createArray() {
         String[][] weekSchedule = new String[7][2];
 
         weekSchedule[0][0] = "Sunday";
@@ -31,23 +31,24 @@ public class Planner {
         return weekSchedule;
     }
 
-    private static String enterDay() {
+    public static String enterDay() {
         System.out.print("Enter a day of week: ");
         Scanner scan = new Scanner(System.in);
         String userEntry = scan.nextLine();
         return userEntry;
     }
 
-    private static String dayBeautified(String userEntry) {
+    public static String unifyDayEntry(String userEntry) {
         return userEntry.trim().substring(0, 1).toUpperCase() + userEntry.trim().substring(1).toLowerCase();
     }
 
     public static void main(String[] args) {
         String[][] arr = createArray();
-        String day = dayBeautified(enterDay());
+        String day = enterDay();
+        String dayUnified = unifyDayEntry(day);
 
         do {
-            switch (day) {
+            switch (dayUnified) {
                 case "Sunday":
                     System.out.println("Your task for Sunday: " + arr[0][1]);
                     break;
@@ -72,7 +73,8 @@ public class Planner {
                 default:
                     System.out.println("Sorry, I don't understand you, please try again.");
             }
-            day = dayBeautified(enterDay());
-        } while (!(day.equals("Exit")));
+            day = enterDay();
+            dayUnified = unifyDayEntry(day);
+        } while (!day.equals("exit"));
     }
 }

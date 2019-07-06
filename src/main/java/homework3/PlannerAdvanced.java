@@ -1,45 +1,97 @@
 package homework3;
 
-
-//Написать консольную программу "планирощик задач на неделю".
-//1. Создать двумерный массив строк размерностью 7х2
-//String[][] scedule = new String[7][2]
-
-//2. Заполните матрицу значениями день недели: главное задание на данный день:
-//scedule[0][0] = "Sunday";
-//scedule[0][1] = "do home work";
-//scedule[1][0] = "Monday";
-//scedule[1][1] = "go to courses; watch a film";
-
-//3. Используя цикл и оператор switch, запросите у пользователя ввести день недели в консоль и, в зависимости от ввода:
-//
-//программа: Please, input the day of the week:
-//пользователь вводит корректный день недели (f.e. Monday)
-//программа выводит на экран Your tasks for Monday: go to courses; watch a film.; программа идет на следующую итерацию;
-//программа: Please, input the day of the week:
-//пользователь вводит некорректный день недели (f.e. %$=+!11=4)
-//программа выводит на экран Sorry, I don't understand you, please try again.; программа идет на следующую итерацию до успешного ввода;
-//программа: Please, input the day of the week:
-//пользователь выводит команду выхода exit
-//программа выходит из цикла и корректно завершает работу.
-
-//Задание должно быть выполнено ипспользуя массивы (НЕ используйте интерфейсы List, Set, Map).
-
-//Учтите: программа должна принимать команды как в нижнем регистре (monday) так и в верхнем (MONDAY) и учитывать,
-// что пользователь мог случайно после дня недели ввести пробел.
-
-//Не обязательное задание продвинутой сложности:
-
-// --> Доработайте программу так, чтобы при вводе пользователем фразы change [day of the week] или reschedule [day of the week],
+//Не обязательное задание продвинутой сложности - продолжение ДЗ_3:
+//Доработайте программу так, чтобы при вводе пользователем фразы change [day of the week] или reschedule [day of the week],
 // программа предложила ввести новые задания для данного дня недели и сохранила их в соответствующей ячейке массива,
 // удалив при этом старые задания. После чего программа идет на следующую итерацию до ввода exit.
-//
-//программа: Please, input the day of the week://
-//     -   пользователь вводит change Monday//
-//     -  программа предлагает ввести новые задания на понедельник Please, input new tasks for Monday.//
-//     -  пользователь вводит новые задания в консоль
-//     -  программа сохраняет новые задачи в соответствующую ячейку
-//     -  программа пошла на новую итерацию и при вводе "Monday" выдает уже новые задания.
+
+import java.util.Scanner;
+
+import static homework3.Planner.*;
 
 public class PlannerAdvanced {
+
+    public static void getDayTask(String str, String ar[][]) {
+        switch (str) {
+            case "Sunday":
+                System.out.println("Your task for Sunday: " + ar[0][1]);
+                break;
+            case "Monday":
+                System.out.println("Your task for Monday: " + ar[1][1]);
+                break;
+            case "Tuesday":
+                System.out.println("Your task for Thursday: " + ar[2][1]);
+                break;
+            case "Wednesday":
+                System.out.println("Your task for Wednesday: " + ar[3][1]);
+                break;
+            case "Thursday":
+                System.out.println("Your task for Thursday: " + ar[4][1]);
+                break;
+            case "Friday":
+                System.out.println("Your task for Friday: " + ar[5][1]);
+                break;
+            case "Saturday":
+                System.out.println("Your task for Saturday: " + ar[6][1]);
+                break;
+            default:
+                System.out.println("Sorry, I don't understand you, please try again.");
+        }
+    }
+
+    public static String[][] updateSchedule(String userChange, String userSchedule[][]) {
+        Scanner scan = new Scanner(System.in);
+
+        switch (userChange) {
+            case "change Sunday":
+                System.out.print("Please, input new task for Sunday: ");
+                userSchedule[0][1] = scan.nextLine();
+                break;
+            case "change Monday":
+                System.out.print("Please, input new task for Monday: ");
+                userSchedule[1][1] = scan.nextLine();
+                break;
+            case "change Tuesday":
+                System.out.print("Please, input new task for Tuesday: ");
+                userSchedule[2][1] = scan.nextLine();
+                break;
+            case "change Wednesday":
+                System.out.print("Please, input new task for Wednesday: ");
+                userSchedule[3][1] = scan.nextLine();
+                break;
+            case "change Thursday":
+                System.out.print("Please, input new task for Thursday: ");
+                userSchedule[4][1] = scan.nextLine();
+                break;
+            case "change Friday":
+                System.out.print("Please, input new task for Friday: ");
+                userSchedule[5][1] = scan.nextLine();
+                break;
+            case "change Saturday":
+                System.out.print("Please, input new task for Saturday: ");
+                userSchedule[6][1] = scan.nextLine();
+                break;
+            default:
+                System.out.print("Input not recognized");
+        }
+        return userSchedule;
+    }
+
+    public static void main(String[] args) {
+        String[][] schedule = createArray();
+        String day = enterDay();
+        String dayUnified = unifyDayEntry(day);
+
+        do {
+            if (day.length() <= 9) {
+                getDayTask(dayUnified, schedule);
+            } else {
+                schedule = updateSchedule(day, schedule);
+            }
+
+            day = enterDay();
+            dayUnified = unifyDayEntry(day);
+
+        } while (!day.equals("exit"));
+    }
 }

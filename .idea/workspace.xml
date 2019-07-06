@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5a6cfef6-0c35-4cc2-8150-160c48de1dc8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/homework3/Planner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homework3/Planner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homework3/PlannerAdvanced.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homework3/PlannerAdvanced.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,7 +42,7 @@
         <counts>
           <entry key="gitignore" value="1" />
           <entry key="iml" value="1" />
-          <entry key="java" value="8" />
+          <entry key="java" value="9" />
           <entry key="txt" value="2" />
           <entry key="xml" value="3" />
         </counts>
@@ -49,7 +50,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="8" />
+          <entry key="JAVA" value="9" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="XML" value="3" />
         </counts>
@@ -57,12 +58,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="11" />
-          <entry key="java" value="8519" />
+          <entry key="java" value="9505" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="8519" />
+          <entry key="JAVA" value="9505" />
           <entry key="PLAIN_TEXT" value="11" />
         </counts>
       </usages-collector>
@@ -70,24 +71,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/homework3/Planner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="809">
-              <caret line="77" column="5" selection-start-line="77" selection-start-column="5" selection-end-line="77" selection-end-column="5" />
+            <state relative-caret-position="102">
+              <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
               <folding>
                 <element signature="method#createArray#0;class#Planner#0" />
-                <marker date="1562436986110" expanded="true" signature="1392:2640" ph="..." />
+                <element signature="method#unifyDayEntry#0;class#Planner#0" />
+                <marker date="1562438273155" expanded="true" signature="1372:2603" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/homework3/PlannerAdvanced.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="41" column="90" selection-start-line="41" selection-start-column="90" selection-end-line="41" selection-end-column="90" />
+            <state relative-caret-position="112">
+              <caret line="79" selection-start-line="79" selection-end-line="79" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#getDayTask#0;class#PlannerAdvanced#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -113,10 +119,10 @@
         <option value="$PROJECT_DIR$/src/main/java/Homework_2/Homework_2_AreaShooting.java" />
         <option value="$PROJECT_DIR$/src/main/java/homework2/Homework_2_AreaShooting.java" />
         <option value="$PROJECT_DIR$/src/main/java/ArrayList002.java" />
-        <option value="$PROJECT_DIR$/src/main/java/homework3/PlannerAdvanced.java" />
         <option value="$PROJECT_DIR$/src/main/java/homework1/RandomNumbers.java" />
         <option value="$PROJECT_DIR$/src/main/java/homework1/RandNumAdvanced.java" />
         <option value="$PROJECT_DIR$/src/main/java/homework3/Planner.java" />
+        <option value="$PROJECT_DIR$/src/main/java/homework3/PlannerAdvanced.java" />
       </list>
     </option>
   </component>
@@ -162,6 +168,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="homework1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DAN.IT_Java_core_homeworks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DAN.IT_Java_core_homeworks" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="homework3" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -196,20 +210,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Planner">
-    <configuration name="AreaShooting" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="homework2.AreaShooting" />
-      <module name="DAN.IT_Java_core_homeworks" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="homework1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.PlannerAdvanced">
     <configuration name="ArrayList002" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ArrayList002" />
       <module name="DAN.IT_Java_core_homeworks" />
@@ -219,6 +220,19 @@
     </configuration>
     <configuration name="Planner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="homework3.Planner" />
+      <module name="DAN.IT_Java_core_homeworks" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="homework3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlannerAdvanced" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="homework3.PlannerAdvanced" />
       <module name="DAN.IT_Java_core_homeworks" />
       <extension name="coverage">
         <pattern>
@@ -257,14 +271,15 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.AreaShooting" />
       <item itemvalue="Application.RandomNumbers" />
       <item itemvalue="Application.Planner" />
       <item itemvalue="Application.ArrayList002" />
       <item itemvalue="Application.RandNumAdvanced" />
+      <item itemvalue="Application.PlannerAdvanced" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PlannerAdvanced" />
         <item itemvalue="Application.Planner" />
         <item itemvalue="Application.RandNumAdvanced" />
         <item itemvalue="Application.ArrayList002" />
@@ -288,14 +303,14 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15960665" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15960665" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.28911564" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28911564" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39965987" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -337,13 +352,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore.txt" />
     <entry file="file://$PROJECT_DIR$/src/main/java/ArrayList002.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/homework3/PlannerAdvanced.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="90" selection-start-line="41" selection-start-column="90" selection-end-line="41" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/homework2/AreaShooting.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1037">
@@ -369,9 +377,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/io/FileInputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="218" column="23" selection-start-line="218" selection-start-column="23" selection-end-line="218" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/homework1/RandomNumbers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
+        <state relative-caret-position="526">
           <caret line="73" column="49" selection-start-line="73" selection-start-column="49" selection-end-line="73" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -382,20 +397,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/io/FileInputStream.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/homework3/Planner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="218" column="23" selection-start-line="218" selection-start-column="23" selection-end-line="218" selection-end-column="23" />
+        <state relative-caret-position="102">
+          <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+          <folding>
+            <element signature="method#createArray#0;class#Planner#0" />
+            <element signature="method#unifyDayEntry#0;class#Planner#0" />
+            <marker date="1562438273155" expanded="true" signature="1372:2603" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/homework3/Planner.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/homework3/PlannerAdvanced.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="809">
-          <caret line="77" column="5" selection-start-line="77" selection-start-column="5" selection-end-line="77" selection-end-column="5" />
+        <state relative-caret-position="112">
+          <caret line="79" selection-start-line="79" selection-end-line="79" />
           <folding>
-            <element signature="method#createArray#0;class#Planner#0" />
-            <marker date="1562436986110" expanded="true" signature="1392:2640" ph="..." />
+            <element signature="imports" expanded="true" />
+            <element signature="method#getDayTask#0;class#PlannerAdvanced#0" />
           </folding>
         </state>
       </provider>
