@@ -36,7 +36,7 @@ public class RandNumAdvanced {
         }
     }
 
-     public static String giveAnswer() {
+    public static String giveAnswer() {
         Scanner scan = new Scanner(System.in);
         while (!scan.hasNextInt()) {
             System.out.print("Your entry is not a year. Enter a year once more, please: ");
