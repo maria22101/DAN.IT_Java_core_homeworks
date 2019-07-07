@@ -59,13 +59,6 @@ public class AreaShootingAdvanced {
 
     private static boolean isGoodShot(int x, int y, int[][] target, int[][] userShots) {
         boolean isHit = false;
-
-//        for (int i = 0; i < 3; i++) {
-//            if (x == userShots[i][0] && y == userShots[i][1]) {
-//                isHit = true;
-//                break;
-//            }
-//        }
         for (int t = 0; t < 3; t++) {
             if (x == target[t][0] && y == target[t][1]) {
                 isHit = true;
