@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a6cfef6-0c35-4cc2-8150-160c48de1dc8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/homework2/AreaShootingAdvanced.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/homework1/RandNumAdvanced.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homework1/RandNumAdvanced.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/homework2/AreaShooting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homework2/AreaShooting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/homework2/AreaShooting.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homework2/AreaShooting.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/homework3/PlannerAdvanced.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homework3/PlannerAdvanced.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homework2/AreaShootingAdvanced.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homework2/AreaShootingAdvanced.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,12 +57,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="11" />
-          <entry key="java" value="12450" />
+          <entry key="java" value="12487" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="12450" />
+          <entry key="JAVA" value="12487" />
           <entry key="PLAIN_TEXT" value="11" />
         </counts>
       </usages-collector>
@@ -78,15 +73,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/homework2/AreaShootingAdvanced.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="120" column="19" selection-start-line="120" selection-start-column="19" selection-end-line="120" selection-end-column="19" />
+            <state relative-caret-position="401">
+              <caret line="88" column="5" lean-forward="true" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#generateBigTarget#0;class#AreaShootingAdvanced#0" />
-                <element signature="e#3497#3498#0" expanded="true" />
-                <element signature="e#3532#3533#0" expanded="true" />
-                <element signature="e#3621#3622#0" expanded="true" />
-                <element signature="e#3656#3657#0" expanded="true" />
+                <element signature="e#2518#2557#0" />
+                <element signature="method#isTargetHit#0;class#AreaShootingAdvanced#0" />
+                <element signature="method#printTargetCoordinates#0;class#AreaShootingAdvanced#0" />
               </folding>
             </state>
           </provider>
@@ -340,7 +334,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32993197" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.78061223" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32993197" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -448,15 +442,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/homework2/AreaShootingAdvanced.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="120" column="19" selection-start-line="120" selection-start-column="19" selection-end-line="120" selection-end-column="19" />
+        <state relative-caret-position="401">
+          <caret line="88" column="5" lean-forward="true" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#generateBigTarget#0;class#AreaShootingAdvanced#0" />
-            <element signature="e#3497#3498#0" expanded="true" />
-            <element signature="e#3532#3533#0" expanded="true" />
-            <element signature="e#3621#3622#0" expanded="true" />
-            <element signature="e#3656#3657#0" expanded="true" />
+            <element signature="e#2518#2557#0" />
+            <element signature="method#isTargetHit#0;class#AreaShootingAdvanced#0" />
+            <element signature="method#printTargetCoordinates#0;class#AreaShootingAdvanced#0" />
           </folding>
         </state>
       </provider>

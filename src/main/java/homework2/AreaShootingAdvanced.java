@@ -59,29 +59,27 @@ public class AreaShootingAdvanced {
 
     private static boolean isGoodShot(int x, int y, int[][] target, int[][] userShots) {
         boolean isHit = false;
-        outer:
-        for (int i = 0; i < 3; i++) {
-            if (x == userShots[i][0] && y == userShots[i][1]) {
+
+//        for (int i = 0; i < 3; i++) {
+//            if (x == userShots[i][0] && y == userShots[i][1]) {
+//                isHit = true;
+//                break;
+//            }
+//        }
+        for (int t = 0; t < 3; t++) {
+            if (x == target[t][0] && y == target[t][1]) {
+                isHit = true;
                 break;
-            }else {
-                for (int t = 0; t < 3; t++) {
-                    if (x == target[t][0] && y == target[t][1]) {
-                        isHit = true;
-                        break outer;
-                    }
-                }
             }
         }
         return isHit;
     }
 
-    public static void displayGoodShot(int targetX, int targetY, String[][] area) {
-        area[targetX][targetY] = " x |";
-        printShootingArea(area);
-    }
-
     private static void updateGoodShotsArray(int x, int y, int[][] arr) {
         for (int i = 0; i < 3; i++) {
+            if (x == arr[i][0] && y == arr[i][1]) {
+                break;
+            }
             if (arr[i][0] == 0) {
                 arr[i][0] = x;
                 arr[i][1] = y;
@@ -139,6 +137,4 @@ public class AreaShootingAdvanced {
         congrats();
         printTargetCoordinates(targetArray);
     }
-
-
 }
