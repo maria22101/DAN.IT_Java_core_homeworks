@@ -34,8 +34,7 @@ public class Planner {
     public static String enterDay() {
         System.out.print("Enter a day of week: ");
         Scanner scan = new Scanner(System.in);
-        String userEntry = scan.nextLine();
-        return userEntry;
+        return scan.nextLine();
     }
 
     public static String unifyDayEntry(String userEntry) {

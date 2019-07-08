@@ -108,12 +108,10 @@ public class AreaShootingAdvanced {
         int[][] targetArray = generateTargetCoordinatesArray();
 
         int[][] userGoodShotsArray = new int[3][2];
-        int x = 0;
-        int y = 0;
 
         while (!isTargetHit(userGoodShotsArray)) {
-            x = chooseShootingLine();
-            y = chooseShootingRow();
+            int x = chooseShootingLine();
+            int y = chooseShootingRow();
 
             while (!isGoodShot(x, y, targetArray, userGoodShotsArray)) {
                 updateShootingAreaWithMissedShot(x, y, shootingArea);
