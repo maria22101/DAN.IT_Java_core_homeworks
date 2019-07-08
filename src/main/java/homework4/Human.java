@@ -51,7 +51,7 @@ public class Human {
                 ", iQ=" + iQ +
                 ", mother=" + (mother != null ? mother.name + " " + mother.surname : null) +
                 ", father=" + (father != null ? father.name + " " + father.surname : null) +
-                ", pet=" + this.pet + "}";
+                ", pet=" + pet + "}";
     }
 
     void greetPet() {
@@ -67,17 +67,17 @@ public class Human {
     boolean feedPet(boolean isTimeToEat) {
         boolean flag = false;
         if (isTimeToEat) {
-            System.out.printf("Hmm, I think I will feed %s ", this.pet.nickName);
+            System.out.printf("Hmm, I think I will feed %s ", pet.nickName);
             System.out.println();
             flag = true;
         } else {
             Random rand = new Random();
-            if (this.pet.trickLevel > rand.nextInt(100)) {
-                System.out.printf("Hmm, I think I will feed %s ", this.pet.nickName);
+            if (pet.trickLevel > rand.nextInt(100)) {
+                System.out.printf("Hmm, I think I will feed %s ", pet.nickName);
                 System.out.println();
                 flag = true;
             } else {
-                System.out.printf("I think %s is not hungry", this.pet.nickName);
+                System.out.printf("I think %s is not hungry", pet.nickName);
                 System.out.println();
             }
         }
