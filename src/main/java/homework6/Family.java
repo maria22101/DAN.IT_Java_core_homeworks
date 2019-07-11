@@ -156,4 +156,9 @@ public class Family {
                 ", pet=" + pet +
                 '}';
     }
+
+    @Override
+    protected void finalize() throws Throwable {
+        System.out.println(this.toString() + "is being deleted...");;
+    }
 }

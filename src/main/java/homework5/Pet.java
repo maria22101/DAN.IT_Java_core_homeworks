@@ -1,6 +1,7 @@
 package homework5;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 public class Pet {
     private String species;
@@ -95,4 +96,18 @@ public class Pet {
         System.out.println("Oops! I need to hide this mess...");
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Pet pet = (Pet) o;
+        return age == pet.age &&
+                Objects.equals(species, pet.species) &&
+                Objects.equals(nickName, pet.nickName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(species, nickName, age);
+    }
 }

@@ -3,7 +3,7 @@ package homework6;
 import java.util.Arrays;
 
 public class Pet {
-    private String species;
+    private Species species;
     private String nickName;
     private int age;
     private int trickLevel;
@@ -17,12 +17,12 @@ public class Pet {
         System.out.println("New object of Pet type being created");
     }
 
-    public Pet(String species, String nickName) {
+    public Pet(Species species, String nickName) {
         this.species = species;
         this.nickName = nickName;
     }
 
-    public Pet(String species, String nickName, int age, int trickLevel, String[] habits) {
+    public Pet(Species species, String nickName, int age, int trickLevel, String[] habits) {
         this.species = species;
         this.nickName = nickName;
         this.age = age;
@@ -33,11 +33,11 @@ public class Pet {
     public Pet() {
     }
 
-    public String getSpecies() {
+    public Species getSpecies() {
         return species;
     }
 
-    public void setSpecies(String species) {
+    public void setSpecies(Species species) {
         this.species = species;
     }
 
@@ -93,6 +93,11 @@ public class Pet {
 
     void foul(){
         System.out.println("Oops! I need to hide this mess...");
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        System.out.println(this.toString() + "is being deleted...");;
     }
 
 }
