@@ -1,6 +1,7 @@
 package homework6;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 public class Family {
 
@@ -160,5 +161,21 @@ public class Family {
     @Override
     protected void finalize() throws Throwable {
         System.out.println(this.toString() + "is being deleted...");;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Family family = (Family) o;
+        return (children.length == family.children.length) &&
+                Objects.equals(pet, family.pet);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hash(pet);
+        result = 31 * result + Arrays.hashCode(children);
+        return result;
     }
 }

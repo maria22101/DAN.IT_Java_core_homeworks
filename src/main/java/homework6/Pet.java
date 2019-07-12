@@ -1,6 +1,7 @@
 package homework6;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 public class Pet {
     private Species species;
@@ -80,6 +81,9 @@ public class Pet {
                 "', age=" + age +
                 ", trickLevel=" + trickLevel +
                 ", habits=" + Arrays.toString(habits) +
+                ", canFly: " + species.isCanFly() +
+                ", hasFur:" + species.isHasFur() +
+                ", legsNumber:" + species.getNumberOfLegs() +
                 '}';
     }
 
@@ -100,4 +104,18 @@ public class Pet {
         System.out.println(this.toString() + "is being deleted...");;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Pet pet = (Pet) o;
+        return age == pet.age &&
+                species == pet.species &&
+                Objects.equals(nickName, pet.nickName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(species, nickName, age);
+    }
 }

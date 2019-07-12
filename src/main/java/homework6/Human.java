@@ -9,7 +9,7 @@ public class Human {
     private String surname;
     private int year;
     private int iQ;
-    String[][] schedule;
+    private String[][] schedule;
     private Family family;
 
     static {
@@ -92,7 +92,7 @@ public class Human {
                 ", surname='" + surname + '\'' +
                 ", year=" + year +
                 ", iQ=" + iQ +
-                ", schedule=" + Arrays.toString(schedule) +
+                ", schedule=" + Arrays.deepToString(schedule) +
                 '}';
     }
 
