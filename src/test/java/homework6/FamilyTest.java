@@ -25,7 +25,7 @@ class FamilyTest {
     }
 
     @Test
-    void is_given_child_deleted_from_childrenArray() {
+    void deleteChild_givenChildDeletedFromChildrenArray() {
         Human ch = familyInTest.getChildren()[1];
         Human[] result = new Human[]{familyInTest.getChildren()[0], familyInTest.getChildren()[2]};
         assertEquals(true, familyInTest.deleteChild(ch));
@@ -33,7 +33,7 @@ class FamilyTest {
     }
 
     @Test
-    void is_childrenArray_unchanged_with_wrongChildEntry() {
+    void deleteChild_wrongChildEntry_falseAndChildrenArrayUnchanged() {
         Human wrongChild = new Human("Bob", "Black", 1999);
         Human[] result = new Human[]{familyInTest.getChildren()[0], familyInTest.getChildren()[1], familyInTest.getChildren()[2]};
         assertEquals(false, familyInTest.deleteChild(wrongChild));
@@ -41,14 +41,14 @@ class FamilyTest {
     }
 
     @Test
-    void is_childAtGivenIndex_deleted_from_childrenArray() {
+    void deleteChild_childWithGivenIndexDeletedFromChildrenArray() {
         Human[] result = new Human[]{familyInTest.getChildren()[1], familyInTest.getChildren()[2]};
         assertEquals(true, familyInTest.deleteChild(0));
         assertThat(familyInTest.getChildren(), is(result));
     }
 
     @Test
-    void is_childrenArray_unchanged_with_wrongIndexEntry() {
+    void deleteChild_wrongIndexEntry_falseAndChildrenArrayUnchanged() {
         int wrongIndex = 5;
         Human[] result = new Human[]{familyInTest.getChildren()[0], familyInTest.getChildren()[1], familyInTest.getChildren()[2]};
         assertEquals(false, familyInTest.deleteChild(wrongIndex));
@@ -56,7 +56,7 @@ class FamilyTest {
     }
 
     @Test
-    void is_child_added_to_ChildrenArray() {
+    void addChild_childAddedToChildrenArray() {
         Human newChild = new Human("Eve", "Green", 2011);
         familyInTest.addChild(newChild);
         assertEquals(4, familyInTest.getChildren().length);
@@ -64,8 +64,10 @@ class FamilyTest {
     }
 
     @Test
-    void is_familyMembers_counted_correctly() {
+    void countFamily_correctNumberOfFamilyMembers() {
         assertEquals(5, familyInTest.countFamily());
     }
+
+
 
 }

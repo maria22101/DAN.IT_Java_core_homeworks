@@ -3,6 +3,10 @@ package homework6;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
 import static org.junit.jupiter.api.Assertions.*;
 
 class HumanTest {
@@ -25,60 +29,67 @@ class HumanTest {
     }
 
     @Test
-    void isToStringCorrect() {
+    void toString_correctObjectDisplayWithString() {
         assertEquals("Human{name='Morgan', surname='Morris', year=1975, iQ=80, schedule=[[Mon, Gym], " +
                 "[Tue, Theater], [Wed, Homework], [Thu, Courses], [Fri, Party], [Sat, Yoga], [Sun, Cooking]]}"
                 , humanInTest.toString());
     }
 
     @Test
-    void is_equals_correct_when_same_object() {
+    void equals_withSameObjects_true() {
         Human sameHuman = humanInTest;
-        assertEquals(true, humanInTest.equals(sameHuman));
+        assertThat(humanInTest.equals(sameHuman), is(true));
     }
 
     @Test
-    void is_equals_correct_whith_null() {
+    void equals_withNull_false() {
         Human nullHuman = null;
-        assertEquals(false, humanInTest.equals(nullHuman));
+        assertThat(humanInTest.equals(nullHuman), is(false));
     }
 
     @Test
-    void is_equals_correct_whith_different_class() {
+    void equals_differentClasses_false() {
         Pet diffClass = new Pet();
-        assertEquals(false, humanInTest.equals(diffClass));
+        assertThat(humanInTest.equals(diffClass), is(false));
     }
 
     @Test
-    void is_equals_correct_with_same_class_and_equalFields(){
+    void equals_sameClassAndSameFields_true(){
         Human human = new Human("Morgan", "Morris", 1975);
-        assertEquals(true, humanInTest.equals(human));
+        assertThat(humanInTest.equals(human), is(true));
     }
 
     @Test
-    void is_equals_correct_with_same_class_and_differentField_1(){
+    void equals_sameClassAndDifferentFieldYear_false(){
         Human human = new Human("Morgan", "Morris", 1976);;
-        assertEquals(false, humanInTest.equals(human));
+        assertThat(humanInTest.equals(human), is(false));
     }
 
     @Test
-    void is_equals_correct_with_same_class_and_differentField_2(){
+    void equals_sameClassAndDifferentFieldName_false(){
         Human human = new Human("Mary", "Morris", 1975);;
-        assertEquals(false, humanInTest.equals(human));
+        assertThat(humanInTest.equals(human), is(false));
     }
 
     @Test
-    void is_equals_correct_with_same_class_and_differentField_3(){
+    void equals_sameClassAndDifferentFieldSurname_false(){
         Human human = new Human("Morgan", "Mors", 1975);;
-        assertEquals(false, humanInTest.equals(human));
+        assertThat(humanInTest.equals(human), is(false));
     }
 
     @Test
-    void equals_and_hashcode_contract_check(){
+    void equals_equalAndHashcodeContract_true(){
         Human human = new Human("Morgan", "Morris", 1975);
         boolean isEqual = humanInTest.equals(human);
-        boolean isHashEqual = humanInTest.hashCode() == human.hashCode() ? true : false;
-        assertTrue(isEqual);
-        assertTrue(isHashEqual);
+        boolean isHashEqual = humanInTest.hashCode() == human.hashCode();
+        assertThat(isEqual, is(true));
+        assertThat(isHashEqual, is(true));
+    }
+
+    @Test
+    void hashCode_true(){
+        Object[] arr = new Object[]{humanInTest.getName(), humanInTest.getSurname(), humanInTest.getYear()};
+        int result = Arrays.hashCode(arr);
+        assertEquals(result, humanInTest.hashCode());
     }
 }

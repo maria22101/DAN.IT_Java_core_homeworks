@@ -8,7 +8,6 @@ public class Main {
             Human human = new Human();
         }
 
-        Human h = new Human("Leon", "Collins", 43);
         String[][] sch = new String[][]{
                 {DayOfWeek.SUNDAY.name(), "Sport"},
                 {DayOfWeek.MONDAY.name(), "Office"},
@@ -19,5 +18,6 @@ public class Main {
                 {DayOfWeek.SATURDAY.name(), "Relax"},
 
         };
+
     }
 }

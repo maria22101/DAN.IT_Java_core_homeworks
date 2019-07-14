@@ -2,26 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a6cfef6-0c35-4cc2-8150-160c48de1dc8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/homework6/FamilyTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/homework6/HumanTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/homework6/PetTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/DAN.IT_Java_core_homeworks.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DAN.IT_Java_core_homeworks.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/homework6/Family.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homework6/Family.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/homework6/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homework6/Human.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/homework6/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homework6/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/homework6/Pet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homework6/Pet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/homework6/Species.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homework6/Species.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/homework5/Family.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homework5/Family.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/homework5/Human.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homework5/Human.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/homework5/Pet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homework5/Pet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/homework6/Activities.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/homework6/Family.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homework6/Family.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/homework6/Human.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homework6/Human.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/homework6/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homework6/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/homework6/Pet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homework6/Pet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/homework6/Species.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homework6/Species.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/homework6/FamilyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/homework6/FamilyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/homework6/HumanTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/homework6/HumanTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/homework6/PetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/homework6/PetTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,7 +24,7 @@
     <session id="1494104757">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
@@ -48,14 +33,14 @@
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.16" value="2" />
           <entry key="project.open.time.24" value="1" />
-          <entry key="project.open.time.3" value="4" />
+          <entry key="project.open.time.3" value="5" />
           <entry key="project.open.time.39" value="1" />
           <entry key="project.open.time.41" value="1" />
           <entry key="project.open.time.44" value="1" />
           <entry key="project.open.time.45" value="1" />
           <entry key="project.open.time.78" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="21" />
+          <entry key="project.opened" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -78,13 +63,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="22" />
-          <entry key="java" value="21734" />
+          <entry key="java" value="22919" />
           <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="21734" />
+          <entry key="JAVA" value="22919" />
           <entry key="PLAIN_TEXT" value="22" />
           <entry key="XML" value="3" />
         </counts>
@@ -93,40 +78,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/homework6/Family.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="918">
-              <caret line="179" column="5" lean-forward="true" selection-start-line="179" selection-start-column="5" selection-end-line="179" selection-end-column="5" />
+            <state relative-caret-position="401">
+              <caret line="179" column="5" selection-start-line="179" selection-start-column="5" selection-end-line="179" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="initializer##0;class#Family#0" />
                 <element signature="initializer##1;class#Family#0" />
-                <element signature="method#Family#0;class#Family#0" />
                 <element signature="method#addChild#0;class#Family#0" />
                 <element signature="method#deleteChild#0;class#Family#0" />
                 <element signature="method#deleteChild#1;class#Family#0" />
                 <element signature="method#countFamily#0;class#Family#0" />
                 <element signature="method#toString#0;class#Family#0" />
-                <element signature="method#equals#0;class#Family#0" />
-                <element signature="method#hashCode#0;class#Family#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/homework6/Species.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
-              <folding>
-                <element signature="e#490#491#0" expanded="true" />
-                <element signature="e#519#520#0" expanded="true" />
-                <element signature="e#555#556#0" expanded="true" />
-                <element signature="e#590#591#0" expanded="true" />
-                <element signature="e#623#624#0" expanded="true" />
-                <element signature="e#652#653#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -135,10 +100,27 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/homework6/FamilyTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1139">
-              <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+            <state relative-caret-position="843">
+              <caret line="70" selection-start-line="70" selection-end-line="70" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/homework6/Human.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="433">
+              <caret line="146" column="5" selection-start-line="146" selection-start-column="5" selection-end-line="146" selection-end-column="5" />
+              <folding>
+                <element signature="method#toString#0;class#Human#0" />
+                <element signature="method#describePet#0;class#Human#0" />
+                <element signature="method#feedPet#0;class#Human#0" />
+                <element signature="method#equals#0;class#Human#0" />
+                <element signature="e#3508#3509#0" expanded="true" />
+                <element signature="e#3564#3565#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -147,25 +129,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/homework6/HumanTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1411">
-              <caret line="83" column="1" lean-forward="true" selection-start-line="83" selection-start-column="1" selection-end-line="83" selection-end-column="1" />
+            <state relative-caret-position="124">
+              <caret line="92" column="40" selection-start-line="92" selection-start-column="40" selection-end-line="92" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/homework6/Human.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="915">
-              <caret line="146" column="5" selection-start-line="146" selection-start-column="5" selection-end-line="146" selection-end-column="5" />
-              <folding>
-                <element signature="method#toString#0;class#Human#0" />
-                <element signature="method#describePet#0;class#Human#0" />
-                <element signature="method#feedPet#0;class#Human#0" />
-                <element signature="method#equals#0;class#Human#0" />
               </folding>
             </state>
           </provider>
@@ -174,8 +141,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/homework6/PetTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="64" selection-start-line="64" selection-end-line="71" selection-end-column="5" />
+            <state relative-caret-position="333">
+              <caret line="75" column="4" selection-start-line="75" selection-start-column="4" selection-end-line="80" selection-end-column="5" />
               <folding>
                 <element signature="e#230#231#0" expanded="true" />
                 <element signature="e#328#329#0" expanded="true" />
@@ -187,8 +154,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/homework6/Pet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="109" column="26" selection-start-line="109" selection-start-column="26" selection-end-line="109" selection-end-column="26" />
+            <state relative-caret-position="384">
+              <caret line="118" column="36" selection-start-line="118" selection-start-column="36" selection-end-line="118" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#finalize#0;class#Pet#0" />
@@ -202,17 +169,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/homework6/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="46" column="34" selection-start-line="22" selection-start-column="9" selection-end-line="46" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+            <state relative-caret-position="323">
+              <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -255,11 +213,11 @@
         <option value="$PROJECT_DIR$/src/main/java/homework5/Family.java" />
         <option value="$PROJECT_DIR$/src/main/java/homework5/Human.java" />
         <option value="$PROJECT_DIR$/src/main/java/homework6/Species.java" />
-        <option value="$PROJECT_DIR$/src/main/java/homework6/Main.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/homework6/Human.java" />
         <option value="$PROJECT_DIR$/src/main/java/homework6/Family.java" />
         <option value="$PROJECT_DIR$/src/main/java/homework6/Pet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/homework6/Main.java" />
         <option value="$PROJECT_DIR$/src/test/java/homework6/FamilyTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/homework6/PetTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/homework6/HumanTest.java" />
@@ -277,7 +235,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -307,32 +264,20 @@
               <item name="DAN.IT_Java_core_homeworks" type="b2602c69:ProjectViewProjectNode" />
               <item name="DAN.IT_Java_core_homeworks" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="homework5" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DAN.IT_Java_core_homeworks" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DAN.IT_Java_core_homeworks" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DAN.IT_Java_core_homeworks" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DAN.IT_Java_core_homeworks" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Java_core-practice" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -363,7 +308,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.HumanTest.hashCode_true">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="homework6.Main" />
       <module name="DAN.IT_Java_core_homeworks" />
@@ -377,7 +322,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HumanTest.equals_and_hashcode_contract_check" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HumanTest.equals_withNull_false" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DAN.IT_Java_core_homeworks" />
       <extension name="coverage">
         <pattern>
@@ -387,13 +332,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="homework6" />
       <option name="MAIN_CLASS_NAME" value="homework6.HumanTest" />
-      <option name="METHOD_NAME" value="equals_and_hashcode_contract_check" />
+      <option name="METHOD_NAME" value="equals_withNull_false" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HumanTest.is_equals_correct_with_same_class_and_differentField_2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HumanTest.equals_withSameObjects_true" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DAN.IT_Java_core_homeworks" />
       <extension name="coverage">
         <pattern>
@@ -403,13 +348,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="homework6" />
       <option name="MAIN_CLASS_NAME" value="homework6.HumanTest" />
-      <option name="METHOD_NAME" value="is_equals_correct_with_same_class_and_differentField_2" />
+      <option name="METHOD_NAME" value="equals_withSameObjects_true" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HumanTest.is_equals_correct_with_same_class_and_differentField_3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HumanTest.hashCode_true" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DAN.IT_Java_core_homeworks" />
       <extension name="coverage">
         <pattern>
@@ -419,13 +364,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="homework6" />
       <option name="MAIN_CLASS_NAME" value="homework6.HumanTest" />
-      <option name="METHOD_NAME" value="is_equals_correct_with_same_class_and_differentField_3" />
+      <option name="METHOD_NAME" value="hashCode_true" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PetTest.equals_and_hashcode_contract_check" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PetTest.hashCode_true" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DAN.IT_Java_core_homeworks" />
       <extension name="coverage">
         <pattern>
@@ -435,26 +380,26 @@
       </extension>
       <option name="PACKAGE_NAME" value="homework6" />
       <option name="MAIN_CLASS_NAME" value="homework6.PetTest" />
-      <option name="METHOD_NAME" value="equals_and_hashcode_contract_check" />
+      <option name="METHOD_NAME" value="hashCode_true" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.HumanTest.is_equals_correct_with_same_class_and_differentField_2" />
-      <item itemvalue="JUnit.HumanTest.is_equals_correct_with_same_class_and_differentField_3" />
-      <item itemvalue="JUnit.PetTest.equals_and_hashcode_contract_check" />
-      <item itemvalue="JUnit.HumanTest.equals_and_hashcode_contract_check" />
+      <item itemvalue="JUnit.HumanTest.equals_withNull_false" />
+      <item itemvalue="JUnit.HumanTest.equals_withSameObjects_true" />
       <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.PetTest.hashCode_true" />
+      <item itemvalue="JUnit.HumanTest.hashCode_true" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.HumanTest.hashCode_true" />
+        <item itemvalue="JUnit.PetTest.hashCode_true" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.HumanTest.equals_and_hashcode_contract_check" />
-        <item itemvalue="JUnit.PetTest.equals_and_hashcode_contract_check" />
-        <item itemvalue="JUnit.HumanTest.is_equals_correct_with_same_class_and_differentField_3" />
-        <item itemvalue="JUnit.HumanTest.is_equals_correct_with_same_class_and_differentField_2" />
+        <item itemvalue="JUnit.HumanTest.equals_withSameObjects_true" />
+        <item itemvalue="JUnit.HumanTest.equals_withNull_false" />
       </list>
     </recent_temporary>
   </component>
@@ -472,42 +417,42 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PetTest_is_equals_correct_with_same_class_and_differentField_3 - 2019.07.12 at 06h 33m 58s.xml">
-      <configuration name="PetTest.is_equals_correct_with_same_class_and_differentField_3" configurationId="JUnit" />
+    <history-entry file="HumanTest_equals_sameClassAndDifferentFieldName_false - 2019.07.14 at 15h 59m 34s.xml">
+      <configuration name="HumanTest.equals_sameClassAndDifferentFieldName_false" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HumanTest_is_equals_correct_when_same_object - 2019.07.12 at 06h 36m 54s.xml">
-      <configuration name="HumanTest.is_equals_correct_when_same_object" configurationId="JUnit" />
+    <history-entry file="HumanTest_equals_sameClassAndDifferentFieldName_false - 2019.07.14 at 16h 00m 20s.xml">
+      <configuration name="HumanTest.equals_sameClassAndDifferentFieldName_false" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HumanTest_is_equals_correct_whith_null - 2019.07.12 at 06h 37m 29s.xml">
-      <configuration name="HumanTest.is_equals_correct_whith_null" configurationId="JUnit" />
+    <history-entry file="HumanTest_equals_sameClassAndDifferentFieldYear_false - 2019.07.14 at 16h 00m 56s.xml">
+      <configuration name="HumanTest.equals_sameClassAndDifferentFieldYear_false" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HumanTest_is_equals_correct_whith_different_class - 2019.07.12 at 06h 39m 47s.xml">
-      <configuration name="HumanTest.is_equals_correct_whith_different_class" configurationId="JUnit" />
+    <history-entry file="HumanTest_equals_sameClassAndSameFields_true - 2019.07.14 at 16h 01m 29s.xml">
+      <configuration name="HumanTest.equals_sameClassAndSameFields_true" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HumanTest_is_equals_correct_with_same_class_and_equalFields - 2019.07.12 at 06h 42m 27s.xml">
-      <configuration name="HumanTest.is_equals_correct_with_same_class_and_equalFields" configurationId="JUnit" />
+    <history-entry file="HumanTest_equals_differentClasses_false - 2019.07.14 at 16h 01m 56s.xml">
+      <configuration name="HumanTest.equals_differentClasses_false" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HumanTest_is_equals_correct_with_same_class_and_differentField_1 - 2019.07.12 at 06h 43m 40s.xml">
-      <configuration name="HumanTest.is_equals_correct_with_same_class_and_differentField_1" configurationId="JUnit" />
+    <history-entry file="HumanTest_equals_withNull_false - 2019.07.14 at 16h 02m 26s.xml">
+      <configuration name="HumanTest.equals_withNull_false" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HumanTest_is_equals_correct_with_same_class_and_differentField_2 - 2019.07.12 at 06h 44m 29s.xml">
-      <configuration name="HumanTest.is_equals_correct_with_same_class_and_differentField_2" configurationId="JUnit" />
+    <history-entry file="HumanTest_equals_withSameObjects_true - 2019.07.14 at 16h 02m 52s.xml">
+      <configuration name="HumanTest.equals_withSameObjects_true" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HumanTest_is_equals_correct_with_same_class_and_differentField_3 - 2019.07.12 at 06h 45m 07s.xml">
-      <configuration name="HumanTest.is_equals_correct_with_same_class_and_differentField_3" configurationId="JUnit" />
+    <history-entry file="PetTest_hashCode_true - 2019.07.14 at 18h 11m 56s.xml">
+      <configuration name="PetTest.hashCode_true" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PetTest_equals_and_hashcode_contract_check - 2019.07.12 at 07h 10m 29s.xml">
-      <configuration name="PetTest.equals_and_hashcode_contract_check" configurationId="JUnit" />
+    <history-entry file="PetTest_hashCode_true - 2019.07.14 at 18h 33m 23s.xml">
+      <configuration name="PetTest.hashCode_true" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HumanTest_equals_and_hashcode_contract_check - 2019.07.12 at 07h 14m 19s.xml">
-      <configuration name="HumanTest.equals_and_hashcode_contract_check" configurationId="JUnit" />
+    <history-entry file="HumanTest_hashCode_true - 2019.07.14 at 18h 42m 00s.xml">
+      <configuration name="HumanTest.hashCode_true" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15733737" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15960665" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -647,68 +592,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/homework6/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="46" column="34" selection-start-line="22" selection-start-column="9" selection-end-line="46" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/homework5/Family.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="271">
           <caret line="165" column="16" lean-forward="true" selection-start-line="165" selection-start-column="16" selection-end-line="165" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/homework6/Pet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="109" column="26" selection-start-line="109" selection-start-column="26" selection-end-line="109" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#finalize#0;class#Pet#0" />
-            <element signature="e#2746#2747#0" expanded="true" />
-            <element signature="e#2805#2806#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/homework6/PetTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="64" selection-start-line="64" selection-end-line="71" selection-end-column="5" />
-          <folding>
-            <element signature="e#230#231#0" expanded="true" />
-            <element signature="e#328#329#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/homework6/Family.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="179" column="5" lean-forward="true" selection-start-line="179" selection-start-column="5" selection-end-line="179" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="initializer##0;class#Family#0" />
-            <element signature="initializer##1;class#Family#0" />
-            <element signature="method#Family#0;class#Family#0" />
-            <element signature="method#addChild#0;class#Family#0" />
-            <element signature="method#deleteChild#0;class#Family#0" />
-            <element signature="method#deleteChild#1;class#Family#0" />
-            <element signature="method#countFamily#0;class#Family#0" />
-            <element signature="method#toString#0;class#Family#0" />
-            <element signature="method#equals#0;class#Family#0" />
-            <element signature="method#hashCode#0;class#Family#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -727,35 +614,92 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="19" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homework6/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/homework6/FamilyTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
-          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+        <state relative-caret-position="843">
+          <caret line="70" selection-start-line="70" selection-end-line="70" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/homework6/HumanTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/homework6/Pet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1411">
-          <caret line="83" column="1" lean-forward="true" selection-start-line="83" selection-start-column="1" selection-end-line="83" selection-end-column="1" />
+        <state relative-caret-position="384">
+          <caret line="118" column="36" selection-start-line="118" selection-start-column="36" selection-end-line="118" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#finalize#0;class#Pet#0" />
+            <element signature="e#2746#2747#0" expanded="true" />
+            <element signature="e#2805#2806#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/homework6/PetTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="75" column="4" selection-start-line="75" selection-start-column="4" selection-end-line="80" selection-end-column="5" />
+          <folding>
+            <element signature="e#230#231#0" expanded="true" />
+            <element signature="e#328#329#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/homework6/Human.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
+        <state relative-caret-position="433">
           <caret line="146" column="5" selection-start-line="146" selection-start-column="5" selection-end-line="146" selection-end-column="5" />
           <folding>
             <element signature="method#toString#0;class#Human#0" />
             <element signature="method#describePet#0;class#Human#0" />
             <element signature="method#feedPet#0;class#Human#0" />
             <element signature="method#equals#0;class#Human#0" />
+            <element signature="e#3508#3509#0" expanded="true" />
+            <element signature="e#3564#3565#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/homework6/HumanTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="92" column="40" selection-start-line="92" selection-start-column="40" selection-end-line="92" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homework6/Family.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="179" column="5" selection-start-line="179" selection-start-column="5" selection-end-line="179" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="initializer##0;class#Family#0" />
+            <element signature="initializer##1;class#Family#0" />
+            <element signature="method#addChild#0;class#Family#0" />
+            <element signature="method#deleteChild#0;class#Family#0" />
+            <element signature="method#deleteChild#1;class#Family#0" />
+            <element signature="method#countFamily#0;class#Family#0" />
+            <element signature="method#toString#0;class#Family#0" />
           </folding>
         </state>
       </provider>

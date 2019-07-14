@@ -3,6 +3,8 @@ package homework6;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class PetTest {
@@ -15,59 +17,66 @@ class PetTest {
     }
 
     @Test
-    void is_toString_correct() {
+    void toString_correctObjectDisplayWithString() {
         assertEquals("CAT{nickName='Tigra', age=11, trickLevel=95, habits=[play, scratch], canFly: false, hasFur:true, legsNumber:4}"
                 , petInTest.toString());
     }
 
     @Test
-    void is_equals_correct_when_same_object() {
+    void equals_withSameObjects_true() {
         Pet samePet = petInTest;
         assertEquals(true, petInTest.equals(samePet));
     }
 
     @Test
-    void is_equals_correct_whith_null() {
+    void equals_withNull_false() {
         Pet nullPet = null;
         assertEquals(false, petInTest.equals(nullPet));
     }
 
     @Test
-    void is_equals_correct_whith_different_class() {
+    void equals_differentClasses_false() {
         Human diffClass = new Human();
         assertEquals(false, petInTest.equals(diffClass));
     }
 
     @Test
-    void is_equals_correct_with_same_class_and_equalFields(){
+    void equals_sameClassAndSameFields_true(){
         Pet pet = new Pet(Species.CAT, "Tigra", 11, 45, new String[]{"sleep", "play"});
         assertEquals(true, petInTest.equals(pet));
     }
 
     @Test
-    void is_equals_correct_with_same_class_and_differentField_1(){
+    void equals_sameClassAndDifferentFieldAge_false(){
         Pet pet = new Pet(Species.CAT, "Tigra", 2, 45, new String[]{"sleep", "play"});
         assertEquals(false, petInTest.equals(pet));
     }
 
     @Test
-    void is_equals_correct_with_same_class_and_differentField_2(){
+    void equals_sameClassAndDifferentFieldSpecies_false(){
         Pet pet = new Pet(Species.DOG, "Tigra", 11, 45, new String[]{"sleep", "play"});
         assertEquals(false, petInTest.equals(pet));
     }
 
     @Test
-    void is_equals_correct_with_same_class_and_differentField_3(){
+    void equals_sameClassAndDifferentFieldNickName_false(){
         Pet pet = new Pet(Species.CAT, "Tom", 11, 45, new String[]{"sleep", "play"});
         assertEquals(false, petInTest.equals(pet));
     }
 
     @Test
-    void equals_and_hashcode_contract_check(){
+    void equals_equalAndHashcodeContract_true(){
         Pet pet = new Pet(Species.CAT, "Tigra", 11, 45, new String[]{"sleep", "play"});
         boolean isEqual = petInTest.equals(pet);
         boolean isHashEqual = petInTest.hashCode() == pet.hashCode() ? true : false;
         assertEquals(true, isEqual);
         assertEquals(true, isHashEqual);
+    }
+
+    @Test
+    void hashCode_true(){
+        Object[] arr = new Object[]{petInTest.getSpecies(), petInTest.getNickName(), petInTest.getAge()};
+        int result = Arrays.hashCode(arr);
+        assertEquals(result, petInTest.hashCode());
     }
 }
