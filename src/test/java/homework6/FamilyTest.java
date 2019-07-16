@@ -27,7 +27,8 @@ class FamilyTest {
         Human ch = familyInTest.getChildren()[1];
         Human[] result = new Human[]{familyInTest.getChildren()[0], familyInTest.getChildren()[2]};
         assertEquals(true, familyInTest.deleteChild(ch));
-        assertTrue(Arrays.equals(result, familyInTest.getChildren()));
+//        assertTrue(Arrays.equals(result, familyInTest.getChildren())); below is better option:
+        assertArrayEquals(result, familyInTest.getChildren());
     }
 
     @Test

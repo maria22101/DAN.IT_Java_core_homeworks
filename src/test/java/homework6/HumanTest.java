@@ -44,13 +44,13 @@ class HumanTest {
     @Test
     void equals_withNull_false() {
         Human nullHuman = null;
-        assertThat(humanInTest.equals(nullHuman), is(false));
+        assertNotEquals(humanInTest, nullHuman);
     }
 
     @Test
     void equals_differentClasses_false() {
         Pet diffClass = new Pet();
-        assertThat(humanInTest.equals(diffClass), is(false));
+        assertNotEquals(humanInTest, diffClass);
     }
 
     @Test
@@ -62,19 +62,20 @@ class HumanTest {
     @Test
     void equals_sameClassAndDifferentFieldYear_false(){
         Human human = new Human("Morgan", "Morris", 1976);;
-        assertThat(humanInTest.equals(human), is(false));
+        assertNotEquals(humanInTest, human);
     }
 
     @Test
     void equals_sameClassAndDifferentFieldName_false(){
         Human human = new Human("Mary", "Morris", 1975);;
-        assertThat(humanInTest.equals(human), is(false));
+        assertNotEquals(humanInTest, human);
     }
 
     @Test
     void equals_sameClassAndDifferentFieldSurname_false(){
         Human human = new Human("Morgan", "Mors", 1975);;
-        assertThat(humanInTest.equals(human), is(false));
+//        assertThat(humanInTest.equals(human), is(false)); better option below:
+        assertNotEquals(humanInTest, human);
     }
 
     @Test
@@ -91,5 +92,12 @@ class HumanTest {
         Object[] arr = new Object[]{humanInTest.getName(), humanInTest.getSurname(), humanInTest.getYear()};
         int result = Arrays.hashCode(arr);
         assertEquals(result, humanInTest.hashCode());
+    }
+
+    @Test
+    void hashCode_false(){
+        Object[] arr = new Object[]{humanInTest.getName(), humanInTest.getYear()};
+        int result = Arrays.hashCode(arr);
+        assertNotEquals(result, humanInTest.hashCode());
     }
 }

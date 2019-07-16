@@ -79,4 +79,11 @@ class PetTest {
         int result = Arrays.hashCode(arr);
         assertEquals(result, petInTest.hashCode());
     }
+
+    @Test
+    void hashCode_false(){
+        Object[] arr = new Object[]{petInTest.getSpecies(), petInTest.getNickName()};
+        int result = Arrays.hashCode(arr);
+        assertNotEquals(result, petInTest.hashCode());
+    }
 }
