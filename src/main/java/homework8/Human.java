@@ -96,17 +96,15 @@ public class Human {
 
     void greetPet() {
         for (Pet petMember : family.getPet()) {
-            System.out.println("Hello, " + petMember + "!");
+            System.out.print("Hello, " + petMember.getNickName() + "!\n");
         }
     }
 
     void describePet() {
         for (Pet petMember : family.getPet()) {
             String howSmartIsPet = petMember.getTrickLevel() > 50 ? "very smart" : "not as smart";
-            System.out.printf("I have a %s, he is %d years old, he is %s", petMember, petMember.getAge(), howSmartIsPet);
-            System.out.println();
+            System.out.printf("I have a %s, he is %d years old, he is %s\n", petMember.getSpecies(), petMember.getAge(), howSmartIsPet);
         }
-
     }
 
     boolean feedPet(boolean isTimeToEat) {
@@ -150,7 +148,6 @@ public class Human {
     @Override
     protected void finalize() throws Throwable {
         System.out.println(this.toString() + "is being deleted...");
-        ;
     }
 
 }

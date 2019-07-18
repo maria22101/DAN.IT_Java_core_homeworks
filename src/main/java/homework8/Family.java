@@ -40,12 +40,19 @@ public class Family implements HumanCreator {
 
     boolean deleteChild(Human ch) {
         boolean flag = false;
-        for (Human elem : children) {
-            if (elem.equals(ch)){
-                children.remove(ch);
-                flag = true;
-            }
+
+        if (children.contains(ch)) {
+            children.remove(ch);
+            flag = true;
         }
+
+//        for (Human elem : children) { // why this code is not working?
+//            if (elem.equals(ch)){
+//                children.remove(ch);
+//                flag = true;
+//            }
+//        }
+
         return flag;
     }
 
