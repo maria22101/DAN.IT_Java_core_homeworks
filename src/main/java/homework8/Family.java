@@ -29,7 +29,7 @@ public class Family implements HumanCreator {
         newChild.setFamily(this);
     }
 
-    boolean deleteChild(int index) {
+    public boolean deleteChild(int index) {
         boolean flag = false;
         if(index < children.size()) {
             children.remove(index);
@@ -38,7 +38,7 @@ public class Family implements HumanCreator {
         return flag;
     }
 
-    boolean deleteChild(Human ch) {
+    public boolean deleteChild(Human ch) {
         boolean flag = false;
 
         if (children.contains(ch)) {
@@ -56,7 +56,7 @@ public class Family implements HumanCreator {
         return flag;
     }
 
-    int countFamily() {
+    public int countFamily() {
         return 2 + children.size();
     }
 

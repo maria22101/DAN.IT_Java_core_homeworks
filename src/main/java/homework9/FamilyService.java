@@ -6,20 +6,21 @@ import homework8.Pet;
 
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 public class FamilyService {
-    private FamilyDAO fDao;
+    private FamilyDAO fDao = new CollectionFamilyDAO();
 
     public List<Family> getAllFamilies() {
-        throw new IllegalArgumentException("not implemented yet");
+        return fDao.getAllFamilies();
     };
 
     public void displayAllFamilies(){
-
+        getAllFamilies().stream().forEach(System.out::println);
     }
 
-    public void getFamiliesBiggerThan(int num){
-
+    public List<Family> getFamiliesBiggerThan(int num){
+        return getAllFamilies().stream().filter(f -> f.countFamily() > num).collect(Collectors.toList());
     }
 
     public void getFamiliesLessThan(int num){
