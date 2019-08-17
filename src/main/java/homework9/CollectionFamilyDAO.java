@@ -1,12 +1,19 @@
 package homework9;
 
 import homework8.Family;
+import homework8.Human;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class CollectionFamilyDAO implements FamilyDAO {
     private List<Family> listFam = new ArrayList<>();
+
+    @Override
+    public void createFamily(Human m, Human f) {
+        Family fam = new Family(m, f);
+        listFam.add(fam);
+    }
 
     @Override
     public List<Family> getAllFamilies() {
