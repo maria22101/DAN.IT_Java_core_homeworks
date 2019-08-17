@@ -113,8 +113,8 @@ public class Family implements HumanCreator {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Family family = (Family) o;
-        return (children.size() == family.children.size()) &&
-                Objects.equals(pet, family.pet);
+        return family.getMother().equals(mother) &&
+                family.getFather().equals(father);
     }
 
     @Override

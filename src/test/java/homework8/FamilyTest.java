@@ -24,7 +24,10 @@ class FamilyTest {
         childrenList.add(child1);
         childrenList.add(child2);
         childrenList.add(child3);
-        familyInTest = new Family(new Human(), new Human());
+
+        Human mother = new Human("Inga", "Eton", 45);
+        Human father = new Human("Igor", "Eton", 46);
+        familyInTest = new Family(mother, father);
         familyInTest.setChildren(childrenList);
     }
 
@@ -97,5 +100,29 @@ class FamilyTest {
     @Test
     void countFamily() {
         assertEquals(5, familyInTest.countFamily());
+    }
+
+    @Test
+    void equalsAppliedToFamily(){
+        Human m1 = new Human("Inga", "Eton", 45);
+        Human f1 = new Human("Igor", "Eton", 46);
+        Family firstFamilyForEquals = new Family(m1, f1);
+
+        Human m2 = new Human("Inga", "Eton", 55);
+        Human f2 = new Human("Igor", "Eton", 56);
+        Family secondFamilyForEquals = new Family(m2, f2);
+
+        Human m3 = new Human("Inga", "Etoning", 45);
+        Human f3 = new Human("Igor", "Etoning", 46);
+        Family thirdFamilyForEquals = new Family(m3, f3);
+
+        Human h = new Human();
+
+        assertTrue(familyInTest.equals(familyInTest));
+        assertFalse(familyInTest.equals(null));
+        assertFalse(familyInTest.equals(h));
+        assertTrue(familyInTest.equals(firstFamilyForEquals));
+        assertFalse(familyInTest.equals(secondFamilyForEquals));
+        assertFalse(familyInTest.equals(thirdFamilyForEquals));
     }
 }

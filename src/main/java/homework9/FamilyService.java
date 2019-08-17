@@ -8,11 +8,11 @@ import java.util.List;
 import java.util.Set;
 
 public class FamilyService {
-    private FamilyDao fDao;
+    private FamilyDAO fDao;
 
-//    public List<Family> getAllFamilies() {
-//
-//    };
+    public List<Family> getAllFamilies() {
+        throw new IllegalArgumentException("not implemented yet");
+    };
 
     public void displayAllFamilies(){
 
@@ -26,41 +26,41 @@ public class FamilyService {
 
     }
 
-//    public int countFamiliesWithMemberNumber(int num){
-//
-//    }
+    public int countFamiliesWithMemberNumber(int num){
+        throw new IllegalArgumentException("not implemented yet");
+    }
 
     public void createNewFamily(Human m, Human f){
 
     }
 
-//    public boolean deleteFamilyByIndex(int index){
-//
-//    }
+    public boolean deleteFamilyByIndex(int index){
+        throw new IllegalArgumentException("not implemented yet");
+    }
 
-//    public Family bornChild(Family f, String femName, String maleName){
-//
-//    }
+    public Family bornChild(Family f, String femName, String maleName){
+        throw new IllegalArgumentException("not implemented yet");
+    }
 
-//    public Family adoptChild(Family f, Human h) {
-//
-//    }
+    public Family adoptChild(Family f, Human h) {
+        throw new IllegalArgumentException("not implemented yet");
+    }
 
     public void deleteAllChildrenOlderThen(int age){
 
     }
 
-//    public int count(){
-//
-//    }
+    public int count(){
+        throw new IllegalArgumentException("not implemented yet");
+    }
 
-//    public Family getFamilyById(int index) {
-//
-//    }
+    public Family getFamilyById(int index) {
+        throw new IllegalArgumentException("not implemented yet");
+    }
 
-//    public Set<Pet> getPets(Family f){
-//
-//    }
+    public Set<Pet> getPets(Family f){
+        throw new IllegalArgumentException("not implemented yet");
+    }
 
     public void addPet(int index, Pet pet){
 

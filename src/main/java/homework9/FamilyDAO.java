@@ -4,7 +4,7 @@ import homework8.Family;
 
 import java.util.List;
 
-public interface FamilyDao {
+public interface FamilyDAO {
     List<Family> getAllFamilies();
     Family getFamilyByIndex(int index);
     boolean deleteFamily(int index);
