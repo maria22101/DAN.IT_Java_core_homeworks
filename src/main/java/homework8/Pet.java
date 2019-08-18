@@ -12,13 +12,13 @@ public abstract class Pet {
     private int trickLevel;
     private Set<String> habits;
 
-    static {
-        System.out.println("New class Pet being loaded...");
-    }
-
-    {
-        System.out.println("New object of Pet type being created");
-    }
+//    static {
+//        System.out.println("New class Pet being loaded..."); // written for studying purposes
+//    }
+//
+//    {
+//        System.out.println("New object of Pet type being created"); // written for studying purposes
+//    }
 
     public Pet(String nickName) {
         this.nickName = nickName;

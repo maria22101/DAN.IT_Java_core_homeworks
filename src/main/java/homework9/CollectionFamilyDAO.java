@@ -10,8 +10,8 @@ public class CollectionFamilyDAO implements FamilyDAO {
     private List<Family> listFam = new ArrayList<>();
 
     @Override
-    public void createFamily(Human m, Human f) {
-        Family fam = new Family(m, f);
+    public void createFamily( Human f, Human m) {
+        Family fam = new Family(f, m);
         listFam.add(fam);
     }
 

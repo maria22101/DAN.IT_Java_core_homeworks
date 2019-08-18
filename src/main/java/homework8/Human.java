@@ -10,13 +10,13 @@ public class Human {
     private Map<String, String> schedule;
     private Family family;
 
-    static {
-        System.out.println("New class Human being loaded...");
-    }
-
-    {
-        System.out.println("New object of Human type being created");
-    }
+//    static {
+//        System.out.println("New class Human being loaded..."); // written for studying purposes
+//    }
+//
+//    {
+//        System.out.println("New object of Human type being created"); // written for studying purposes
+//    }
 
     public Human() {
     }
@@ -89,8 +89,8 @@ public class Human {
                 "name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", year=" + year +
-                ", iQ=" + iQ +
-                ", schedule=" + schedule +
+//                ", iQ=" + iQ + // excluded - for HW_9 testing simplicity
+//                ", schedule=" + schedule + // excluded - for HW_9 testing simplicity
                 '}';
     }
 

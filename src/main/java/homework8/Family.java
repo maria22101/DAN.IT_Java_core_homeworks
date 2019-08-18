@@ -8,20 +8,21 @@ public class Family implements HumanCreator {
     private List<Human> children;
     private Set<Pet> pet;
 
-    static {
-        System.out.println("New class Family being loaded...");
-    }
-
-    {
-        System.out.println("New object of Family type being created");
-    }
+//    static {
+//        System.out.println("New class Family being loaded..."); // written for studying purposes
+//    }
+//
+//    {
+//        System.out.println("New object of Family type being created"); // written for studying purposes
+//    }
 
     public Family(Human mother, Human father) {
         this.mother = mother;
         this.father = father;
         mother.setFamily(this);
         father.setFamily(this);
-        List<Human> children = new ArrayList<>();
+        children = new ArrayList<>();
+        pet = new HashSet<>();
     }
 
     void addChild(Human newChild) {

@@ -18,16 +18,14 @@ public class FamilyService {
         getAllFamilies().stream().forEach(System.out::println);
     }
 
-    public List<Family> getFamiliesBiggerThan(int num) {
+    public void getFamiliesBiggerThan(int num) {
         List<Family> list = getAllFamilies().stream().filter(f -> f.countFamily() > num).collect(Collectors.toList());
         list.stream().forEach(System.out::println);
-        return list;
     }
 
-    public List<Family> getFamiliesLessThan(int num) {
+    public void getFamiliesLessThan(int num) {
         List<Family> list = getAllFamilies().stream().filter(f -> f.countFamily() < num).collect(Collectors.toList());
         list.stream().forEach(System.out::println);
-        return list;
     }
 
     public int countFamiliesWithMemberNumber(int num) {
@@ -60,8 +58,7 @@ public class FamilyService {
         return f;
     }
 
-    public Family adoptChild(Family f, Human h) {
-        Human newChild = h;
+    public Family adoptChild(Family f, Human newChild) {
         newChild.setFamily(f);
         newChild.setSurname(f.getFather().getSurname());
         f.getChildren().add(newChild);
