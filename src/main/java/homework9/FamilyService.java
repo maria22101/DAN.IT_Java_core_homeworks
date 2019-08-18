@@ -1,10 +1,9 @@
 package homework9;
 
-import homework8.Family;
-import homework8.Human;
-import homework8.Pet;
+import homework8.*;
 
 import java.util.List;
+import java.util.Random;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -45,7 +44,20 @@ public class FamilyService {
     }
 
     public Family bornChild(Family f, String femName, String maleName){
-        throw new IllegalArgumentException("not implemented yet");
+        Human newChild;
+        Random rand = new Random();
+        if (rand.nextInt(2) == 0) {
+            newChild = new Woman();
+            newChild.setName(femName);
+        }else {
+            newChild = new Man();
+            newChild.setName(maleName);
+        }
+        newChild.setFamily(f);
+        newChild.setSurname(f.getFather().getSurname());
+        f.getChildren().add(newChild);
+        fDao.saveFamily(f);
+        return f;
     }
 
     public Family adoptChild(Family f, Human h) {
