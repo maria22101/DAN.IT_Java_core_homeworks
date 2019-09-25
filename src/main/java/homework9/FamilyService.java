@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 public class FamilyService {
     private FamilyDAO fDao = new CollectionFamilyDAO();
 
-    public List<Family> getAllFamilies() {
+    public List<Family> getAllFamilies() {//added in test - tested
         return fDao.getAllFamilies();
     }
 
@@ -33,7 +33,7 @@ public class FamilyService {
         return list.size();
     }
 
-    public void createNewFamily(Human m, Human f) {
+    public void createNewFamily(Human m, Human f) { //added in test -> tested
         fDao.createFamily(m, f);
     }
 

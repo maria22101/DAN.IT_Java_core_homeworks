@@ -1,6 +1,6 @@
 package homework10;
 
-public class Demo {
+public class Main {
     public static void main(String[] args) {
 
         Human h = new Human("Mari", "Clair", 1103760000000L);
