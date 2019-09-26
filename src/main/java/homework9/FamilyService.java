@@ -14,7 +14,7 @@ public class FamilyService {
         return fDao.getAllFamilies();
     }
 
-    public void displayAllFamilies() {
+    public void displayAllFamilies() {//added in test
         getAllFamilies().stream().forEach(System.out::println);
     }
 

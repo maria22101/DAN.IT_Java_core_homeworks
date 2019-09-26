@@ -20,20 +20,7 @@ class FamilyServiceTest {
     }
 
     @Test
-    void createNewFamily(){
-        Human motherNew = new Human("Tina", "Trace", 22);
-        Human fatherNew = new Human("Tyler", "Trace", 24);
-        Family fNew = new Family(motherNew, fatherNew);
-
-        List<Family> listFamilies = new ArrayList<Family>();
-        listFamilies.add(fNew);
-
-        famServiceInTest.createNewFamily(motherNew, fatherNew);
-        assertEquals(listFamilies, famServiceInTest.getAllFamilies());
-    }
-
-    @Test
-    void getAllFamilies() {
+    void createNewFamily_and_getAllFamilies(){
         Human mother1 = new Human("Inga", "Eton", 45);
         Human father1 = new Human("Igor", "Eton", 46);
         Family f1 = new Family(mother1, father1);
@@ -42,11 +29,18 @@ class FamilyServiceTest {
         Human father2 = new Human("Mark", "Morris", 38);
         Family f2 = new Family(mother2, father2);
 
-        List<Family> listFamilies = new ArrayList<>();
+        List<Family> listFamilies = new ArrayList<Family>();
         listFamilies.add(f1);
         listFamilies.add(f2);
 
-        List<Family> result = famServiceInTest.getAllFamilies();
-        assertEquals(result, famServiceInTest.getAllFamilies());
+        famServiceInTest.createNewFamily(mother1, father1);
+        famServiceInTest.createNewFamily(mother2, father2);
+
+        assertEquals(listFamilies, famServiceInTest.getAllFamilies());
+    }
+
+    @Test
+    void displayAllFamilies_storageOfFamiliesDisplayed(){
+        //not implemented yet
     }
 }
