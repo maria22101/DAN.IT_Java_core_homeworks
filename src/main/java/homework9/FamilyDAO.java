@@ -6,10 +6,10 @@ import homework8.Human;
 import java.util.List;
 
 public interface FamilyDAO {
-    void createFamily(Human m, Human f);
+    void createFamily(Human female, Human male);
     List<Family> getAllFamilies();
-    Family getFamilyByIndex(int index);
-    boolean deleteFamily(int index);
-    boolean deleteFamily(Family f);
-    void saveFamily(Family f);
+    Family getFamilyByIndex(int familyToGetIndex);
+    boolean deleteFamily(int familyToDeleteIndex);
+    boolean deleteFamily(Family familyToDelete);
+    void saveFamily(Family familyToSave);
 }

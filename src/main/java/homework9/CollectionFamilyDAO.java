@@ -10,8 +10,8 @@ public class CollectionFamilyDAO implements FamilyDAO {
     private List<Family> listFam = new ArrayList<>();
 
     @Override
-    public void createFamily( Human f, Human m) {
-        Family fam = new Family(f, m);
+    public void createFamily(Human female, Human male) {
+        Family fam = new Family(female, male);
         listFam.add(fam);
     }
 
@@ -21,25 +21,25 @@ public class CollectionFamilyDAO implements FamilyDAO {
     }
 
     @Override
-    public Family getFamilyByIndex(int index) {
-        if (index < listFam.size()) {
-            return listFam.get(index);
+    public Family getFamilyByIndex(int familyToGetIndex) {
+        if (familyToGetIndex < listFam.size()) {
+            return listFam.get(familyToGetIndex);
         } else return null;
     }
 
     @Override
-    public boolean deleteFamily(int index) {
-        if (index < listFam.size()) {
-            listFam.remove(index);
+    public boolean deleteFamily(int familyToDeleteIndex) {
+        if (familyToDeleteIndex < listFam.size()) {
+            listFam.remove(familyToDeleteIndex);
             return true;
         } else return false;
     }
 
     @Override
-    public boolean deleteFamily(Family f) {
+    public boolean deleteFamily(Family familyToDelete) {
         for (Family fam : listFam) {
-            if (fam.equals(f)) {
-                listFam.remove(f);
+            if (fam.equals(familyToDelete)) {
+                listFam.remove(familyToDelete);
                 return true;
             }
         }
@@ -47,10 +47,10 @@ public class CollectionFamilyDAO implements FamilyDAO {
     }
 
     @Override
-    public void saveFamily(Family f) {
-        if (listFam.contains(f)) {
-            listFam.set(listFam.indexOf(f), f);
+    public void saveFamily(Family familyToSave) {
+        if (listFam.contains(familyToSave)) {
+            listFam.set(listFam.indexOf(familyToSave), familyToSave);
             return;
-        }else listFam.add(f);
+        }else listFam.add(familyToSave);
     }
 }
