@@ -7,8 +7,7 @@ public class Main {
         System.out.println(h);
         System.out.println(h.describeAge());
 
-        Human adoptedChild = new Human("Lu", "Yong", "20/03/2016", 95);
+        Human adoptedChild = new Human("Lu", "Yong", "02/03/2016", 95);
         System.out.println(adoptedChild);
-
     }
 }
