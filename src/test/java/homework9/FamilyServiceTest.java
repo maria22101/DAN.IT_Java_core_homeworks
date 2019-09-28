@@ -55,4 +55,14 @@ class FamilyServiceTest {
         String outputString = new String(output.toByteArray());
         assertEquals(result, outputString);
     }
+
+    @Test
+    void getFamilyById(){
+        Family expectedFamily = new Family(new Human("Mia", "Morris", 33), new Human("Mark", "Morris", 38));
+        Family returnedFamily = famServiceInTest.getFamilyById(1);
+        assertEquals(expectedFamily, returnedFamily);
+
+        int notExistingFamilyIndex = 3;
+        assertEquals(null, famServiceInTest.getFamilyById(notExistingFamilyIndex));
+    }
 }

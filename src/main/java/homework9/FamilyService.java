@@ -84,7 +84,7 @@ public class FamilyService {
         return getAllFamilies().size();
     }
 
-    public Family getFamilyById(int familyToGetIndex) {
+    public Family getFamilyById(int familyToGetIndex) { //added to test - tested
         return fDao.getFamilyByIndex(familyToGetIndex);
     }
 
