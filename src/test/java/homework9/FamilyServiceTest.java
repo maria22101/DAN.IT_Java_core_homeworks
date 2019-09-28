@@ -65,4 +65,11 @@ class FamilyServiceTest {
         int notExistingFamilyIndex = 3;
         assertEquals(null, famServiceInTest.getFamilyById(notExistingFamilyIndex));
     }
+
+    @Test
+    void deleteFamilyByIndex(){
+        assertTrue(famServiceInTest.deleteFamilyByIndex(0));
+        listFamilies.remove(0);
+        assertEquals(listFamilies, famServiceInTest.getAllFamilies());
+    }
 }
