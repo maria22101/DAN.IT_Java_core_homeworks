@@ -71,5 +71,36 @@ class FamilyServiceTest {
         assertTrue(famServiceInTest.deleteFamilyByIndex(0));
         listFamilies.remove(0);
         assertEquals(listFamilies, famServiceInTest.getAllFamilies());
+        assertFalse(famServiceInTest.deleteFamilyByIndex(4));
+    }
+
+    @Test
+    void bornChild(){
+        Family familyToBornChild = famServiceInTest.getFamilyById(1);
+        Family returnedFamilyWithChild = famServiceInTest.bornChild(familyToBornChild, "Mari", "Mike");
+
+        Family expectedFamilyWithChild1 = new Family(new Human("Mia", "Morris", 33), new Human("Mark", "Morris", 38));
+        Family expectedFamilyWithChild2 = new Family(new Human("Mia", "Morris", 33), new Human("Mark", "Morris", 38));
+        List<Human> childrenList1 = new ArrayList<>();
+        List<Human> childrenList2 = new ArrayList<>();
+
+        Human child1 = new Human();
+        child1.setName("Mari");
+        child1.setSurname(expectedFamilyWithChild1.getFather().getSurname());
+        child1.setFamily(expectedFamilyWithChild1);
+
+        Human child2 = new Human();
+        child2.setName("Mike");
+        child2.setSurname(expectedFamilyWithChild2.getFather().getSurname());
+        child2.setFamily(expectedFamilyWithChild2);
+
+        childrenList1.add(child1);
+        childrenList2.add(child2);
+        expectedFamilyWithChild1.setChildren(childrenList1);
+        expectedFamilyWithChild2.setChildren(childrenList2);
+
+        boolean expectedResult1 = expectedFamilyWithChild1.equals(returnedFamilyWithChild);
+        boolean expectedResult2 = expectedFamilyWithChild2.equals(returnedFamilyWithChild);
+        assertTrue(expectedResult1 || expectedResult2);
     }
 }

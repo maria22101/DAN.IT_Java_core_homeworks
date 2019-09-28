@@ -37,7 +37,7 @@ public class FamilyService {
         fDao.createFamily(female, male);
     }
 
-    public boolean deleteFamilyByIndex(int familyToDeleteIndex) { //added in test
+    public boolean deleteFamilyByIndex(int familyToDeleteIndex) { //added in test - tested
         return fDao.deleteFamily(familyToDeleteIndex);
     }
 
