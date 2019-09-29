@@ -49,8 +49,8 @@ public class FamilyController {
         return f;
     }
 
-    public void deleteAllChildrenOlderThen(int age) { //tested in Main
-        famService.deleteAllChildrenOlderThen(age);
+    public void deleteAllChildrenOlderThan(int age) { //tested in Main
+        famService.deleteAllChildrenOlderThan(age);
     }
 
     public int count() {//tested in Main

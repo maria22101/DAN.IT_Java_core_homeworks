@@ -121,6 +121,33 @@ class FamilyServiceTest {
     }
 
     @Test
+    void deleteAllChildrenOlderThan_childrenWithRequestedAgeRemovedFromFamily(){
+        Human childToBeAdopted1 = new Human("Elise", "Cooper", 5);
+        Human childToBeAdopted2 = new Human("Frank", "Cooper", 14);
+        Human childToBeAdopted3 = new Human("Gemma", "Cooper", 19);
+        Human childToBeAdopted4 = new Human("Hank", "Cooper", 21);
+
+        Family exampleFamily = new Family(new Human(), new Human());
+        exampleFamily.addChild(childToBeAdopted1);
+        exampleFamily.addChild(childToBeAdopted2);
+        exampleFamily.addChild(childToBeAdopted3);
+        exampleFamily.addChild(childToBeAdopted4);
+        exampleFamily.deleteChild(childToBeAdopted3);
+        exampleFamily.deleteChild(childToBeAdopted4);
+        List<Human> expectedChildrenList = exampleFamily.getChildren();
+
+        Family familyTested = famServiceInTest.getFamilyById(1);
+        famServiceInTest.adoptChild(familyTested, childToBeAdopted1);
+        famServiceInTest.adoptChild(familyTested, childToBeAdopted2);
+        famServiceInTest.adoptChild(familyTested, childToBeAdopted3);
+        famServiceInTest.adoptChild(familyTested, childToBeAdopted4);
+        famServiceInTest.deleteAllChildrenOlderThan(18);
+        List<Human> returnedChildrenList = famServiceInTest.getFamilyById(1).getChildren();
+
+        assertEquals(expectedChildrenList, returnedChildrenList);
+    }
+
+    @Test
     void count_returnNumberOfFamilies() {
         int expectedResult = listFamilies.size();
         int returnedResult = famServiceInTest.count();
@@ -161,8 +188,8 @@ class FamilyServiceTest {
         Set<Pet> returnedPets = famServiceInTest.getPets(1);
         assertEquals(expectedPets, returnedPets);
 
-        Set<Pet> expectedNullPets = famServiceInTest.getFamilyById(0).getPet();
-        Set<Pet> returnedNullPets = famServiceInTest.getPets(0);
-        assertEquals(expectedNullPets, returnedNullPets);
+        Set<Pet> expectedEmptyPetsSet = famServiceInTest.getFamilyById(0).getPet();
+        Set<Pet> returnedEmptyPetsSet = famServiceInTest.getPets(0);
+        assertEquals(expectedEmptyPetsSet, returnedEmptyPetsSet);
     }
 }

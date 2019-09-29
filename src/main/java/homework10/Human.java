@@ -32,7 +32,7 @@ public class Human {
 
     public Human(String name, String surname, String adoptedChildBirthDate, int iQ) { //Constructor for an adopted child
         this(name, surname, LocalDate
-                .parse(adoptedChildBirthDate, DateTimeFormatter.ofPattern("d/MM/yyyy"))
+                .parse(adoptedChildBirthDate, DateTimeFormatter.ofPattern("dd/MM/yyyy"))
                 .atStartOfDay(ZoneId.systemDefault())
                 .toInstant()
                 .toEpochMilli()

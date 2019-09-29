@@ -85,7 +85,7 @@ public class Main {
         System.out.println();
 
         System.out.println("====children older than 16 left their families====");
-        famController.deleteAllChildrenOlderThen(16);
+        famController.deleteAllChildrenOlderThan(16);
         famController.displayAllFamilies();
         System.out.println();
 

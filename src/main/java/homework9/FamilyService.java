@@ -66,7 +66,7 @@ public class FamilyService {
         return family;
     }
 
-    public void deleteAllChildrenOlderThen(int ageToCompareWith) {
+    public void deleteAllChildrenOlderThan(int ageToCompareWith) {
 
         for (Family fam : getAllFamilies()) {
             if (fam.getChildren().stream().filter(ch -> ch.getYear() > ageToCompareWith).collect(Collectors.toList()).size() > 0) {
@@ -80,7 +80,7 @@ public class FamilyService {
         }
     }
 
-    public int count() {
+    public int count() {//added to test - tested
         return getAllFamilies().size();
     }
 
@@ -88,11 +88,11 @@ public class FamilyService {
         return fDao.getFamilyByIndex(familyToGetIndex);
     }
 
-    public Set<Pet> getPets(int familyWhichPetsRequestedIndex) {
+    public Set<Pet> getPets(int familyWhichPetsRequestedIndex) {//added to test - tested
         return fDao.getFamilyByIndex(familyWhichPetsRequestedIndex).getPet();
     }
 
-    public void addPet(int familyWhichTakesPetIndex, Pet pet) {
+    public void addPet(int familyWhichTakesPetIndex, Pet pet) {//added to test - tested
         Family fam = fDao.getFamilyByIndex(familyWhichTakesPetIndex);
         fam.getPet().add(pet);
         fDao.saveFamily(fam);

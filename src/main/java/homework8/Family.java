@@ -25,7 +25,7 @@ public class Family implements HumanCreator {
         pet = new HashSet<>();
     }
 
-    void addChild(Human newChild) {
+    public void addChild(Human newChild) {
         children.add(newChild);
         newChild.setFamily(this);
     }
@@ -106,7 +106,6 @@ public class Family implements HumanCreator {
     @Override
     protected void finalize() throws Throwable {
         System.out.println(this.toString() + "is being deleted...");
-        ;
     }
 
     @Override
