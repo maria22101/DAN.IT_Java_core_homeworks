@@ -41,7 +41,7 @@ public class FamilyService {
         return fDao.deleteFamily(familyToDeleteIndex);
     }
 
-    public Family bornChild(Family family, String femaleName, String maleName) {
+    public Family bornChild(Family family, String femaleName, String maleName) { //added in test - tested
         Human newChild;
         Random rand = new Random();
         if (rand.nextInt(2) == 0) {
@@ -58,7 +58,7 @@ public class FamilyService {
         return family;
     }
 
-    public Family adoptChild(Family family, Human newChild) {
+    public Family adoptChild(Family family, Human newChild) { //added in test
         newChild.setFamily(family);
         newChild.setSurname(family.getFather().getSurname());
         family.getChildren().add(newChild);

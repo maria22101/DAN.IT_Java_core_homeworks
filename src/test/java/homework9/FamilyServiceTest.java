@@ -57,7 +57,7 @@ class FamilyServiceTest {
     }
 
     @Test
-    void getFamilyById(){
+    void getFamilyById_correctFamilyReturned_nullIfIndexNotFound(){
         Family expectedFamily = new Family(new Human("Mia", "Morris", 33), new Human("Mark", "Morris", 38));
         Family returnedFamily = famServiceInTest.getFamilyById(1);
         assertEquals(expectedFamily, returnedFamily);
@@ -67,7 +67,7 @@ class FamilyServiceTest {
     }
 
     @Test
-    void deleteFamilyByIndex(){
+    void deleteFamilyByIndex_trueOrFalseReturned_correctListOfFamiliesRemained(){
         assertTrue(famServiceInTest.deleteFamilyByIndex(0));
         listFamilies.remove(0);
         assertEquals(listFamilies, famServiceInTest.getAllFamilies());
@@ -75,7 +75,7 @@ class FamilyServiceTest {
     }
 
     @Test
-    void bornChild(){
+    void bornChild_familyWithBornChildReturned(){
         Family familyToBornChild = famServiceInTest.getFamilyById(1);
         Family returnedFamilyWithChild = famServiceInTest.bornChild(familyToBornChild, "Mari", "Mike");
 
@@ -102,5 +102,17 @@ class FamilyServiceTest {
         boolean expectedResult1 = expectedFamilyWithChild1.equals(returnedFamilyWithChild);
         boolean expectedResult2 = expectedFamilyWithChild2.equals(returnedFamilyWithChild);
         assertTrue(expectedResult1 || expectedResult2);
+    }
+
+    @Test
+    void adoptChild_familyWithAdoptedChildReturned(){
+        Family familyToAdoptChild = famServiceInTest.getFamilyById(0);
+        Human childToBeAdopted = new Human("Elise", "Cooper", 5);
+        childToBeAdopted.setFamily(familyToAdoptChild);
+        childToBeAdopted.setSurname(familyToAdoptChild.getFather().getSurname());
+        familyToAdoptChild.getChildren().add(childToBeAdopted);
+
+        Family returnedFamilyWithAdoptedChild = famServiceInTest.adoptChild(familyToAdoptChild, childToBeAdopted);
+        assertTrue(familyToAdoptChild.equals(familyToAdoptChild));
     }
 }
