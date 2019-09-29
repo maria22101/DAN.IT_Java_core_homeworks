@@ -113,6 +113,6 @@ class FamilyServiceTest {
         familyToAdoptChild.getChildren().add(childToBeAdopted);
 
         Family returnedFamilyWithAdoptedChild = famServiceInTest.adoptChild(familyToAdoptChild, childToBeAdopted);
-        assertTrue(familyToAdoptChild.equals(familyToAdoptChild));
+        assertTrue(familyToAdoptChild.equals(returnedFamilyWithAdoptedChild));
     }
 }
