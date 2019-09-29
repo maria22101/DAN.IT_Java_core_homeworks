@@ -94,6 +94,20 @@ class FamilyServiceTest {
     }
 
     @Test
+    void getFamiliesLessThan_familiesWithLessThanRequestedMemebersNumberReturned(){
+        famServiceInTest.adoptChild(famServiceInTest.getFamilyById(1), new Human("Emi", "Young", 6));
+
+        String expectedResult = "Family{mother=Human{name='Eva', surname='Eton', year=45}, " +
+                "father=Human{name='El', surname='Eton', year=46}, children=[], pet=[]}\r\n";
+
+        ByteArrayOutputStream output = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(output));
+        famServiceInTest.getFamiliesLessThan(3);
+        String result = new String(output.toByteArray());
+        assertEquals(expectedResult, result);
+    }
+
+    @Test
     void getFamilyById_correctFamilyReturned_nullIfIndexNotFound() {
         Family expectedFamily = new Family(new Human("Mia", "Morris", 33), new Human("Mark", "Morris", 38));
         Family returnedFamily = famServiceInTest.getFamilyById(1);

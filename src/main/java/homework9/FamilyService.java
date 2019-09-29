@@ -18,12 +18,12 @@ public class FamilyService {
         getAllFamilies().stream().forEach(System.out::println);
     }
 
-    public void getFamiliesBiggerThan(int familySize) {
+    public void getFamiliesBiggerThan(int familySize) {// added in test - tested
         List<Family> list = getAllFamilies().stream().filter(f -> f.countFamily() > familySize).collect(Collectors.toList());
         list.stream().forEach(System.out::println);
     }
 
-    public void getFamiliesLessThan(int familySize) {
+    public void getFamiliesLessThan(int familySize) {// added in test - tested
         List<Family> list = getAllFamilies().stream().filter(f -> f.countFamily() < familySize).collect(Collectors.toList());
         list.stream().forEach(System.out::println);
     }
