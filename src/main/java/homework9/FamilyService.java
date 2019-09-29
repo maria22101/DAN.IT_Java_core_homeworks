@@ -66,7 +66,7 @@ public class FamilyService {
         return family;
     }
 
-    public void deleteAllChildrenOlderThan(int ageToCompareWith) {
+    public void deleteAllChildrenOlderThan(int ageToCompareWith) {//added in test - tested
 
         for (Family fam : getAllFamilies()) {
             if (fam.getChildren().stream().filter(ch -> ch.getYear() > ageToCompareWith).collect(Collectors.toList()).size() > 0) {

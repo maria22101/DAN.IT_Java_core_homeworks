@@ -61,6 +61,39 @@ class FamilyServiceTest {
     }
 
     @Test
+    void getFamiliesBiggerThan_familiesWithMoreThanRequestedMemebersNumberReturned(){
+        Human mother3 = new Human("Kate", "Kean", 23);
+        Human father3 = new Human("Klive", "Kean", 24);
+        Family f3 = new Family(mother3, father3);
+        listFamilies.add(f3);
+        famServiceInTest.createNewFamily(mother3, father3);
+
+        famServiceInTest.adoptChild(famServiceInTest.getFamilyById(0), new Human("Emi", "Young", 6));
+        famServiceInTest.adoptChild(famServiceInTest.getFamilyById(0), new Human("Elizabeth", "Young", 8));
+        famServiceInTest.bornChild(famServiceInTest.getFamilyById(2), "Kendra", "Kolin");
+
+        String expectedResult1 = "Family{mother=Human{name='Eva', surname='Eton', year=45}, " +
+                "father=Human{name='El', surname='Eton', year=46}, children=[Human{name='Emi', surname='Eton', year=6}," +
+                " Human{name='Elizabeth', surname='Eton', year=8}], pet=[]}\r\n" +
+                "Family{mother=Human{name='Kate', surname='Kean', year=23}, " +
+                "father=Human{name='Klive', surname='Kean', year=24}, " +
+                "children=[Human{name='Kendra', surname='Kean', year=0}], pet=[]}\r\n";
+
+        String expectedResult2 = "Family{mother=Human{name='Eva', surname='Eton', year=45}, " +
+                "father=Human{name='El', surname='Eton', year=46}, children=[Human{name='Emi', surname='Eton', year=6}," +
+                " Human{name='Elizabeth', surname='Eton', year=8}], pet=[]}\r\n" +
+                "Family{mother=Human{name='Kate', surname='Kean', year=23}, " +
+                "father=Human{name='Klive', surname='Kean', year=24}, " +
+                "children=[Human{name='Kolin', surname='Kean', year=0}], pet=[]}\r\n";
+
+        ByteArrayOutputStream output = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(output));
+        famServiceInTest.getFamiliesBiggerThan(2);
+        String result = new String(output.toByteArray());
+        assertTrue(expectedResult1.equals(result) || expectedResult2.equals(result));
+    }
+
+    @Test
     void getFamilyById_correctFamilyReturned_nullIfIndexNotFound() {
         Family expectedFamily = new Family(new Human("Mia", "Morris", 33), new Human("Mark", "Morris", 38));
         Family returnedFamily = famServiceInTest.getFamilyById(1);
