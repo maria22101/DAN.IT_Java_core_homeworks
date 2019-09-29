@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a6cfef6-0c35-4cc2-8150-160c48de1dc8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/homework9/FamilyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homework9/FamilyService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/homework9/FamilyServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/homework9/FamilyServiceTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -75,13 +74,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="39" />
-          <entry key="java" value="38128" />
+          <entry key="java" value="38314" />
           <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="38128" />
+          <entry key="JAVA" value="38314" />
           <entry key="PLAIN_TEXT" value="39" />
           <entry key="XML" value="3" />
         </counts>
@@ -102,8 +101,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/homework9/FamilyService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="169">
+              <caret line="30" column="59" selection-start-line="30" selection-start-column="49" selection-end-line="30" selection-end-column="59" />
               <folding>
                 <element signature="e#275#276#0" expanded="true" />
                 <element signature="e#375#376#0" expanded="true" />
@@ -125,10 +124,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/homework9/FamilyServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="107" column="45" selection-start-line="107" selection-start-column="45" selection-end-line="107" selection-end-column="45" />
+            <state relative-caret-position="238">
+              <caret line="112" column="49" selection-start-line="112" selection-start-column="49" selection-end-line="112" selection-end-column="49" />
               <folding>
                 <element signature="method#createNewFamily_and_getAllFamilies#0;class#FamilyServiceTest#0" />
+                <element signature="method#displayAllFamilies_storageOfFamiliesDisplayed#0;class#FamilyServiceTest#0" />
                 <element signature="method#getFamilyById_correctFamilyReturned_nullIfIndexNotFound#0;class#FamilyServiceTest#0" />
                 <element signature="method#deleteFamilyByIndex_trueOrFalseReturned_correctListOfFamiliesRemained#0;class#FamilyServiceTest#0" />
                 <element signature="method#bornChild_familyWithBornChildReturned#0;class#FamilyServiceTest#0" />
@@ -145,7 +145,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/homework8/Family.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
+            <state relative-caret-position="-415">
               <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
             </state>
           </provider>
@@ -399,7 +399,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.FamilyServiceTest.getFamiliesLessThan_familiesWithLessThanRequestedMemebersNumberReturned">
+  <component name="RunManager" selected="JUnit.FamilyServiceTest.countFamiliesWithMemberNumber_numberOfFamiliesWithRequestedMembersNumberReturned">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="homework10.Main" />
       <module name="DAN.IT_Java_core_homeworks" />
@@ -409,6 +409,22 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FamilyServiceTest.countFamiliesWithMemberNumber_numberOfFamiliesWithRequestedMembersNumberReturned" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DAN.IT_Java_core_homeworks" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="homework9.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="homework9" />
+      <option name="MAIN_CLASS_NAME" value="homework9.FamilyServiceTest" />
+      <option name="METHOD_NAME" value="countFamiliesWithMemberNumber_numberOfFamiliesWithRequestedMembersNumberReturned" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -424,22 +440,6 @@
       <option name="PACKAGE_NAME" value="homework9" />
       <option name="MAIN_CLASS_NAME" value="homework9.FamilyServiceTest" />
       <option name="METHOD_NAME" value="deleteAllChildrenOlderThan_childrenWithRequestedAgeRemovedFromFamily" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FamilyServiceTest.deleteAllChildrenOlderThen_childrenWithRequestedAgeRemovedFromFamily" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DAN.IT_Java_core_homeworks" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="homework9.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="homework9" />
-      <option name="MAIN_CLASS_NAME" value="homework9.FamilyServiceTest" />
-      <option name="METHOD_NAME" value="deleteAllChildrenOlderThen_childrenWithRequestedAgeRemovedFromFamily" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -478,19 +478,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.FamilyServiceTest.deleteAllChildrenOlderThen_childrenWithRequestedAgeRemovedFromFamily" />
       <item itemvalue="JUnit.FamilyServiceTest.deleteAllChildrenOlderThan_childrenWithRequestedAgeRemovedFromFamily" />
       <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.FamilyServiceTest.getFamiliesBiggerThan_familiesWithMoreThanRequestedMemebersNumberReturned" />
       <item itemvalue="JUnit.FamilyServiceTest.getFamiliesLessThan_familiesWithLessThanRequestedMemebersNumberReturned" />
+      <item itemvalue="JUnit.FamilyServiceTest.countFamiliesWithMemberNumber_numberOfFamiliesWithRequestedMembersNumberReturned" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.FamilyServiceTest.getFamiliesLessThan_familiesWithLessThanRequestedMemebersNumberReturned" />
+        <item itemvalue="JUnit.FamilyServiceTest.countFamiliesWithMemberNumber_numberOfFamiliesWithRequestedMembersNumberReturned" />
         <item itemvalue="JUnit.FamilyServiceTest.getFamiliesBiggerThan_familiesWithMoreThanRequestedMemebersNumberReturned" />
+        <item itemvalue="JUnit.FamilyServiceTest.getFamiliesLessThan_familiesWithLessThanRequestedMemebersNumberReturned" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.FamilyServiceTest.deleteAllChildrenOlderThan_childrenWithRequestedAgeRemovedFromFamily" />
-        <item itemvalue="JUnit.FamilyServiceTest.deleteAllChildrenOlderThen_childrenWithRequestedAgeRemovedFromFamily" />
       </list>
     </recent_temporary>
   </component>
@@ -508,18 +508,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FamilyServiceTest_deleteAllChildrenOlderThen_childrenWithRequestedAgeRemovedFromFamily - 2019.09.29 at 17h 45m 07s.xml">
-      <configuration name="FamilyServiceTest.deleteAllChildrenOlderThen_childrenWithRequestedAgeRemovedFromFamily" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FamilyServiceTest_deleteAllChildrenOlderThen_childrenWithRequestedAgeRemovedFromFamily - 2019.09.29 at 17h 49m 53s.xml">
-      <configuration name="FamilyServiceTest.deleteAllChildrenOlderThen_childrenWithRequestedAgeRemovedFromFamily" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FamilyServiceTest_deleteAllChildrenOlderThan_childrenWithRequestedAgeRemovedFromFamily - 2019.09.29 at 21h 19m 24s.xml">
-      <configuration name="FamilyServiceTest.deleteAllChildrenOlderThan_childrenWithRequestedAgeRemovedFromFamily" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FamilyServiceTest_deleteAllChildrenOlderThan_childrenWithRequestedAgeRemovedFromFamily - 2019.09.29 at 21h 20m 14s.xml">
-      <configuration name="FamilyServiceTest.deleteAllChildrenOlderThan_childrenWithRequestedAgeRemovedFromFamily" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="FamilyServiceTest_deleteAllChildrenOlderThan_childrenWithRequestedAgeRemovedFromFamily - 2019.09.29 at 21h 25m 09s.xml">
       <configuration name="FamilyServiceTest.deleteAllChildrenOlderThan_childrenWithRequestedAgeRemovedFromFamily" configurationId="JUnit" />
     </history-entry>
@@ -537,6 +525,18 @@
     </history-entry>
     <history-entry file="FamilyServiceTest_getFamiliesBiggerThan_familiesWithMoreThanRequestedMemebersNumberReturned - 2019.09.29 at 22h 11m 59s.xml">
       <configuration name="FamilyServiceTest.getFamiliesBiggerThan_familiesWithMoreThanRequestedMemebersNumberReturned" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FamilyServiceTest_getFamiliesLessThan_familiesWithLessThanRequestedMemebersNumberReturned - 2019.09.29 at 22h 18m 47s.xml">
+      <configuration name="FamilyServiceTest.getFamiliesLessThan_familiesWithLessThanRequestedMemebersNumberReturned" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FamilyServiceTest_getFamiliesLessThan_familiesWithLessThanRequestedMemebersNumberReturned - 2019.09.29 at 22h 19m 08s.xml">
+      <configuration name="FamilyServiceTest.getFamiliesLessThan_familiesWithLessThanRequestedMemebersNumberReturned" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FamilyServiceTest_getFamiliesBiggerThan_familiesWithMoreThanRequestedMemebersNumberReturned - 2019.09.29 at 22h 27m 48s.xml">
+      <configuration name="FamilyServiceTest.getFamiliesBiggerThan_familiesWithMoreThanRequestedMemebersNumberReturned" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FamilyServiceTest_countFamiliesWithMemberNumber_numberOfFamiliesWithRequestedMembersNumberReturned - 2019.09.29 at 22h 30m 10s.xml">
+      <configuration name="FamilyServiceTest.countFamiliesWithMemberNumber_numberOfFamiliesWithRequestedMembersNumberReturned" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -886,13 +886,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/homework8/Family.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/homework8/Human.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1156">
@@ -914,10 +907,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homework8/Family.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-415">
+          <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/homework9/FamilyService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="169">
+          <caret line="30" column="59" selection-start-line="30" selection-start-column="49" selection-end-line="30" selection-end-column="59" />
           <folding>
             <element signature="e#275#276#0" expanded="true" />
             <element signature="e#375#376#0" expanded="true" />
@@ -937,10 +937,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/homework9/FamilyServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="107" column="45" selection-start-line="107" selection-start-column="45" selection-end-line="107" selection-end-column="45" />
+        <state relative-caret-position="238">
+          <caret line="112" column="49" selection-start-line="112" selection-start-column="49" selection-end-line="112" selection-end-column="49" />
           <folding>
             <element signature="method#createNewFamily_and_getAllFamilies#0;class#FamilyServiceTest#0" />
+            <element signature="method#displayAllFamilies_storageOfFamiliesDisplayed#0;class#FamilyServiceTest#0" />
             <element signature="method#getFamilyById_correctFamilyReturned_nullIfIndexNotFound#0;class#FamilyServiceTest#0" />
             <element signature="method#deleteFamilyByIndex_trueOrFalseReturned_correctListOfFamiliesRemained#0;class#FamilyServiceTest#0" />
             <element signature="method#bornChild_familyWithBornChildReturned#0;class#FamilyServiceTest#0" />

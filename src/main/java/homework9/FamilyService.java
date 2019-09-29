@@ -10,20 +10,20 @@ import java.util.stream.Collectors;
 public class FamilyService {
     private FamilyDAO fDao = new CollectionFamilyDAO();
 
-    public List<Family> getAllFamilies() {//added in test - tested (together with createNewFamily)
+    public List<Family> getAllFamilies() {
         return fDao.getAllFamilies();
     }
 
-    public void displayAllFamilies() {//added in test - tested
+    public void displayAllFamilies() {
         getAllFamilies().stream().forEach(System.out::println);
     }
 
-    public void getFamiliesBiggerThan(int familySize) {// added in test - tested
+    public void getFamiliesBiggerThan(int familySize) {
         List<Family> list = getAllFamilies().stream().filter(f -> f.countFamily() > familySize).collect(Collectors.toList());
         list.stream().forEach(System.out::println);
     }
 
-    public void getFamiliesLessThan(int familySize) {// added in test - tested
+    public void getFamiliesLessThan(int familySize) {
         List<Family> list = getAllFamilies().stream().filter(f -> f.countFamily() < familySize).collect(Collectors.toList());
         list.stream().forEach(System.out::println);
     }
@@ -33,15 +33,15 @@ public class FamilyService {
         return list.size();
     }
 
-    public void createNewFamily(Human female, Human male) { //added in test -> tested (together with getAllFamilies)
+    public void createNewFamily(Human female, Human male) {
         fDao.createFamily(female, male);
     }
 
-    public boolean deleteFamilyByIndex(int familyToDeleteIndex) { //added in test - tested
+    public boolean deleteFamilyByIndex(int familyToDeleteIndex) {
         return fDao.deleteFamily(familyToDeleteIndex);
     }
 
-    public Family bornChild(Family family, String femaleName, String maleName) { //added in test - tested
+    public Family bornChild(Family family, String femaleName, String maleName) {
         Human newChild;
         Random rand = new Random();
         if (rand.nextInt(2) == 0) {
@@ -58,7 +58,7 @@ public class FamilyService {
         return family;
     }
 
-    public Family adoptChild(Family family, Human newChild) { //added in test - tested
+    public Family adoptChild(Family family, Human newChild) {
         newChild.setFamily(family);
         newChild.setSurname(family.getFather().getSurname());
         family.getChildren().add(newChild);
@@ -66,7 +66,7 @@ public class FamilyService {
         return family;
     }
 
-    public void deleteAllChildrenOlderThan(int ageToCompareWith) {//added in test - tested
+    public void deleteAllChildrenOlderThan(int ageToCompareWith) {
 
         for (Family fam : getAllFamilies()) {
             if (fam.getChildren().stream().filter(ch -> ch.getYear() > ageToCompareWith).collect(Collectors.toList()).size() > 0) {
@@ -80,19 +80,19 @@ public class FamilyService {
         }
     }
 
-    public int count() {//added to test - tested
+    public int count() {
         return getAllFamilies().size();
     }
 
-    public Family getFamilyById(int familyToGetIndex) { //added to test - tested
+    public Family getFamilyById(int familyToGetIndex) {
         return fDao.getFamilyByIndex(familyToGetIndex);
     }
 
-    public Set<Pet> getPets(int familyWhichPetsRequestedIndex) {//added to test - tested
+    public Set<Pet> getPets(int familyWhichPetsRequestedIndex) {
         return fDao.getFamilyByIndex(familyWhichPetsRequestedIndex).getPet();
     }
 
-    public void addPet(int familyWhichTakesPetIndex, Pet pet) {//added to test - tested
+    public void addPet(int familyWhichTakesPetIndex, Pet pet) {
         Family fam = fDao.getFamilyByIndex(familyWhichTakesPetIndex);
         fam.getPet().add(pet);
         fDao.saveFamily(fam);

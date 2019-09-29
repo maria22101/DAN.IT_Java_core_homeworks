@@ -65,7 +65,6 @@ class FamilyServiceTest {
         Human mother3 = new Human("Kate", "Kean", 23);
         Human father3 = new Human("Klive", "Kean", 24);
         Family f3 = new Family(mother3, father3);
-        listFamilies.add(f3);
         famServiceInTest.createNewFamily(mother3, father3);
 
         famServiceInTest.adoptChild(famServiceInTest.getFamilyById(0), new Human("Emi", "Young", 6));
@@ -105,6 +104,24 @@ class FamilyServiceTest {
         famServiceInTest.getFamiliesLessThan(3);
         String result = new String(output.toByteArray());
         assertEquals(expectedResult, result);
+    }
+
+    @Test
+    void countFamiliesWithMemberNumber_numberOfFamiliesWithRequestedMembersNumberReturned(){
+        Human mother3 = new Human("Kate", "Kean", 23);
+        Human father3 = new Human("Klive", "Kean", 24);
+        Family f3 = new Family(mother3, father3);
+        famServiceInTest.createNewFamily(mother3, father3);
+
+        famServiceInTest.adoptChild(famServiceInTest.getFamilyById(0), new Human("Emi", "Young", 6));
+        famServiceInTest.adoptChild(famServiceInTest.getFamilyById(0), new Human("Elizabeth", "Young", 8));
+        famServiceInTest.bornChild(famServiceInTest.getFamilyById(1), "Maya", "Mike");
+        famServiceInTest.bornChild(famServiceInTest.getFamilyById(2), "Kendra", "Kolin");
+
+        int familySize = 3;
+        int expectedNumberOfFamilies = 2;
+
+        assertEquals(2, famServiceInTest.countFamiliesWithMemberNumber(familySize));
     }
 
     @Test
