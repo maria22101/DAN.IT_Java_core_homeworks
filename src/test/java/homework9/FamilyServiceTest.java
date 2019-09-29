@@ -1,14 +1,18 @@
 package homework9;
 
+import homework8.DomesticCat;
 import homework8.Family;
 import homework8.Human;
+import homework8.Pet;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -18,7 +22,7 @@ class FamilyServiceTest {
     private List<Family> listFamilies = new ArrayList<>();
 
     @BeforeEach
-    void beforeEach(){
+    void beforeEach() {
         Human mother1 = new Human("Eva", "Eton", 45);
         Human father1 = new Human("El", "Eton", 46);
         Family f1 = new Family(mother1, father1);
@@ -32,7 +36,7 @@ class FamilyServiceTest {
     }
 
     @Test
-    void createNewFamily_and_getAllFamilies(){
+    void createNewFamily_and_getAllFamilies() {
         Human mother3 = new Human("Nika", "Nike", 45);
         Human father3 = new Human("Noel", "Nike", 46);
         Family f3 = new Family(mother3, father3);
@@ -43,7 +47,7 @@ class FamilyServiceTest {
     }
 
     @Test
-    void displayAllFamilies_storageOfFamiliesDisplayed(){
+    void displayAllFamilies_storageOfFamiliesDisplayed() {
         String result = "Family{mother=Human{name='Eva', surname='Eton', year=45}, " +
                 "father=Human{name='El', surname='Eton', year=46}, children=[], pet=[]}\r\n" +
                 "Family{mother=Human{name='Mia', surname='Morris', year=33}, " +
@@ -57,7 +61,7 @@ class FamilyServiceTest {
     }
 
     @Test
-    void getFamilyById_correctFamilyReturned_nullIfIndexNotFound(){
+    void getFamilyById_correctFamilyReturned_nullIfIndexNotFound() {
         Family expectedFamily = new Family(new Human("Mia", "Morris", 33), new Human("Mark", "Morris", 38));
         Family returnedFamily = famServiceInTest.getFamilyById(1);
         assertEquals(expectedFamily, returnedFamily);
@@ -67,7 +71,7 @@ class FamilyServiceTest {
     }
 
     @Test
-    void deleteFamilyByIndex_trueOrFalseReturned_correctListOfFamiliesRemained(){
+    void deleteFamilyByIndex_trueOrFalseReturned_correctListOfFamiliesRemained() {
         assertTrue(famServiceInTest.deleteFamilyByIndex(0));
         listFamilies.remove(0);
         assertEquals(listFamilies, famServiceInTest.getAllFamilies());
@@ -75,7 +79,7 @@ class FamilyServiceTest {
     }
 
     @Test
-    void bornChild_familyWithBornChildReturned(){
+    void bornChild_familyWithBornChildReturned() {
         Family familyToBornChild = famServiceInTest.getFamilyById(1);
         Family returnedFamilyWithChild = famServiceInTest.bornChild(familyToBornChild, "Mari", "Mike");
 
@@ -105,7 +109,7 @@ class FamilyServiceTest {
     }
 
     @Test
-    void adoptChild_familyWithAdoptedChildReturned(){
+    void adoptChild_familyWithAdoptedChildReturned() {
         Family familyToAdoptChild = famServiceInTest.getFamilyById(0);
         Human childToBeAdopted = new Human("Elise", "Cooper", 5);
         childToBeAdopted.setFamily(familyToAdoptChild);
@@ -117,9 +121,48 @@ class FamilyServiceTest {
     }
 
     @Test
-    void count_returnNumberOfFamilies(){
+    void count_returnNumberOfFamilies() {
         int expectedResult = listFamilies.size();
         int returnedResult = famServiceInTest.count();
         assertEquals(expectedResult, returnedResult);
+    }
+
+    @Test
+    void addPet_petAddedToFamilyWithGivenIndex(){
+        Set<String> catHabits = new HashSet<>();
+        catHabits.add("play");
+        catHabits.add("sleep");
+        Pet pet = new DomesticCat("Cake", 2, 55, catHabits);
+
+        Family familyToTakePet = famServiceInTest.getFamilyById(1);
+        familyToTakePet.getPet().add(pet);
+        listFamilies.set(1, familyToTakePet);
+        famServiceInTest.addPet(1, pet);
+
+        assertEquals(listFamilies, famServiceInTest.getAllFamilies());
+    }
+
+    @Test
+    void getPets_returnPetsOfTheFamilyWithGivenIndex() {
+        Set<String> catHabits1 = new HashSet<>();
+        catHabits1.add("play");
+        catHabits1.add("sleep");
+        Pet pet1 = new DomesticCat("Whity", 3, 55, catHabits1);
+
+        Set<String> catHabits2 = new HashSet<>();
+        catHabits2.add("eat");
+        catHabits2.add("hide");
+        Pet pet2 = new DomesticCat("Blacky", 2, 75, catHabits2);
+
+        famServiceInTest.addPet(1, pet1);
+        famServiceInTest.addPet(1, pet2);
+
+        Set<Pet> expectedPets = famServiceInTest.getFamilyById(1).getPet();
+        Set<Pet> returnedPets = famServiceInTest.getPets(1);
+        assertEquals(expectedPets, returnedPets);
+
+        Set<Pet> expectedNullPets = famServiceInTest.getFamilyById(0).getPet();
+        Set<Pet> returnedNullPets = famServiceInTest.getPets(0);
+        assertEquals(expectedNullPets, returnedNullPets);
     }
 }

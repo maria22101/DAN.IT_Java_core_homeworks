@@ -88,12 +88,12 @@ public class FamilyService {
         return fDao.getFamilyByIndex(familyToGetIndex);
     }
 
-    public Set<Pet> getPets(int petsToGetIndex) {
-        return fDao.getFamilyByIndex(petsToGetIndex).getPet();
+    public Set<Pet> getPets(int familyWhichPetsRequestedIndex) {
+        return fDao.getFamilyByIndex(familyWhichPetsRequestedIndex).getPet();
     }
 
-    public void addPet(int petToAddIndex, Pet pet) {
-        Family fam = fDao.getFamilyByIndex(petToAddIndex);
+    public void addPet(int familyWhichTakesPetIndex, Pet pet) {
+        Family fam = fDao.getFamilyByIndex(familyWhichTakesPetIndex);
         fam.getPet().add(pet);
         fDao.saveFamily(fam);
     }
