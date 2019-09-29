@@ -74,13 +74,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="39" />
-          <entry key="java" value="36184" />
+          <entry key="java" value="36310" />
           <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="36184" />
+          <entry key="JAVA" value="36310" />
           <entry key="PLAIN_TEXT" value="39" />
           <entry key="XML" value="3" />
         </counts>
@@ -105,8 +105,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/homework9/FamilyService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="64" column="32" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="32" />
+            <state relative-caret-position="17">
+              <caret line="60" column="86" selection-start-line="60" selection-start-column="86" selection-end-line="60" selection-end-column="86" />
               <folding>
                 <element signature="e#275#276#0" expanded="true" />
                 <element signature="e#319#320#0" expanded="true" />
@@ -130,8 +130,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/homework9/FamilyServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="115" column="65" selection-start-line="115" selection-start-column="65" selection-end-line="115" selection-end-column="65" />
+            <state relative-caret-position="401">
+              <caret line="121" column="54" selection-start-line="121" selection-start-column="54" selection-end-line="121" selection-end-column="54" />
               <folding>
                 <element signature="method#createNewFamily_and_getAllFamiliested#0;class#FamilyServiceTest#0" />
                 <element signature="method#displayAllFamilies_storageOfFamiliesDisplayed#0;class#FamilyServiceTest#0" />
@@ -415,7 +415,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.FamilyServiceTest.adoptChild_familyWithAdoptedChildReturned">
+  <component name="RunManager" selected="JUnit.FamilyServiceTest.count_returnNumberOfFamilies">
     <configuration name="FamilyServiceTest.adoptChild_familyWithAdoptedChildReturned" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DAN.IT_Java_core_homeworks" />
       <extension name="coverage">
@@ -448,6 +448,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FamilyServiceTest.count_returnNumberOfFamilies" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DAN.IT_Java_core_homeworks" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="homework9.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="homework9" />
+      <option name="MAIN_CLASS_NAME" value="homework9.FamilyServiceTest" />
+      <option name="METHOD_NAME" value="count_returnNumberOfFamilies" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="FamilyServiceTest.deleteFamilyByIndex" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DAN.IT_Java_core_homeworks" />
       <extension name="coverage">
@@ -459,22 +475,6 @@
       <option name="PACKAGE_NAME" value="homework9" />
       <option name="MAIN_CLASS_NAME" value="homework9.FamilyServiceTest" />
       <option name="METHOD_NAME" value="deleteFamilyByIndex" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FamilyServiceTest.displayAllFamilies_storageOfFamiliesDisplayed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DAN.IT_Java_core_homeworks" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="homework9.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="homework9" />
-      <option name="MAIN_CLASS_NAME" value="homework9.FamilyServiceTest" />
-      <option name="METHOD_NAME" value="displayAllFamilies_storageOfFamiliesDisplayed" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -497,19 +497,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.FamilyServiceTest.displayAllFamilies_storageOfFamiliesDisplayed" />
       <item itemvalue="JUnit.FamilyServiceTest.getFamilyById" />
       <item itemvalue="JUnit.FamilyServiceTest.deleteFamilyByIndex" />
       <item itemvalue="JUnit.FamilyServiceTest.bornChild" />
       <item itemvalue="JUnit.FamilyServiceTest.adoptChild_familyWithAdoptedChildReturned" />
+      <item itemvalue="JUnit.FamilyServiceTest.count_returnNumberOfFamilies" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FamilyServiceTest.count_returnNumberOfFamilies" />
         <item itemvalue="JUnit.FamilyServiceTest.adoptChild_familyWithAdoptedChildReturned" />
         <item itemvalue="JUnit.FamilyServiceTest.bornChild" />
         <item itemvalue="JUnit.FamilyServiceTest.deleteFamilyByIndex" />
         <item itemvalue="JUnit.FamilyServiceTest.getFamilyById" />
-        <item itemvalue="JUnit.FamilyServiceTest.displayAllFamilies_storageOfFamiliesDisplayed" />
       </list>
     </recent_temporary>
   </component>
@@ -527,12 +527,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FamilyServiceTest_displayAllFamilies_storageOfFamiliesDisplayed - 2019.09.27 at 07h 54m 50s.xml">
-      <configuration name="FamilyServiceTest.displayAllFamilies_storageOfFamiliesDisplayed" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FamilyServiceTest_createNewFamily_and_getAllFamilies - 2019.09.28 at 21h 16m 45s.xml">
-      <configuration name="FamilyServiceTest.createNewFamily_and_getAllFamilies" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="FamilyServiceTest_createNewFamily_and_getAllFamilies - 2019.09.28 at 21h 24m 04s.xml">
       <configuration name="FamilyServiceTest.createNewFamily_and_getAllFamilies" configurationId="JUnit" />
     </history-entry>
@@ -556,6 +550,12 @@
     </history-entry>
     <history-entry file="FamilyServiceTest_bornChild - 2019.09.28 at 22h 58m 57s.xml">
       <configuration name="FamilyServiceTest.bornChild" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FamilyServiceTest_adoptChild_familyWithAdoptedChildReturned - 2019.09.29 at 12h 52m 05s.xml">
+      <configuration name="FamilyServiceTest.adoptChild_familyWithAdoptedChildReturned" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FamilyServiceTest_adoptChild_familyWithAdoptedChildReturned - 2019.09.29 at 12h 53m 27s.xml">
+      <configuration name="FamilyServiceTest.adoptChild_familyWithAdoptedChildReturned" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -942,8 +942,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/homework9/FamilyService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="64" column="32" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="32" />
+        <state relative-caret-position="17">
+          <caret line="60" column="86" selection-start-line="60" selection-start-column="86" selection-end-line="60" selection-end-column="86" />
           <folding>
             <element signature="e#275#276#0" expanded="true" />
             <element signature="e#319#320#0" expanded="true" />
@@ -965,8 +965,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/homework9/FamilyServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="115" column="65" selection-start-line="115" selection-start-column="65" selection-end-line="115" selection-end-column="65" />
+        <state relative-caret-position="401">
+          <caret line="121" column="54" selection-start-line="121" selection-start-column="54" selection-end-line="121" selection-end-column="54" />
           <folding>
             <element signature="method#createNewFamily_and_getAllFamiliested#0;class#FamilyServiceTest#0" />
             <element signature="method#displayAllFamilies_storageOfFamiliesDisplayed#0;class#FamilyServiceTest#0" />

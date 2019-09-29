@@ -115,4 +115,11 @@ class FamilyServiceTest {
         Family returnedFamilyWithAdoptedChild = famServiceInTest.adoptChild(familyToAdoptChild, childToBeAdopted);
         assertTrue(familyToAdoptChild.equals(returnedFamilyWithAdoptedChild));
     }
+
+    @Test
+    void count_returnNumberOfFamilies(){
+        int expectedResult = listFamilies.size();
+        int returnedResult = famServiceInTest.count();
+        assertEquals(expectedResult, returnedResult);
+    }
 }

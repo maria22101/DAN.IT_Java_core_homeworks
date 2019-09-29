@@ -58,7 +58,7 @@ public class FamilyService {
         return family;
     }
 
-    public Family adoptChild(Family family, Human newChild) { //added in test
+    public Family adoptChild(Family family, Human newChild) { //added in test - tested
         newChild.setFamily(family);
         newChild.setSurname(family.getFather().getSurname());
         family.getChildren().add(newChild);
