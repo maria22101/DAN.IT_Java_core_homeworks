@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a6cfef6-0c35-4cc2-8150-160c48de1dc8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homework9/FamilyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homework9/FamilyService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/homework9/FamilyServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/homework9/FamilyServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/homework9/FamilyService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homework9/FamilyService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/homework9/FamilyServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/homework9/FamilyServiceTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -58,7 +62,7 @@
         <counts>
           <entry key="gitignore" value="2" />
           <entry key="iml" value="1" />
-          <entry key="java" value="211" />
+          <entry key="java" value="217" />
           <entry key="txt" value="2" />
           <entry key="xml" value="4" />
         </counts>
@@ -66,22 +70,22 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="211" />
+          <entry key="JAVA" value="217" />
           <entry key="PLAIN_TEXT" value="4" />
           <entry key="XML" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="39" />
-          <entry key="java" value="38421" />
+          <entry key="dummy" value="51" />
+          <entry key="java" value="38755" />
           <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="38421" />
-          <entry key="PLAIN_TEXT" value="39" />
+          <entry key="JAVA" value="38755" />
+          <entry key="PLAIN_TEXT" value="51" />
           <entry key="XML" value="3" />
         </counts>
       </usages-collector>
@@ -89,12 +93,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/homework9/CollectionFamilyDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/homework9/FamilyService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="248">
+              <caret line="94" column="24" lean-forward="true" selection-start-line="94" selection-start-column="24" selection-end-line="94" selection-end-column="24" />
+              <folding>
+                <element signature="e#275#276#0" expanded="true" />
+                <element signature="e#319#320#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/homework9/FamilyServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-313">
-              <caret line="220" column="42" selection-start-line="220" selection-start-column="42" selection-end-line="220" selection-end-column="42" />
+            <state relative-caret-position="-1095">
+              <caret line="123" column="95" selection-start-line="123" selection-start-column="95" selection-end-line="123" selection-end-column="95" />
               <folding>
+                <element signature="e#9814#9815#0" expanded="true" />
                 <element signature="e#9886#9887#0" expanded="true" />
               </folding>
             </state>
@@ -120,8 +147,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/homework5/Family.java" />
-        <option value="$PROJECT_DIR$/src/main/java/homework5/Human.java" />
         <option value="$PROJECT_DIR$/src/main/java/homework6/Species.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/homework6/Family.java" />
@@ -169,8 +194,10 @@
         <option value="$PROJECT_DIR$/src/main/java/homework9/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/homework10/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/homework10/Human.java" />
-        <option value="$PROJECT_DIR$/src/main/java/homework9/FamilyService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/homework11/FamilyService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/homework11/FamilyService_Java8.java" />
         <option value="$PROJECT_DIR$/src/test/java/homework9/FamilyServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/homework9/FamilyService.java" />
       </list>
     </option>
   </component>
@@ -235,14 +262,6 @@
               <item name="DAN.IT_Java_core_homeworks" type="b2602c69:ProjectViewProjectNode" />
               <item name="DAN.IT_Java_core_homeworks" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="homework10" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DAN.IT_Java_core_homeworks" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DAN.IT_Java_core_homeworks" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -288,6 +307,7 @@
       <recent name="homework6" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="homework11" />
       <recent name="homework10" />
       <recent name="homework9" />
       <recent name="homework8" />
@@ -315,7 +335,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.FamilyServiceTest">
+  <component name="RunManager" selected="JUnit.FamilyServiceTest.deleteAllChildrenOlderThan_childrenWithRequestedAgeRemovedFromFamily">
     <configuration name="FamilyServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DAN.IT_Java_core_homeworks" />
       <extension name="coverage">
@@ -330,7 +350,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FamilyServiceTest.adoptChild_familyWithAdoptedChildReturned" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FamilyServiceTest.countFamiliesWithMemberNumber_numberOfFamiliesOfRequestedSizeReturned" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DAN.IT_Java_core_homeworks" />
       <extension name="coverage">
         <pattern>
@@ -340,13 +360,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="homework9" />
       <option name="MAIN_CLASS_NAME" value="homework9.FamilyServiceTest" />
-      <option name="METHOD_NAME" value="adoptChild_familyWithAdoptedChildReturned" />
+      <option name="METHOD_NAME" value="countFamiliesWithMemberNumber_numberOfFamiliesOfRequestedSizeReturned" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FamilyServiceTest.countFamiliesWithMemberNumber_numberOfFamiliesWithRequestedMembersNumberReturned" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FamilyServiceTest.deleteAllChildrenOlderThan_childrenWithRequestedAgeRemovedFromFamily" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DAN.IT_Java_core_homeworks" />
       <extension name="coverage">
         <pattern>
@@ -356,7 +376,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="homework9" />
       <option name="MAIN_CLASS_NAME" value="homework9.FamilyServiceTest" />
-      <option name="METHOD_NAME" value="countFamiliesWithMemberNumber_numberOfFamiliesWithRequestedMembersNumberReturned" />
+      <option name="METHOD_NAME" value="deleteAllChildrenOlderThan_childrenWithRequestedAgeRemovedFromFamily" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -378,7 +398,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FamilyServiceTest.getFamilyById_correctFamilyReturned_nullIfIndexNotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FamilyServiceTest.getFamiliesLessThan_lessThanRequestedFamilyReturned" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DAN.IT_Java_core_homeworks" />
       <extension name="coverage">
         <pattern>
@@ -388,26 +408,26 @@
       </extension>
       <option name="PACKAGE_NAME" value="homework9" />
       <option name="MAIN_CLASS_NAME" value="homework9.FamilyServiceTest" />
-      <option name="METHOD_NAME" value="getFamilyById_correctFamilyReturned_nullIfIndexNotFound" />
+      <option name="METHOD_NAME" value="getFamiliesLessThan_lessThanRequestedFamilyReturned" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.FamilyServiceTest.countFamiliesWithMemberNumber_numberOfFamiliesWithRequestedMembersNumberReturned" />
       <item itemvalue="JUnit.FamilyServiceTest.getFamiliesBiggerThan_biggerThanRequestedFamilyReturned" />
-      <item itemvalue="JUnit.FamilyServiceTest.getFamilyById_correctFamilyReturned_nullIfIndexNotFound" />
-      <item itemvalue="JUnit.FamilyServiceTest.adoptChild_familyWithAdoptedChildReturned" />
       <item itemvalue="JUnit.FamilyServiceTest" />
+      <item itemvalue="JUnit.FamilyServiceTest.getFamiliesLessThan_lessThanRequestedFamilyReturned" />
+      <item itemvalue="JUnit.FamilyServiceTest.countFamiliesWithMemberNumber_numberOfFamiliesOfRequestedSizeReturned" />
+      <item itemvalue="JUnit.FamilyServiceTest.deleteAllChildrenOlderThan_childrenWithRequestedAgeRemovedFromFamily" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.FamilyServiceTest" />
-        <item itemvalue="JUnit.FamilyServiceTest.adoptChild_familyWithAdoptedChildReturned" />
-        <item itemvalue="JUnit.FamilyServiceTest.getFamilyById_correctFamilyReturned_nullIfIndexNotFound" />
+        <item itemvalue="JUnit.FamilyServiceTest.deleteAllChildrenOlderThan_childrenWithRequestedAgeRemovedFromFamily" />
+        <item itemvalue="JUnit.FamilyServiceTest.countFamiliesWithMemberNumber_numberOfFamiliesOfRequestedSizeReturned" />
+        <item itemvalue="JUnit.FamilyServiceTest.getFamiliesLessThan_lessThanRequestedFamilyReturned" />
         <item itemvalue="JUnit.FamilyServiceTest.getFamiliesBiggerThan_biggerThanRequestedFamilyReturned" />
-        <item itemvalue="JUnit.FamilyServiceTest.countFamiliesWithMemberNumber_numberOfFamiliesWithRequestedMembersNumberReturned" />
+        <item itemvalue="JUnit.FamilyServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -425,15 +445,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FamilyServiceTest_getFamiliesBiggerThan_familiesWithMoreThanRequestedMemebersNumberReturned - 2019.09.29 at 22h 11m 59s.xml">
-      <configuration name="FamilyServiceTest.getFamiliesBiggerThan_familiesWithMoreThanRequestedMemebersNumberReturned" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FamilyServiceTest_getFamiliesLessThan_familiesWithLessThanRequestedMemebersNumberReturned - 2019.09.29 at 22h 18m 47s.xml">
-      <configuration name="FamilyServiceTest.getFamiliesLessThan_familiesWithLessThanRequestedMemebersNumberReturned" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FamilyServiceTest_getFamiliesLessThan_familiesWithLessThanRequestedMemebersNumberReturned - 2019.09.29 at 22h 19m 08s.xml">
-      <configuration name="FamilyServiceTest.getFamiliesLessThan_familiesWithLessThanRequestedMemebersNumberReturned" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="FamilyServiceTest_getFamiliesBiggerThan_familiesWithMoreThanRequestedMemebersNumberReturned - 2019.09.29 at 22h 27m 48s.xml">
       <configuration name="FamilyServiceTest.getFamiliesBiggerThan_familiesWithMoreThanRequestedMemebersNumberReturned" configurationId="JUnit" />
     </history-entry>
@@ -454,6 +465,15 @@
     </history-entry>
     <history-entry file="FamilyServiceTest - 2019.10.03 at 19h 36m 16s.xml">
       <configuration name="FamilyServiceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FamilyServiceTest_getFamiliesBiggerThan_biggerThanRequestedFamilyReturned - 2019.10.03 at 20h 11m 55s.xml">
+      <configuration name="FamilyServiceTest.getFamiliesBiggerThan_biggerThanRequestedFamilyReturned" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FamilyServiceTest_getFamiliesLessThan_lessThanRequestedFamilyReturned - 2019.10.03 at 20h 16m 32s.xml">
+      <configuration name="FamilyServiceTest.getFamiliesLessThan_lessThanRequestedFamilyReturned" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FamilyServiceTest_countFamiliesWithMemberNumber_numberOfFamiliesOfRequestedSizeReturned - 2019.10.03 at 20h 21m 38s.xml">
+      <configuration name="FamilyServiceTest.countFamiliesWithMemberNumber_numberOfFamiliesOfRequestedSizeReturned" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -488,13 +508,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="19" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/homework6/Pet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
@@ -771,13 +784,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/homework9/CollectionFamilyDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/homework8/FamilyTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -824,17 +830,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/homework9/FamilyService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-          <folding>
-            <element signature="e#275#276#0" expanded="true" />
-            <element signature="e#319#320#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/homework10/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -842,11 +837,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homework11/FamilyService_Java8.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="23" column="105" selection-start-line="23" selection-start-column="105" selection-end-line="23" selection-end-column="105" />
+          <folding>
+            <element signature="e#342#343#0" expanded="true" />
+            <element signature="e#386#387#0" expanded="true" />
+            <element signature="e#426#427#0" expanded="true" />
+            <element signature="e#496#497#0" expanded="true" />
+            <element signature="e#1376#1377#0" expanded="true" />
+            <element signature="e#1437#1438#0" expanded="true" />
+            <element signature="e#2881#2882#0" expanded="true" />
+            <element signature="e#2927#2928#0" expanded="true" />
+            <element signature="e#2984#2985#0" expanded="true" />
+            <element signature="e#3046#3047#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homework9/CollectionFamilyDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homework9/FamilyService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="94" column="24" lean-forward="true" selection-start-line="94" selection-start-column="24" selection-end-line="94" selection-end-column="24" />
+          <folding>
+            <element signature="e#275#276#0" expanded="true" />
+            <element signature="e#319#320#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/homework9/FamilyServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-313">
-          <caret line="220" column="42" selection-start-line="220" selection-start-column="42" selection-end-line="220" selection-end-column="42" />
+        <state relative-caret-position="-1095">
+          <caret line="123" column="95" selection-start-line="123" selection-start-column="95" selection-end-line="123" selection-end-column="95" />
           <folding>
+            <element signature="e#9814#9815#0" expanded="true" />
             <element signature="e#9886#9887#0" expanded="true" />
           </folding>
         </state>

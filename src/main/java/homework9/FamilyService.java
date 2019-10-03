@@ -5,6 +5,8 @@ import homework8.*;
 import java.util.List;
 import java.util.Random;
 import java.util.Set;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class FamilyService {
@@ -19,18 +21,25 @@ public class FamilyService {
     }
 
     public void getFamiliesBiggerThan(int familySize) {
-        List<Family> list = getAllFamilies().stream().filter(f -> f.countFamily() > familySize).collect(Collectors.toList());
-        list.stream().forEach(System.out::println);
+        getAllFamilies()
+                .stream()
+                .filter(f -> f.countFamily() > familySize)
+                .forEach(System.out::println);
     }
 
     public void getFamiliesLessThan(int familySize) {
-        List<Family> list = getAllFamilies().stream().filter(f -> f.countFamily() < familySize).collect(Collectors.toList());
-        list.stream().forEach(System.out::println);
+        getAllFamilies()
+                .stream()
+                .filter(f -> f.countFamily() < familySize)
+                .forEach(System.out::println);
     }
 
     public int countFamiliesWithMemberNumber(int familySize) {
-        List<Family> list = getAllFamilies().stream().filter(f -> f.countFamily() == familySize).collect(Collectors.toList());
-        return list.size();
+        return getAllFamilies()
+                .stream()
+                .filter(f -> f.countFamily() == familySize)
+                .collect(Collectors.toList())
+                .size();
     }
 
     public void createNewFamily(Human female, Human male) {
@@ -68,16 +77,29 @@ public class FamilyService {
 
     public void deleteAllChildrenOlderThan(int ageToCompareWith) {
 
-        for (Family fam : getAllFamilies()) {
-            if (fam.getChildren().stream().filter(ch -> ch.getYear() > ageToCompareWith).collect(Collectors.toList()).size() > 0) {
-                List<Human> newChildrenList = fam.getChildren()
-                        .stream()
-                        .filter(ch -> ch.getYear() <= ageToCompareWith)
-                        .collect(Collectors.toList());
-                fam.setChildren(newChildrenList);
-                fDao.saveFamily(fam);
-            }
-        }
+        //second version - more java-8 features applied
+        getAllFamilies()
+                .stream()
+                .forEach((family) -> {
+                    List<Human> newChildrenList = family.getChildren()
+                            .stream()
+                            .filter((child) -> child.getYear() <= ageToCompareWith)
+                            .collect(Collectors.toList());
+                    family.setChildren(newChildrenList);
+                    fDao.saveFamily(family);
+                });
+
+        //first version
+//        for (Family family : getAllFamilies()) {
+//            if (family.getChildren().stream().filter(ch -> ch.getYear() > ageToCompareWith).collect(Collectors.toList()).size() > 0) {
+//                List<Human> newChildrenList = family.getChildren()
+//                        .stream()
+//                        .filter(ch -> ch.getYear() <= ageToCompareWith)
+//                        .collect(Collectors.toList());
+//                family.setChildren(newChildrenList);
+//                fDao.saveFamily(family);
+//            }
+//        }
     }
 
     public int count() {
