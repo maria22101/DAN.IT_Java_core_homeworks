@@ -1,38 +1,45 @@
-package homework8;
+package homework12;
 
-import java.util.*;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
+import java.util.Map;
+import java.util.Objects;
+import java.util.Random;
 
 public class Human {
     private String name;
     private String surname;
-    private int year;
+    private long birthDate;
     private int iQ;
     private Map<String, String> schedule;
     private Family family;
 
-//    static {
-//        System.out.println("New class Human being loaded..."); // written for studying purposes
-//    }
-//
-//    {
-//        System.out.println("New object of Human type being created"); // written for studying purposes
-//    }
-
     public Human() {
     }
 
-    public Human(String name, String surname, int year) {
+    public Human(String name, String surname, long birthDate) {
         this.name = name;
         this.surname = surname;
-        this.year = year;
+        this.birthDate = birthDate;
     }
 
-    public Human(String name, String surname, int year, int iQ, Family family) {
-        this.name = name;
-        this.surname = surname;
-        this.year = year;
+    public Human(String name, String surname, long birthDate, int iQ, Family family) {
+        this(name, surname, birthDate);
         this.iQ = iQ;
         this.family = family;
+    }
+
+    public Human(String name, String surname, String adoptedChildBirthDate, int iQ) { //Constructor for an adopted child
+        this(name, surname, LocalDate
+                .parse(adoptedChildBirthDate, DateTimeFormatter.ofPattern("dd/MM/yyyy"))
+                .atStartOfDay(ZoneId.systemDefault())
+                .toInstant()
+                .toEpochMilli()
+        );
+        this.iQ = iQ;
     }
 
     public String getName() {
@@ -51,12 +58,12 @@ public class Human {
         this.surname = surname;
     }
 
-    public int getYear() {
-        return year;
+    public long getBirthDate() {
+        return birthDate;
     }
 
-    public void setYear(int year) {
-        this.year = year;
+    public void setBirthDate(long birthDate) {
+        this.birthDate = birthDate;
     }
 
     public int getiQ() {
@@ -88,9 +95,11 @@ public class Human {
         return "Human{" +
                 "name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
-                ", year=" + year +
-//                ", iQ=" + iQ + // excluded - for HW_9 testing simplicity
-//                ", schedule=" + schedule + // excluded - for HW_9 testing simplicity
+                ", birthDate=" + DateTimeFormatter
+                .ofPattern("dd/MM/yyyy")
+                .format(Instant.ofEpochMilli(birthDate).atZone(ZoneId.systemDefault()).toLocalDate())
+                + ", iQ=" + iQ +
+                ", schedule=" + schedule +
                 '}';
     }
 
@@ -130,23 +139,53 @@ public class Human {
         return flag;
     }
 
+    String describeAge() {
+        StringBuilder result = new StringBuilder();
+        LocalDate birthDateLocal = Instant
+                .ofEpochMilli(birthDate)
+                .atZone(ZoneId.systemDefault())
+                .toLocalDate();
+        return result
+                .append("Years: " + Period.between(birthDateLocal, LocalDate.now()).getYears())
+                .append(", month: " + Period.between(birthDateLocal, LocalDate.now()).getMonths())
+                .append(", days: " + Period.between(birthDateLocal, LocalDate.now()).getDays())
+                .toString();
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Human human = (Human) o;
-        return year == human.year &&
+        return birthDate == human.birthDate &&
                 Objects.equals(name, human.name) &&
                 Objects.equals(surname, human.surname);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, surname, year);
+        return Objects.hash(name, surname, birthDate);
     }
 
     @Override
     protected void finalize() throws Throwable {
         System.out.println(this.toString() + "is being deleted...");
     }
+
+    public String prettyFormat() {
+        DateTimeFormatter f = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate date = Instant
+                .ofEpochMilli(birthDate)
+                .atZone(ZoneId.systemDefault())
+                .toLocalDate();
+
+        String result = new StringBuilder()
+                .append("{")
+                .append(String.format("name=%s, surname=%s, iq=%d, ", name, surname, iQ))
+                .append(f.format(date) + ", " + schedule)
+                .append("}")
+                .toString();
+        return result;
+    }
+
 }

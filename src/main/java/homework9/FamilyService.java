@@ -76,8 +76,6 @@ public class FamilyService {
     }
 
     public void deleteAllChildrenOlderThan(int ageToCompareWith) {
-
-        //second version - more java-8 features applied
         getAllFamilies()
                 .stream()
                 .forEach((family) -> {
@@ -88,18 +86,6 @@ public class FamilyService {
                     family.setChildren(newChildrenList);
                     fDao.saveFamily(family);
                 });
-
-        //first version
-//        for (Family family : getAllFamilies()) {
-//            if (family.getChildren().stream().filter(ch -> ch.getYear() > ageToCompareWith).collect(Collectors.toList()).size() > 0) {
-//                List<Human> newChildrenList = family.getChildren()
-//                        .stream()
-//                        .filter(ch -> ch.getYear() <= ageToCompareWith)
-//                        .collect(Collectors.toList());
-//                family.setChildren(newChildrenList);
-//                fDao.saveFamily(family);
-//            }
-//        }
     }
 
     public int count() {

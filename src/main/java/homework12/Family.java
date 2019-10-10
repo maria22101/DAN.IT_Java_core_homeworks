@@ -1,20 +1,12 @@
-package homework8;
+package homework12;
 
 import java.util.*;
 
-public class Family implements HumanCreator {
+public class Family {
     private Human mother;
     private Human father;
     private List<Human> children;
     private Set<Pet> pet;
-
-//    static {
-//        System.out.println("New class Family being loaded..."); // written for studying purposes
-//    }
-//
-//    {
-//        System.out.println("New object of Family type being created"); // written for studying purposes
-//    }
 
     public Family(Human mother, Human father) {
         this.mother = mother;
@@ -46,13 +38,6 @@ public class Family implements HumanCreator {
             children.remove(ch);
             flag = true;
         }
-
-//        for (Human elem : children) { // why this code is not working?
-//            if (elem.equals(ch)){
-//                children.remove(ch);
-//                flag = true;
-//            }
-//        }
 
         return flag;
     }
@@ -122,7 +107,6 @@ public class Family implements HumanCreator {
         return Objects.hash(children, pet);
     }
 
-    @Override
     public Human bornChild() {
         String[] maleNames = new String[]{"Alex", "John", "Tom", "Adam", "Juan", "Leon"};
         String[] femaleNames = new String[]{"Ann", "Joy", "Tea", "Alice", "Jess", "Lea"};
@@ -145,4 +129,32 @@ public class Family implements HumanCreator {
 
         return newChild;
     }
+
+    public String prettyFormat() {
+        String parentsInPrettyFormat = new StringJoiner("\n")
+                .add("family:")
+                .add("        mother: " + mother.prettyFormat())
+                .add("        father: " + father.prettyFormat())
+                .toString();
+
+
+        StringJoiner sj1 = new StringJoiner("\n").add("        children: ");
+        for (Human ch : children) {
+            if (ch instanceof Man){
+                sj1 = sj1.add("                boy: " + ch.prettyFormat());
+            }else {
+                sj1 = sj1.add("                girl: " + ch.prettyFormat());
+            }
+        }
+        String childrenInPrettyFormat = sj1.toString();
+
+        StringJoiner sj2 = new StringJoiner("\n").add("        pets: ");
+        for (Pet p : pet) {
+            sj2 = sj2.add("               " + p.prettyFormat());
+        }
+        String petsInPrettyFormat = sj2.toString();
+
+        return parentsInPrettyFormat + "\n" + childrenInPrettyFormat + "\n" + petsInPrettyFormat;
+    }
+
 }

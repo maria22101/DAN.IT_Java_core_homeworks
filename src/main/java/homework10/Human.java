@@ -169,5 +169,4 @@ public class Human {
     protected void finalize() throws Throwable {
         System.out.println(this.toString() + "is being deleted...");
     }
-
 }
