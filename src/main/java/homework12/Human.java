@@ -152,6 +152,14 @@ public class Human {
                 .toString();
     }
 
+    int getYears() {
+        LocalDate birthDateLocal = Instant
+                .ofEpochMilli(birthDate)
+                .atZone(ZoneId.systemDefault())
+                .toLocalDate();
+        return Period.between(birthDateLocal, LocalDate.now()).getYears();
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
