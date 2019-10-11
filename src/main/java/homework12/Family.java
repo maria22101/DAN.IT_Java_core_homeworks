@@ -12,8 +12,6 @@ public class Family {
     public Family(Human mother, Human father) {
         this.mother = mother;
         this.father = father;
-        mother.setFamily(this);
-        father.setFamily(this);
         children = new ArrayList<>();
         pet = new HashSet<>();
     }

@@ -3,6 +3,7 @@ package homework12;
 import homework8.Species;
 
 import java.io.IOException;
+import java.time.format.DateTimeParseException;
 import java.util.*;
 
 public class Main {
@@ -24,16 +25,16 @@ public class Main {
     }
 
     static void generateTestFamilies() {
-        Human f1 = new Human("Ann", "Amber", 45);
-        Human m1 = new Human("Adam", "Amber", 46);
+        Human f1 = new Human("Ann", "Amber", "01/02/1980", 90);
+        Human m1 = new Human("Adam", "Amber", "13/03/1978", 89);
         famController.createNewFamily(f1, m1);
 
-        Human f2 = new Human("Tea", "Taller", 54);
+        Human f2 = new Human("Tea", "Taller", "01/02/1990", 80);
         f2.setSchedule(new HashMap<String, String>() {{
             put("SUNDAY", "Jogging");
             put("MONDAY", "Meditation");
         }});
-        Human m2 = new Human("Teodor", "Taller", 56);
+        Human m2 = new Human("Teodor", "Taller", "13/05/1985", 79);
         m2.setSchedule(new HashMap<String, String>() {{
             put("SUNDAY", "Gardening");
             put("MONDAY", "Gym");
@@ -45,8 +46,8 @@ public class Main {
         famController.createNewFamily(f2, m2);
         famController.addPet(1, pet2);
 
-        Human f3 = new Human("Nicole", "Nocks", 35);
-        Human m3 = new Human("Noa", "Nocks", 36);
+        Human f3 = new Human("Nicole", "Nocks", "01/06/1970", 70);
+        Human m3 = new Human("Noa", "Nocks", "14/07/1967", 69);
         Set<String> dogHabits = new HashSet<>();
         dogHabits.add("run");
         dogHabits.add("bark");
@@ -62,24 +63,28 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int choiceNumber = 0;
         int choiceNumberSubmenu = 0;
+        int number = 0;
         String choiceExit = "programm running";
 
         String motherName, motherSurname, motherBirthDate, motherBirthYear, motherBirthMonth, motherBirthDay;
         String fatherName, fatherSurname, fatherBirthDate, fatherBirthYear, fatherBirthMonth, fatherBirthDay;
         String boyName, girlName, adoptedName, adoptedSurname, adoptedBirthYear;
-        int motherIQ, fatherIQ, familyID, adoptedIQ;
+        int motherIQ = 0;
+        int fatherIQ = 0;
+        int familyID = 0;
+        int adoptedIQ = 0;
 
         try {
             choiceNumber = scanner.nextInt();
         } catch (InputMismatchException e) {
             try {
                 choiceExit = scanner.nextLine();
-            } catch (InputMismatchException ex) {
                 if (!choiceExit.equals("exit")) {
-                    System.out.println("Ввод должен быть число от 1 до 9 или exit");
+                    System.out.println("!!!!! Ввод должен быть число от 1 до 9 или exit");
                 }
+            } catch (InputMismatchException ex) {
+                System.out.println("!!!!! Ввод должен быть число от 1 до 9 или exit");
             }
-            System.out.println("Ввод должен быть число от 1 до 9 или exit");
         }
 
         while (!choiceExit.equals("exit")) {
@@ -91,56 +96,119 @@ public class Main {
 
             } else if (choiceNumber == 3) {
                 System.out.print("Задайте число: ");
-                choiceNumberSubmenu = scanner.nextInt();
-                famController.getFamiliesBiggerThan(choiceNumberSubmenu);
+                try {
+                    number = scanner.nextInt();
+                    famController.getFamiliesBiggerThan(number);
+                } catch (InputMismatchException e) {
+                    try {
+                        choiceExit = scanner.nextLine();
+                        if (!choiceExit.equals("exit")) {
+                            System.out.println("!!!!! Ввод должен быть целое число или exit");
+                        }
+                    } catch (InputMismatchException ex) {
+                        System.out.println("!!!!! Ввод должен быть целое число или exit");
+                    }
+                }
 
             } else if (choiceNumber == 4) {
                 System.out.print("Задайте число: ");
-                choiceNumberSubmenu = scanner.nextInt();
-                famController.getFamiliesLessThan(choiceNumberSubmenu);
+                try {
+                    number = scanner.nextInt();
+                    famController.getFamiliesLessThan(number);
+                } catch (InputMismatchException e) {
+                    try {
+                        choiceExit = scanner.nextLine();
+                        if (!choiceExit.equals("exit")) {
+                            System.out.println("!!!!! Ввод должен быть целое число или exit");
+                        }
+                    } catch (InputMismatchException ex) {
+                        System.out.println("!!!!! Ввод должен быть целое число или exit");
+                    }
+                }
 
             } else if (choiceNumber == 5) {
                 System.out.print("Задайте число: ");
-                choiceNumberSubmenu = scanner.nextInt();
-                famController.countFamiliesWithMemberNumber(choiceNumber);
+                try {
+                    number = scanner.nextInt();
+                    System.out.println(famController.countFamiliesWithMemberNumber(number));
+                } catch (InputMismatchException e) {
+                    try {
+                        choiceExit = scanner.nextLine();
+                        if (!choiceExit.equals("exit")) {
+                            System.out.println("!!!!! Ввод должен быть целое число или exit");
+                        }
+                    } catch (InputMismatchException ex) {
+                        System.out.println("!!!!! Ввод должен быть целое число или exit");
+                    }
+                }
 
             } else if (choiceNumber == 6) {
-                System.out.print("Введите имя матери: ");
+                System.out.print("Введите имя матери (строка): ");
                 motherName = scanner.next();
-                System.out.print("Введите фамилию матери: ");
-                motherSurname = scanner.next();
-                System.out.print("Введите год рождения матери: ");
-                motherBirthYear = scanner.next();
-                System.out.print("Введите месяц рождения матери: ");
-                motherBirthMonth = scanner.next();
-                System.out.print("Введите день рождения матери: ");
-                motherBirthDay = scanner.next();
-                System.out.print("Введите iq матери: ");
-                motherIQ = scanner.nextInt();
 
-                System.out.print("Введите имя отца: ");
+                System.out.print("Введите фамилию матери (строка): ");
+                motherSurname = scanner.next();
+
+                System.out.print("Введите год рождения матери (число - четыре цифры): ");
+                motherBirthYear = scanner.next();
+
+                System.out.print("Введите месяц рождения матери (число от 01 до 12): ");
+                motherBirthMonth = scanner.next();
+
+                System.out.print("Введите день рождения матери (число от 01 до последнего дня месяца): ");
+                motherBirthDay = scanner.next();
+
+                System.out.print("Введите iq матери (число): ");
+                try {
+                    motherIQ = scanner.nextInt();
+                } catch (InputMismatchException e) {
+                    System.out.println("!!!!! Ввод должен быть целое число");
+                }
+
+                System.out.print("Введите имя отца (строка): ");
                 fatherName = scanner.next();
-                System.out.print("Введите фамилию отца: ");
+
+                System.out.print("Введите фамилию отца (строка): ");
                 fatherSurname = scanner.next();
-                System.out.print("Введите год рождения отца: ");
+
+                System.out.print("Введите год рождения отца (число - четыре цифры): ");
                 fatherBirthYear = scanner.next();
-                System.out.print("Введите месяц рождения отца: ");
+
+                System.out.print("Введите месяц рождения отца (число от 01 до 12): ");
                 fatherBirthMonth = scanner.next();
-                System.out.print("Введите день рождения отца: ");
+
+                System.out.print("Введите день рождения отца (число от 01 до последнего дня месяца): ");
                 fatherBirthDay = scanner.next();
-                System.out.print("Введите iq отца: ");
-                fatherIQ = scanner.nextInt();
+
+                System.out.print("Введите iq отца (число): ");
+                try {
+                    fatherIQ = scanner.nextInt();
+                } catch (InputMismatchException e) {
+                    System.out.println("!!!!! Ввод должен быть целое число");
+                }
 
                 motherBirthDate = motherBirthDay + "/" + motherBirthMonth + "/" + motherBirthYear;
                 fatherBirthDate = fatherBirthDay + "/" + fatherBirthMonth + "/" + fatherBirthYear;
-                Human newMother = new Human(motherName, motherSurname, motherBirthDate, motherIQ);
-                Human newFather = new Human(fatherName, fatherSurname, fatherBirthDate, fatherIQ);
-                famController.createNewFamily(newMother, newFather);
+
+                Human newMother = null;
+                Human newFather = null;
+
+                try {
+                    newMother = new Human(motherName, motherSurname, motherBirthDate, motherIQ);
+                    newFather = new Human(fatherName, fatherSurname, fatherBirthDate, fatherIQ);
+                    famController.createNewFamily(newMother, newFather);
+                } catch (DateTimeParseException e) {
+                    System.out.println("!!!!! Введите поля родителей следуя запрашиваемым форматам");
+                }
 
             } else if (choiceNumber == 7) {
-                System.out.print("Задайте порядковый номер семьи: ");
-                choiceNumberSubmenu = scanner.nextInt();
-                famController.deleteFamilyByIndex(choiceNumberSubmenu);
+                System.out.print("Задайте порядковый номер семьи - целое число больше нуля: ");
+                try {
+                    familyID = scanner.nextInt();
+                    famController.deleteFamilyByIndex(familyID - 1);
+                } catch (InputMismatchException | ArrayIndexOutOfBoundsException e) {
+                    System.out.println("!!!!! Ввод должен быть целое число больше нуля");
+                }
 
             } else if (choiceNumber == 8) {
                 System.out.println("***************");
@@ -148,21 +216,35 @@ public class Main {
                         "1. Родить ребенка\n" +
                         "2. Усыновить ребенка\n" +
                         "3. Вернуться в главное меню\n");
-                choiceNumberSubmenu = scanner.nextInt();
+                try {
+                    choiceNumberSubmenu = scanner.nextInt();
+                } catch (InputMismatchException e) {
+                    System.out.println("!!!!! Ввод должен быть целое число от 1 до 3");
+                }
 
                 if (choiceNumberSubmenu == 1) {
+                    Family familyBorningChild = null;
                     System.out.print("Введите порядковый номер семьи: ");
-                    familyID = scanner.nextInt();
-                    Family familyBorningChild = famController.getFamilyById(familyID);
-                    System.out.print("Введите имя мальчика: ");
-                    boyName = scanner.next();
-                    System.out.print("Введите имя девочки: ");
-                    girlName = scanner.next();
-                    famController.bornChild(familyBorningChild, girlName, boyName);
+                    try {
+                        familyID = scanner.nextInt();
+                        familyBorningChild = famController.getFamilyById(familyID - 1);
+                        System.out.print("Введите имя мальчика: ");
+                        boyName = scanner.next();
+                        System.out.print("Введите имя девочки: ");
+                        girlName = scanner.next();
+                        famController.bornChild(familyBorningChild, girlName, boyName);
+                    } catch (InputMismatchException e) {
+                        System.out.println("!!!!! Ввод должен быть целое число");
+                    }
 
                 } else if (choiceNumberSubmenu == 2) {
                     System.out.print("Введите порядковый номер семьи: ");
-                    familyID = scanner.nextInt();
+                    try {
+                        familyID = scanner.nextInt();
+                    } catch (InputMismatchException e) {
+                        System.out.println("!!!!! Ввод должен быть целое число");
+                    }
+
                     System.out.print("Введите имя ребенка которого принимает семья: ");
                     adoptedName = scanner.next();
                     System.out.print("Введите фамилию ребенка которого принимает семья: ");
@@ -170,9 +252,20 @@ public class Main {
                     System.out.print("Введите год рождения ребенка которого принимает семья: ");
                     adoptedBirthYear = scanner.next();
                     System.out.print("Введите IQ ребенка которого принимает семья: ");
-                    adoptedIQ = scanner.nextInt();
-                    Family familyAdoptingChild = famController.getFamilyById(familyID);
-                    Human adoptedChild = new Human(adoptedName, adoptedSurname, "01/01/" + adoptedBirthYear, adoptedIQ);
+                    try {
+                        adoptedIQ = scanner.nextInt();
+                    } catch (InputMismatchException e) {
+                        System.out.println("!!!!! Ввод должен быть целое число");
+                    }
+
+                    Family familyAdoptingChild = famController.getFamilyById(familyID - 1);
+                    Human adoptedChild = null;
+                    try {
+                        adoptedChild = new Human(adoptedName, adoptedSurname, "01/01/" + adoptedBirthYear, adoptedIQ);
+                    } catch (DateTimeParseException e) {
+                        System.out.println("!!!!! Введите поля для Ребенка следуя запрашиваемым форматам");
+                    }
+
                     famController.adoptChild(familyAdoptingChild, adoptedChild);
 
                 } else if (choiceNumberSubmenu == 3) {
@@ -192,29 +285,36 @@ public class Main {
                         }
                         System.out.println("Ввод должен быть число от 1 до 9 или exit");
                     }
-                    continue;
                 }
+
             } else if (choiceNumber == 9) {
                 System.out.print("Задайте число: ");
-                choiceNumberSubmenu = scanner.nextInt();
-                famController.deleteAllChildrenOlderThan(choiceNumberSubmenu);
+                try {
+                    number = scanner.nextInt();
+                } catch (InputMismatchException e) {
+                    System.out.println("!!!!! Ввод должен быть целое число");
+                }
+
+                famController.deleteAllChildrenOlderThan(number);
+                continue;
             }
 
             System.out.println("***********************************************************************");
 
+            choiceNumber = 0;
             printMenu();
 
             try {
                 choiceNumber = scanner.nextInt();
-            } catch (InputMismatchException e) {
+            } catch (InputMismatchException exept) {
                 try {
                     choiceExit = scanner.nextLine();
-                } catch (InputMismatchException ex) {
                     if (!choiceExit.equals("exit")) {
-                        System.out.println("Ввод должен быть число от 1 до 9 или exit");
+                        System.out.println("!!!!! Ввод должен быть число от 1 до 9 или exit !!!!!");
                     }
+                } catch (InputMismatchException exception) {
+                    System.out.println("!!!!! Ввод должен быть число от 1 до 9 или exit !!!!!");
                 }
-                System.out.println("Ввод должен быть число от 1 до 9 или exit");
             }
         }
     }
