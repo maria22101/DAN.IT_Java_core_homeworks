@@ -1,6 +1,7 @@
 package homework12;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Family {
     private Human mother;
@@ -137,24 +138,32 @@ public class Family {
                 .add("        father: " + father.prettyFormat())
                 .toString();
 
-
         StringJoiner sj1 = new StringJoiner("\n").add("        children: ");
         for (Human ch : children) {
-            if (ch instanceof Man){
+            if (ch instanceof Man) {
                 sj1 = sj1.add("                boy: " + ch.prettyFormat());
-            }else {
+            } else if (ch instanceof Woman){
                 sj1 = sj1.add("                girl: " + ch.prettyFormat());
+            } else {
+                sj1 = sj1.add("                child: " + ch.prettyFormat());
             }
         }
         String childrenInPrettyFormat = sj1.toString();
 
-        StringJoiner sj2 = new StringJoiner("\n").add("        pets: ");
-        for (Pet p : pet) {
-            sj2 = sj2.add("               " + p.prettyFormat());
-        }
-        String petsInPrettyFormat = sj2.toString();
+        StringJoiner sj2 = new StringJoiner("").add("        pets:   ");
+            String petString = pet
+                    .stream()
+                    .map(p -> p.prettyFormat())
+                    .collect(Collectors.joining(", ","[","]"));
+        String petsInPrettyFormat = sj2.add(petString).toString();
 
-        return parentsInPrettyFormat + "\n" + childrenInPrettyFormat + "\n" + petsInPrettyFormat;
+        if (!children.isEmpty() && !pet.isEmpty()) {
+            return "----------------------------" + "\n" + parentsInPrettyFormat + "\n" + childrenInPrettyFormat +
+                    "\n" + petsInPrettyFormat;
+        } else if (!children.isEmpty()) {
+            return "----------------------------" + "\n" + parentsInPrettyFormat + "\n" + childrenInPrettyFormat;
+        } else if (!pet.isEmpty()) {
+            return "----------------------------" + "\n" + parentsInPrettyFormat + "\n" + petsInPrettyFormat;
+        } else return "----------------------------" + "\n" + parentsInPrettyFormat;
     }
-
 }
