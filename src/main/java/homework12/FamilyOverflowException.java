@@ -1,10 +1,10 @@
 package homework12;
 
-public class MaximumFamilySize extends RuntimeException {
+public class FamilyOverflowException extends RuntimeException {
     Family family;
-    private final int MEMBERS = 4;
+    static final int MEMBERS = 4;
 
-    public MaximumFamilySize(Family family) {
+    public FamilyOverflowException(Family family) {
         this.family = family;
     }
 

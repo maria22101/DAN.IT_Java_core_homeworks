@@ -1,10 +1,5 @@
 package homework12;
 
-import homework12.Family;
-import homework12.Human;
-import homework12.Pet;
-import homework12.FamilyService;
-
 import java.util.List;
 import java.util.Set;
 
@@ -40,16 +35,20 @@ public class FamilyController {
     }
 
     public Family bornChild(Family f, String femName, String maleName) {
-        if (f.countFamily() >= 4) {
-            throw new MaximumFamilySize(f);
-        } else {
+        try {
             famService.bornChild(f, femName, maleName);
+        } catch (FamilyOverflowException ex) {
+            System.out.println(ex);
         }
         return f;
     }
 
     public Family adoptChild(Family f, Human h) {
-        famService.adoptChild(f, h);
+        try {
+            famService.adoptChild(f, h);
+        } catch (FamilyOverflowException ex) {
+            System.out.println(ex);
+        }
         return f;
     }
 

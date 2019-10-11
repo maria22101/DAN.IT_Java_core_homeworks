@@ -1,7 +1,5 @@
 package homework12;
 
-import homework12.*;
-
 import java.util.List;
 import java.util.Random;
 import java.util.Set;
@@ -48,29 +46,33 @@ public class FamilyService {
         return fDao.deleteFamily(familyToDeleteIndex);
     }
 
-    public Family bornChild(Family family, String femaleName, String maleName) {
-        Human newChild;
-        Random rand = new Random();
-        if (rand.nextInt(2) == 0) {
-            newChild = new Woman();
-            newChild.setName(femaleName);
-        } else {
-            newChild = new Man();
-            newChild.setName(maleName);
-        }
-        newChild.setFamily(family);
-        newChild.setSurname(family.getFather().getSurname());
-        family.getChildren().add(newChild);
-        fDao.saveFamily(family);
-        return family;
+    public Family bornChild(Family family, String femaleName, String maleName) throws FamilyOverflowException {
+        if (family.countFamily() < FamilyOverflowException.MEMBERS) {
+            Human newChild;
+            Random rand = new Random();
+            if (rand.nextInt(2) == 0) {
+                newChild = new Woman();
+                newChild.setName(femaleName);
+            } else {
+                newChild = new Man();
+                newChild.setName(maleName);
+            }
+            newChild.setFamily(family);
+            newChild.setSurname(family.getFather().getSurname());
+            family.getChildren().add(newChild);
+            fDao.saveFamily(family);
+            return family;
+        } else throw new FamilyOverflowException(family);
     }
 
-    public Family adoptChild(Family family, Human newChild) {
-        newChild.setFamily(family);
-        newChild.setSurname(family.getFather().getSurname());
-        family.getChildren().add(newChild);
-        fDao.saveFamily(family);
-        return family;
+    public Family adoptChild(Family family, Human newChild) throws FamilyOverflowException {
+        if (family.countFamily() < FamilyOverflowException.MEMBERS) {
+            newChild.setFamily(family);
+            newChild.setSurname(family.getFather().getSurname());
+            family.getChildren().add(newChild);
+            fDao.saveFamily(family);
+            return family;
+        } else throw new FamilyOverflowException(family);
     }
 
     public void deleteAllChildrenOlderThan(int ageToCompareWith) {

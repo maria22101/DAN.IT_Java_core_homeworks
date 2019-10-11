@@ -71,8 +71,7 @@ public class Main {
         String boyName, girlName, adoptedName, adoptedSurname, adoptedBirthYear;
         int motherIQ = 0;
         int fatherIQ = 0;
-        int familyID = 0;
-        int adoptedIQ = 0;
+        int familyID, adoptedIQ;
 
         try {
             choiceNumber = scanner.nextInt();
@@ -232,58 +231,34 @@ public class Main {
                         boyName = scanner.next();
                         System.out.print("Введите имя девочки: ");
                         girlName = scanner.next();
+
                         famController.bornChild(familyBorningChild, girlName, boyName);
-                    } catch (InputMismatchException e) {
-                        System.out.println("!!!!! Ввод должен быть целое число");
+
+                    } catch (InputMismatchException | IndexOutOfBoundsException e) {
+                        System.out.println("!!!!! Ввод должен быть целое число больше нуля");
                     }
 
                 } else if (choiceNumberSubmenu == 2) {
+                    Family familyAdoptingChild = null;
+                    Human adoptedChild = null;
                     System.out.print("Введите порядковый номер семьи: ");
                     try {
                         familyID = scanner.nextInt();
-                    } catch (InputMismatchException e) {
-                        System.out.println("!!!!! Ввод должен быть целое число");
-                    }
-
-                    System.out.print("Введите имя ребенка которого принимает семья: ");
-                    adoptedName = scanner.next();
-                    System.out.print("Введите фамилию ребенка которого принимает семья: ");
-                    adoptedSurname = scanner.next();
-                    System.out.print("Введите год рождения ребенка которого принимает семья: ");
-                    adoptedBirthYear = scanner.next();
-                    System.out.print("Введите IQ ребенка которого принимает семья: ");
-                    try {
+                        familyAdoptingChild = famController.getFamilyById(familyID - 1);
+                        System.out.print("Введите имя ребенка которого принимает семья - строка: ");
+                        adoptedName = scanner.next();
+                        System.out.print("Введите фамилию ребенка которого принимает семья - строка: ");
+                        adoptedSurname = scanner.next();
+                        System.out.print("Введите год рождения ребенка которого принимает семья (число - четыре цифры): ");
+                        adoptedBirthYear = scanner.next();
+                        System.out.print("Введите IQ ребенка которого принимает семья - целое число больше нуля: ");
                         adoptedIQ = scanner.nextInt();
-                    } catch (InputMismatchException e) {
-                        System.out.println("!!!!! Ввод должен быть целое число");
-                    }
-
-                    Family familyAdoptingChild = famController.getFamilyById(familyID - 1);
-                    Human adoptedChild = null;
-                    try {
                         adoptedChild = new Human(adoptedName, adoptedSurname, "01/01/" + adoptedBirthYear, adoptedIQ);
-                    } catch (DateTimeParseException e) {
+
+                        famController.adoptChild(familyAdoptingChild, adoptedChild);
+
+                    } catch (InputMismatchException | IndexOutOfBoundsException | DateTimeParseException e) {
                         System.out.println("!!!!! Введите поля для Ребенка следуя запрашиваемым форматам");
-                    }
-
-                    famController.adoptChild(familyAdoptingChild, adoptedChild);
-
-                } else if (choiceNumberSubmenu == 3) {
-                    System.out.println("***********************************************************************");
-
-                    printMenu();
-
-                    try {
-                        choiceNumber = scanner.nextInt();
-                    } catch (InputMismatchException e) {
-                        try {
-                            choiceExit = scanner.nextLine();
-                        } catch (InputMismatchException ex) {
-                            if (!choiceExit.equals("exit")) {
-                                System.out.println("Ввод должен быть число от 1 до 9 или exit");
-                            }
-                        }
-                        System.out.println("Ввод должен быть число от 1 до 9 или exit");
                     }
                 }
 
@@ -291,17 +266,15 @@ public class Main {
                 System.out.print("Задайте число: ");
                 try {
                     number = scanner.nextInt();
+                    famController.deleteAllChildrenOlderThan(number);
                 } catch (InputMismatchException e) {
                     System.out.println("!!!!! Ввод должен быть целое число");
                 }
-
-                famController.deleteAllChildrenOlderThan(number);
-                continue;
             }
 
             System.out.println("***********************************************************************");
 
-            choiceNumber = 0;
+            scanner = new Scanner(System.in);
             printMenu();
 
             try {
