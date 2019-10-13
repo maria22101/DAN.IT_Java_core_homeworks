@@ -4,6 +4,14 @@ import homework12.Family;
 import homework12.Human;
 import homework12.FamilyDAO;
 
+import java.io.*;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.FileSystem;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -53,5 +61,22 @@ public class CollectionFamilyDAO implements FamilyDAO {
             listFam.set(listFam.indexOf(familyToSave), familyToSave);
             return;
         }else listFam.add(familyToSave);
+    }
+
+    @Override
+    public void loadData(List<Family> families) {
+        Path path = Paths.get("C:/Users/HP/IdeaProjects/Java Core/DAN.IT_Java_core_homeworks/src/main/java/homework13/families.txt");
+        try {
+            Files.createFile(path);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        for (Family family : listFam) {
+            try{
+                Files.write(path, family.prettyFormat().getBytes(), StandardOpenOption.APPEND);
+            }catch (IOException e){
+                System.out.println(e);
+            }
+        }
     }
 }

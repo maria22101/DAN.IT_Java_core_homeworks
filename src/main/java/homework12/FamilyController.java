@@ -71,4 +71,8 @@ public class FamilyController {
     public void addPet(int index, Pet pet) {
         famService.addPet(index, pet);
     }
+
+    public void loadData() {
+        famService.loadData();
+    }
 }

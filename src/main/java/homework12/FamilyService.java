@@ -105,4 +105,8 @@ public class FamilyService {
         fam.getPet().add(pet);
         fDao.saveFamily(fam);
     }
+
+    public void loadData() {
+        fDao.loadData(fDao.getAllFamilies());
+    }
 }

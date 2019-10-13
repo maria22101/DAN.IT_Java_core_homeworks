@@ -157,11 +157,11 @@ public class Family {
 
         if (!children.isEmpty() && !pet.isEmpty()) {
             return "----------------------------" + "\n" + parentsInPrettyFormat + "\n" + childrenInPrettyFormat +
-                    "\n" + petsInPrettyFormat;
+                    "\n" + petsInPrettyFormat + "\n";
         } else if (!children.isEmpty()) {
-            return "----------------------------" + "\n" + parentsInPrettyFormat + "\n" + childrenInPrettyFormat;
+            return "----------------------------" + "\n" + parentsInPrettyFormat + "\n" + childrenInPrettyFormat + "\n";
         } else if (!pet.isEmpty()) {
-            return "----------------------------" + "\n" + parentsInPrettyFormat + "\n" + petsInPrettyFormat;
-        } else return "----------------------------" + "\n" + parentsInPrettyFormat;
+            return "----------------------------" + "\n" + parentsInPrettyFormat + "\n" + petsInPrettyFormat + "\n";
+        } else return "----------------------------" + "\n" + parentsInPrettyFormat + "\n";
     }
 }
