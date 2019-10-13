@@ -1,10 +1,15 @@
 package homework12;
 
 import homework8.Species;
+import org.junit.platform.commons.util.StringUtils;
 
 import java.io.IOException;
+import java.text.NumberFormat;
+import java.text.ParseException;
 import java.time.format.DateTimeParseException;
 import java.util.*;
+import java.util.function.IntPredicate;
+import java.util.stream.Stream;
 
 public class Main {
     static FamilyController famController = new FamilyController();
@@ -58,6 +63,8 @@ public class Main {
         famController.addPet(2, pet32);
     }
 
+    static Human getValidHuman
+
     public static void main(String[] args) {
         printMenu();
         Scanner scanner = new Scanner(System.in);
@@ -66,11 +73,7 @@ public class Main {
         int number = 0;
         String choiceExit = "programm running";
 
-        String motherName, motherSurname, motherBirthDate, motherBirthYear, motherBirthMonth, motherBirthDay;
-        String fatherName, fatherSurname, fatherBirthDate, fatherBirthYear, fatherBirthMonth, fatherBirthDay;
         String boyName, girlName, adoptedName, adoptedSurname, adoptedBirthYear;
-        int motherIQ = 0;
-        int fatherIQ = 0;
         int familyID, adoptedIQ;
 
         try {
@@ -142,62 +145,88 @@ public class Main {
                 }
 
             } else if (choiceNumber == 6) {
-                System.out.print("Введите имя матери (строка): ");
-                motherName = scanner.next();
-
-                System.out.print("Введите фамилию матери (строка): ");
-                motherSurname = scanner.next();
-
-                System.out.print("Введите год рождения матери (число - четыре цифры): ");
-                motherBirthYear = scanner.next();
-
-                System.out.print("Введите месяц рождения матери (число от 01 до 12): ");
-                motherBirthMonth = scanner.next();
-
-                System.out.print("Введите день рождения матери (число от 01 до последнего дня месяца): ");
-                motherBirthDay = scanner.next();
-
-                System.out.print("Введите iq матери (число): ");
                 try {
-                    motherIQ = scanner.nextInt();
-                } catch (InputMismatchException e) {
-                    System.out.println("!!!!! Ввод должен быть целое число");
-                }
+                    System.out.print("Введите имя матери (строка): ");
+                    if (scanner.nextLine().chars().anyMatch(Character::isDigit))
+                        throw new Exception("!!! Введите имя строкой");
+                    String motherName = scanner.next();
 
-                System.out.print("Введите имя отца (строка): ");
-                fatherName = scanner.next();
+                    System.out.print("Введите фамилию матери (строка): ");
+                    if (scanner.nextLine().chars().anyMatch(Character::isDigit))
+                        throw new Exception("!!! Введите фамилию строкой");
+                    String motherSurname = scanner.next();
 
-                System.out.print("Введите фамилию отца (строка): ");
-                fatherSurname = scanner.next();
+                    System.out.print("Введите год рождения матери (число - четыре цифры): ");
+                    String s = scanner.next();
+                    if ((!(s.chars().allMatch(Character::isDigit))) || (!(s.chars().count() == 4))) {
+                        throw new Exception("Введите год рождения четырьмя цифрами");
+                    }
+                    String motherBirthYear = s;
 
-                System.out.print("Введите год рождения отца (число - четыре цифры): ");
-                fatherBirthYear = scanner.next();
+                    System.out.print("Введите месяц рождения матери (число от 01 до 12): ");
+                    s = scanner.next();
+                    if (!(s.chars().allMatch(Character::isDigit)) || !(Integer.valueOf(s) > 0 && Integer.valueOf(s) <= 12)) {
+                        throw new Exception("Введите месяц рождения числом от 01 до 12");
+                    }
+                    String motherBirthMonth = s;
 
-                System.out.print("Введите месяц рождения отца (число от 01 до 12): ");
-                fatherBirthMonth = scanner.next();
+                    System.out.print("Введите день рождения матери (число от 01 до последнего дня месяца): ");
+                    s = scanner.next();
+                    if (!(s.chars().allMatch(Character::isDigit)) || !(Integer.valueOf(s) > 0 && Integer.valueOf(s) <= 31)) {
+                        throw new Exception("Введите день рождения числом от 01 до последнего дня месяца");
+                    }
+                    String motherBirthDay = s;
 
-                System.out.print("Введите день рождения отца (число от 01 до последнего дня месяца): ");
-                fatherBirthDay = scanner.next();
+                    System.out.print("Введите iq матери (число): ");
+                    int motherIQ = scanner.nextInt();
 
-                System.out.print("Введите iq отца (число): ");
-                try {
-                    fatherIQ = scanner.nextInt();
-                } catch (InputMismatchException e) {
-                    System.out.println("!!!!! Ввод должен быть целое число");
-                }
+                    System.out.print("Введите имя отца (строка): ");
+                    if (scanner.nextLine().chars().anyMatch(Character::isDigit))
+                        throw new Exception("!!! Введите имя строкой");
+                    String fatherName = scanner.next();
 
-                motherBirthDate = motherBirthDay + "/" + motherBirthMonth + "/" + motherBirthYear;
-                fatherBirthDate = fatherBirthDay + "/" + fatherBirthMonth + "/" + fatherBirthYear;
+                    System.out.print("Введите фамилию отца (строка): ");
+                    if (scanner.nextLine().chars().anyMatch(Character::isDigit))
+                        throw new Exception("!!! Введите фамилию строкой");
+                    String fatherSurname = scanner.next();
 
-                Human newMother = null;
-                Human newFather = null;
+                    System.out.print("Введите год рождения отца (число - четыре цифры): ");
+                    s = scanner.next();
+                    if ((!(s.chars().allMatch(Character::isDigit))) || (!(s.chars().count() == 4))) {
+                        throw new Exception("Введите год рождения четырьмя цифрами");
+                    }
+                    String fatherBirthYear = s;
 
-                try {
-                    newMother = new Human(motherName, motherSurname, motherBirthDate, motherIQ);
-                    newFather = new Human(fatherName, fatherSurname, fatherBirthDate, fatherIQ);
+                    System.out.print("Введите месяц рождения отца (число от 01 до 12): ");
+                    s = scanner.next();
+                    if (!(s.chars().allMatch(Character::isDigit)) || !(Integer.valueOf(s) > 0 && Integer.valueOf(s) <= 12)) {
+                        throw new Exception("Введите месяц рождения числом от 01 до 12");
+                    }
+                    String fatherBirthMonth = s;
+
+                    System.out.print("Введите день рождения отца (число от 01 до последнего дня месяца): ");
+                    s = scanner.next();
+                    if (!(s.chars().allMatch(Character::isDigit)) || !(Integer.valueOf(s) > 0 && Integer.valueOf(s) <= 31)) {
+                        throw new Exception("Введите день рождения числом от 01 до последнего дня месяца");
+                    }
+                    String fatherBirthDay = s;
+
+                    System.out.print("Введите iq отца (число): ");
+                    int fatherIQ = scanner.nextInt();
+
+                    String motherBirthDate = motherBirthDay + "/" + motherBirthMonth + "/" + motherBirthYear;
+                    String fatherBirthDate = fatherBirthDay + "/" + fatherBirthMonth + "/" + fatherBirthYear;
+
+                    Human newMother = new Human(motherName, motherSurname, motherBirthDate, motherIQ);
+                    Human newFather = new Human(fatherName, fatherSurname, fatherBirthDate, fatherIQ);
                     famController.createNewFamily(newMother, newFather);
+
+                } catch (InputMismatchException e) {
+                    System.out.println("!!!!! Ввод должен быть целое число");
                 } catch (DateTimeParseException e) {
-                    System.out.println("!!!!! Введите поля родителей следуя запрашиваемым форматам");
+                    System.out.println("!!!!! Проверьте соответствие полей даты рождения запрашиваемым форматам года, месяца, дня");
+                } catch (Exception e) {
+                    System.out.println(e.getMessage());
                 }
 
             } else if (choiceNumber == 7) {
@@ -292,3 +321,4 @@ public class Main {
         }
     }
 }
+
