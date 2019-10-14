@@ -3,20 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5a6cfef6-0c35-4cc2-8150-160c48de1dc8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/homework12/CollectionFamilyDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homework12/CollectionFamilyDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/homework12/Family.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homework12/Family.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/homework12/FamilyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homework12/FamilyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/homework12/FamilyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homework12/FamilyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/homework12/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homework12/Human.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/homework12/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homework12/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/homework13/families.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/homework12/CollectionFamilyDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homework12/CollectionFamilyDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/homework12/Family.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homework12/Family.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/homework12/FamilyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homework12/FamilyController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/homework12/FamilyService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homework12/FamilyService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/homework12/Human.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homework12/Human.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/homework12/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homework12/Main$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/homework12/Main$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homework12/Main$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homework13/families_list.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/homework12/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homework12/Main.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -76,7 +64,7 @@
           <entry key="gitignore" value="2" />
           <entry key="iml" value="1" />
           <entry key="java" value="308" />
-          <entry key="txt" value="10" />
+          <entry key="txt" value="11" />
           <entry key="xml" value="4" />
         </counts>
       </usages-collector>
@@ -84,20 +72,20 @@
         <counts>
           <entry key="IDEA_MODULE" value="1" />
           <entry key="JAVA" value="308" />
-          <entry key="PLAIN_TEXT" value="12" />
+          <entry key="PLAIN_TEXT" value="13" />
           <entry key="XML" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="81" />
-          <entry key="java" value="50617" />
+          <entry key="java" value="50773" />
           <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="50617" />
+          <entry key="JAVA" value="50773" />
           <entry key="PLAIN_TEXT" value="81" />
           <entry key="XML" value="3" />
         </counts>
@@ -124,12 +112,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/homework12/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="279" column="44" selection-start-line="279" selection-start-column="44" selection-end-line="279" selection-end-column="44" />
+            <state relative-caret-position="149">
+              <caret line="294" column="17" lean-forward="true" selection-start-line="294" selection-start-column="17" selection-end-line="294" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#printMenu#0;class#Main#0" />
                 <element signature="method#generateTestFamilies#0;class#Main#0" />
-                <element signature="method#getValidHuman#0;class#Main#0" />
               </folding>
             </state>
           </provider>
@@ -150,8 +138,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/homework12/CollectionFamilyDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="75" column="28" lean-forward="true" selection-start-line="75" selection-start-column="28" selection-end-line="75" selection-end-column="28" />
+            <state relative-caret-position="112">
+              <caret line="63" column="131" lean-forward="true" selection-start-line="63" selection-start-column="131" selection-end-line="63" selection-end-column="131" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -915,32 +903,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/homework12/FamilyController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="51" column="22" lean-forward="true" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#196#197#0" expanded="true" />
-            <element signature="e#249#250#0" expanded="true" />
-            <element signature="e#289#290#0" expanded="true" />
-            <element signature="e#339#340#0" expanded="true" />
-            <element signature="e#389#390#0" expanded="true" />
-            <element signature="e#445#446#0" expanded="true" />
-            <element signature="e#493#494#0" expanded="true" />
-            <element signature="e#547#548#0" expanded="true" />
-            <element signature="e#604#605#0" expanded="true" />
-            <element signature="e#675#676#0" expanded="true" />
-            <element signature="e#736#737#0" expanded="true" />
-            <element signature="e#795#796#0" expanded="true" />
-            <element signature="e#848#849#0" expanded="true" />
-            <element signature="e#911#912#0" expanded="true" />
-            <element signature="e#1945#1946#0" expanded="true" />
-            <element signature="e#1985#1986#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/homework12/FamilyService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-721">
@@ -976,11 +938,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/homework13/families_list.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-256" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/homework12/Family.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="248">
@@ -1004,10 +961,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homework13/families_list.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homework12/FamilyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="51" column="22" lean-forward="true" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#196#197#0" expanded="true" />
+            <element signature="e#249#250#0" expanded="true" />
+            <element signature="e#289#290#0" expanded="true" />
+            <element signature="e#339#340#0" expanded="true" />
+            <element signature="e#389#390#0" expanded="true" />
+            <element signature="e#445#446#0" expanded="true" />
+            <element signature="e#493#494#0" expanded="true" />
+            <element signature="e#547#548#0" expanded="true" />
+            <element signature="e#604#605#0" expanded="true" />
+            <element signature="e#675#676#0" expanded="true" />
+            <element signature="e#736#737#0" expanded="true" />
+            <element signature="e#795#796#0" expanded="true" />
+            <element signature="e#848#849#0" expanded="true" />
+            <element signature="e#911#912#0" expanded="true" />
+            <element signature="e#1945#1946#0" expanded="true" />
+            <element signature="e#1985#1986#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/homework12/CollectionFamilyDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="75" column="28" lean-forward="true" selection-start-line="75" selection-start-column="28" selection-end-line="75" selection-end-column="28" />
+        <state relative-caret-position="112">
+          <caret line="63" column="131" lean-forward="true" selection-start-line="63" selection-start-column="131" selection-end-line="63" selection-end-column="131" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1016,12 +1004,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/homework12/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="279" column="44" selection-start-line="279" selection-start-column="44" selection-end-line="279" selection-end-column="44" />
+        <state relative-caret-position="149">
+          <caret line="294" column="17" lean-forward="true" selection-start-line="294" selection-start-column="17" selection-end-line="294" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#printMenu#0;class#Main#0" />
             <element signature="method#generateTestFamilies#0;class#Main#0" />
-            <element signature="method#getValidHuman#0;class#Main#0" />
           </folding>
         </state>
       </provider>

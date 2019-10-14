@@ -278,13 +278,11 @@ public class Main {
                 familyController.loadData();
 
             } else if (choiceNumber == 11) {
+                Path path = Paths.get("C:/Users/HP/IdeaProjects/Java Core/DAN.IT_Java_core_homeworks/src/main/java/homework13/families_list.txt");
 
-                String s;
-                try (BufferedReader bufferedReader = new BufferedReader(new FileReader("C:/Users/HP/IdeaProjects/Java Core/DAN.IT_Java_core_homeworks/src/main/java/homework13/families_list.txt"))) {
-                    while ((s = bufferedReader.readLine()) != null) {
-                        System.out.print(s);
-                    }
-                } catch (IOException ex) {
+                try {
+                    System.out.println(new String(Files.readAllBytes(path)));
+                } catch (IOException e) {
                     System.out.println("Ошибка вывода");
                 }
             }
