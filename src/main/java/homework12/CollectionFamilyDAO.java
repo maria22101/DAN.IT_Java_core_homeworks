@@ -7,48 +7,44 @@ import homework12.FamilyDAO;
 import java.io.*;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
-import java.nio.file.FileSystem;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.StandardOpenOption;
+import java.nio.file.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class CollectionFamilyDAO implements FamilyDAO {
-    private List<Family> listFam = new ArrayList<>();
+    private List<Family> listFamily = new ArrayList<>();
 
     @Override
     public void createFamily(Human female, Human male) {
         Family fam = new Family(female, male);
-        listFam.add(fam);
+        listFamily.add(fam);
     }
 
     @Override
     public List<Family> getAllFamilies() {
-        return listFam;
+        return listFamily;
     }
 
     @Override
     public Family getFamilyByIndex(int familyToGetIndex) {
-        if (familyToGetIndex < listFam.size()) {
-            return listFam.get(familyToGetIndex);
+        if (familyToGetIndex < listFamily.size()) {
+            return listFamily.get(familyToGetIndex);
         } else return null;
     }
 
     @Override
     public boolean deleteFamily(int familyToDeleteIndex) {
-        if (familyToDeleteIndex < listFam.size()) {
-            listFam.remove(familyToDeleteIndex);
+        if (familyToDeleteIndex < listFamily.size()) {
+            listFamily.remove(familyToDeleteIndex);
             return true;
         } else return false;
     }
 
     @Override
     public boolean deleteFamily(Family familyToDelete) {
-        for (Family fam : listFam) {
+        for (Family fam : listFamily) {
             if (fam.equals(familyToDelete)) {
-                listFam.remove(familyToDelete);
+                listFamily.remove(familyToDelete);
                 return true;
             }
         }
@@ -57,25 +53,29 @@ public class CollectionFamilyDAO implements FamilyDAO {
 
     @Override
     public void saveFamily(Family familyToSave) {
-        if (listFam.contains(familyToSave)) {
-            listFam.set(listFam.indexOf(familyToSave), familyToSave);
+        if (listFamily.contains(familyToSave)) {
+            listFamily.set(listFamily.indexOf(familyToSave), familyToSave);
             return;
-        }else listFam.add(familyToSave);
+        }else listFamily.add(familyToSave);
     }
 
     @Override
     public void loadData(List<Family> families) {
-        Path path = Paths.get("C:/Users/HP/IdeaProjects/Java Core/DAN.IT_Java_core_homeworks/src/main/java/homework13/families.txt");
+        Path path = Paths.get("C:/Users/HP/IdeaProjects/Java Core/DAN.IT_Java_core_homeworks/src/main/java/homework13/families_list.txt");
         try {
             Files.createFile(path);
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (FileAlreadyExistsException e) {
+            System.out.println("Запись в созданный файл");
         }
-        for (Family family : listFam) {
+         catch (IOException e) {
+             System.out.println("Создание файла не удалось");;
+         }
+
+        for (Family family : listFamily) {
             try{
                 Files.write(path, family.prettyFormat().getBytes(), StandardOpenOption.APPEND);
             }catch (IOException e){
-                System.out.println(e);
+                System.out.println("Запись не удалась");
             }
         }
     }

@@ -4,75 +4,75 @@ import java.util.List;
 import java.util.Set;
 
 public class FamilyController {
-    FamilyService famService = new FamilyService();
+    FamilyService familyService = new FamilyService();
 
     public List<Family> getAllFamilies() {
-        return famService.getAllFamilies();
+        return familyService.getAllFamilies();
     }
 
     public void displayAllFamilies() {
-        famService.displayAllFamilies();
+        familyService.displayAllFamilies();
     }
 
     public void getFamiliesBiggerThan(int num) {
-        famService.getFamiliesBiggerThan(num);
+        familyService.getFamiliesBiggerThan(num);
     }
 
     public void getFamiliesLessThan(int num) {
-        famService.getFamiliesLessThan(num);
+        familyService.getFamiliesLessThan(num);
     }
 
     public int countFamiliesWithMemberNumber(int num) {
-        return famService.countFamiliesWithMemberNumber(num);
+        return familyService.countFamiliesWithMemberNumber(num);
     }
 
-    public void createNewFamily(Human f, Human m) {
-        famService.createNewFamily(f, m);
+    public void createNewFamily(Human female, Human male) {
+        familyService.createNewFamily(female, male);
     }
 
     public boolean deleteFamilyByIndex(int index) {
-        return famService.deleteFamilyByIndex(index);
+        return familyService.deleteFamilyByIndex(index);
     }
 
-    public Family bornChild(Family f, String femName, String maleName) {
+    public Family bornChild(Family family, String femaleName, String maleName) {
         try {
-            famService.bornChild(f, femName, maleName);
+            familyService.bornChild(family, femaleName, maleName);
         } catch (FamilyOverflowException ex) {
-            System.out.println(ex);
+            System.out.println("Максимальный допустимый размер семьи превышен");
         }
-        return f;
+        return family;
     }
 
-    public Family adoptChild(Family f, Human h) {
+    public Family adoptChild(Family family, Human human) {
         try {
-            famService.adoptChild(f, h);
+            familyService.adoptChild(family, human);
         } catch (FamilyOverflowException ex) {
-            System.out.println(ex);
+            System.out.println("Максимальный допустимый размер семьи превышен");
         }
-        return f;
+        return family;
     }
 
     public void deleteAllChildrenOlderThan(int age) {
-        famService.deleteAllChildrenOlderThan(age);
+        familyService.deleteAllChildrenOlderThan(age);
     }
 
     public int count() {
-        return famService.count();
+        return familyService.count();
     }
 
     public Family getFamilyById(int index) {
-        return famService.getFamilyById(index);
+        return familyService.getFamilyById(index);
     }
 
     public Set<Pet> getPets(int index) {
-        return famService.getPets(index);
+        return familyService.getPets(index);
     }
 
     public void addPet(int index, Pet pet) {
-        famService.addPet(index, pet);
+        familyService.addPet(index, pet);
     }
 
     public void loadData() {
-        famService.loadData();
+        familyService.loadData();
     }
 }

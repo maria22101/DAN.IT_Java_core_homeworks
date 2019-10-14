@@ -151,7 +151,7 @@ public class Family {
         StringJoiner sj2 = new StringJoiner("").add("        pets:   ");
             String petString = pet
                     .stream()
-                    .map(p -> p.prettyFormat())
+                    .map(Pet::prettyFormat)
                     .collect(Collectors.joining(", ","[","]"));
         String petsInPrettyFormat = sj2.add(petString).toString();
 

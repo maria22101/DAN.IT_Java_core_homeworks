@@ -13,7 +13,7 @@ public class Human {
     private String name;
     private String surname;
     private long birthDate;
-    private int iQ;
+    private int iq;
     private Map<String, String> schedule;
     private Family family;
 
@@ -28,7 +28,7 @@ public class Human {
 
     public Human(String name, String surname, long birthDate, int iQ, Family family) {
         this(name, surname, birthDate);
-        this.iQ = iQ;
+        this.iq = iQ;
         this.family = family;
     }
 
@@ -39,7 +39,7 @@ public class Human {
                 .toInstant()
                 .toEpochMilli()
         );
-        this.iQ = iQ;
+        this.iq = iQ;
     }
 
     public String getName() {
@@ -67,11 +67,11 @@ public class Human {
     }
 
     public int getiQ() {
-        return iQ;
+        return iq;
     }
 
     public void setiQ(int iQ) {
-        this.iQ = iQ;
+        this.iq = iQ;
     }
 
     public Family getFamily() {
@@ -98,7 +98,7 @@ public class Human {
                 ", birthDate=" + DateTimeFormatter
                 .ofPattern("dd/MM/yyyy")
                 .format(Instant.ofEpochMilli(birthDate).atZone(ZoneId.systemDefault()).toLocalDate())
-                + ", iQ=" + iQ +
+                + ", iQ=" + iq +
                 ", schedule=" + schedule +
                 '}';
     }
@@ -189,7 +189,7 @@ public class Human {
 
         String result = new StringBuilder()
                 .append("{")
-                .append(String.format("name=%s, surname=%s, iq=%d, ", name, surname, iQ))
+                .append(String.format("name=%s, surname=%s, iq=%d, ", name, surname, iq))
                 .append(f.format(date) + ", " + schedule)
                 .append("}")
                 .toString();

@@ -6,10 +6,10 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 public class FamilyService {
-    private FamilyDAO fDao = new CollectionFamilyDAO();
+    private FamilyDAO familyDao = new CollectionFamilyDAO();
 
     public List<Family> getAllFamilies() {
-        return fDao.getAllFamilies();
+        return familyDao.getAllFamilies();
     }
 
     public void displayAllFamilies() {
@@ -39,11 +39,11 @@ public class FamilyService {
     }
 
     public void createNewFamily(Human female, Human male) {
-        fDao.createFamily(female, male);
+        familyDao.createFamily(female, male);
     }
 
-    public boolean deleteFamilyByIndex(int familyToDeleteIndex) {
-        return fDao.deleteFamily(familyToDeleteIndex);
+    public boolean deleteFamilyByIndex(int index) {
+        return familyDao.deleteFamily(index);
     }
 
     public Family bornChild(Family family, String femaleName, String maleName) throws FamilyOverflowException {
@@ -60,7 +60,7 @@ public class FamilyService {
             newChild.setFamily(family);
             newChild.setSurname(family.getFather().getSurname());
             family.getChildren().add(newChild);
-            fDao.saveFamily(family);
+            familyDao.saveFamily(family);
             return family;
         } else throw new FamilyOverflowException(family);
     }
@@ -70,7 +70,7 @@ public class FamilyService {
             newChild.setFamily(family);
             newChild.setSurname(family.getFather().getSurname());
             family.getChildren().add(newChild);
-            fDao.saveFamily(family);
+            familyDao.saveFamily(family);
             return family;
         } else throw new FamilyOverflowException(family);
     }
@@ -84,7 +84,7 @@ public class FamilyService {
                             .filter((child) -> child.getYears() <= ageToCompareWith)
                             .collect(Collectors.toList());
                     family.setChildren(newChildrenList);
-                    fDao.saveFamily(family);
+                    familyDao.saveFamily(family);
                 });
     }
 
@@ -92,21 +92,21 @@ public class FamilyService {
         return getAllFamilies().size();
     }
 
-    public Family getFamilyById(int familyToGetIndex) {
-        return fDao.getFamilyByIndex(familyToGetIndex);
+    public Family getFamilyById(int index) {
+        return familyDao.getFamilyByIndex(index);
     }
 
-    public Set<Pet> getPets(int familyWhichPetsRequestedIndex) {
-        return fDao.getFamilyByIndex(familyWhichPetsRequestedIndex).getPet();
+    public Set<Pet> getPets(int index) {
+        return familyDao.getFamilyByIndex(index).getPet();
     }
 
-    public void addPet(int familyWhichTakesPetIndex, Pet pet) {
-        Family fam = fDao.getFamilyByIndex(familyWhichTakesPetIndex);
+    public void addPet(int index, Pet pet) {
+        Family fam = familyDao.getFamilyByIndex(index);
         fam.getPet().add(pet);
-        fDao.saveFamily(fam);
+        familyDao.saveFamily(fam);
     }
 
     public void loadData() {
-        fDao.loadData(fDao.getAllFamilies());
+        familyDao.loadData(familyDao.getAllFamilies());
     }
 }

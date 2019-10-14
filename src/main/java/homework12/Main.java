@@ -1,18 +1,17 @@
 package homework12;
 
 import homework8.Species;
-import org.junit.platform.commons.util.StringUtils;
 
-import java.io.IOException;
-import java.text.NumberFormat;
-import java.text.ParseException;
+import java.io.*;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.time.format.DateTimeParseException;
 import java.util.*;
-import java.util.function.IntPredicate;
-import java.util.stream.Stream;
 
 public class Main {
-    static FamilyController famController = new FamilyController();
+    static FamilyController familyController = new FamilyController();
 
     static void printMenu() {
         System.out.print(
@@ -26,21 +25,23 @@ public class Main {
                         "7. Удалить семью по индексу семьи в общем списке\n" +
                         "8. Редактировать семью по индексу семьи в общем списке\n" +
                         "9. Удалить всех детей старше возраста\n" +
+                        "10. Записать список семей на диск\n" +
+                        "11. Загрузить список ранее записанных семей с диска в консоль\n" +
                         "Если да - введите номер вопроса от 1 до 9, exit для выхода: ");
     }
 
     static void generateTestFamilies() {
-        Human f1 = new Human("Ann", "Amber", "01/02/1980", 90);
-        Human m1 = new Human("Adam", "Amber", "13/03/1978", 89);
-        famController.createNewFamily(f1, m1);
+        Human female1 = new Human("Ann", "Amber", "01/02/1980", 90);
+        Human male1 = new Human("Adam", "Amber", "13/03/1978", 89);
+        familyController.createNewFamily(female1, male1);
 
-        Human f2 = new Human("Tea", "Taller", "01/02/1990", 80);
-        f2.setSchedule(new HashMap<String, String>() {{
+        Human female2 = new Human("Tea", "Taller", "01/02/1990", 80);
+        female2.setSchedule(new HashMap<String, String>() {{
             put("SUNDAY", "Jogging");
             put("MONDAY", "Meditation");
         }});
-        Human m2 = new Human("Teodor", "Taller", "13/05/1985", 79);
-        m2.setSchedule(new HashMap<String, String>() {{
+        Human male2 = new Human("Teodor", "Taller", "13/05/1985", 79);
+        male2.setSchedule(new HashMap<String, String>() {{
             put("SUNDAY", "Gardening");
             put("MONDAY", "Gym");
         }});
@@ -48,19 +49,19 @@ public class Main {
         catHabits.add("play");
         catHabits.add("sleep");
         Pet pet2 = new Pet(Species.CAT, "Tigra", 11, 70, catHabits);
-        famController.createNewFamily(f2, m2);
-        famController.addPet(1, pet2);
+        familyController.createNewFamily(female2, male2);
+        familyController.addPet(1, pet2);
 
-        Human f3 = new Human("Nicole", "Nocks", "01/06/1970", 70);
-        Human m3 = new Human("Noa", "Nocks", "14/07/1967", 69);
+        Human female3 = new Human("Nicole", "Nocks", "01/06/1970", 70);
+        Human male3 = new Human("Noa", "Nocks", "14/07/1967", 69);
         Set<String> dogHabits = new HashSet<>();
         dogHabits.add("run");
         dogHabits.add("bark");
         Pet pet31 = new Pet(Species.DOG, "Cake", 2, 55, dogHabits);
         Pet pet32 = new Pet(Species.DOG, "Black", 1, 50, dogHabits);
-        famController.createNewFamily(f3, m3);
-        famController.addPet(2, pet31);
-        famController.addPet(2, pet32);
+        familyController.createNewFamily(female3, male3);
+        familyController.addPet(2, pet31);
+        familyController.addPet(2, pet32);
     }
 
     static Human getValidHuman(String familyMember) {
@@ -146,13 +147,13 @@ public class Main {
                 generateTestFamilies();
 
             } else if (choiceNumber == 2) {
-                famController.displayAllFamilies();
+                familyController.displayAllFamilies();
 
             } else if (choiceNumber == 3) {
                 System.out.print("Задайте число: ");
                 try {
                     number = scanner.nextInt();
-                    famController.getFamiliesBiggerThan(number);
+                    familyController.getFamiliesBiggerThan(number);
                 } catch (InputMismatchException e) {
                     try {
                         choiceExit = scanner.nextLine();
@@ -168,7 +169,7 @@ public class Main {
                 System.out.print("Задайте число: ");
                 try {
                     number = scanner.nextInt();
-                    famController.getFamiliesLessThan(number);
+                    familyController.getFamiliesLessThan(number);
                 } catch (InputMismatchException e) {
                     try {
                         choiceExit = scanner.nextLine();
@@ -184,7 +185,7 @@ public class Main {
                 System.out.print("Задайте число: ");
                 try {
                     number = scanner.nextInt();
-                    System.out.println(famController.countFamiliesWithMemberNumber(number));
+                    System.out.println(familyController.countFamiliesWithMemberNumber(number));
                 } catch (InputMismatchException e) {
                     try {
                         choiceExit = scanner.nextLine();
@@ -204,8 +205,8 @@ public class Main {
                     Human newFather = getValidHuman("отец");
                     if (newFather == null)
                         throw new Exception("!!! Создание члена семьи не удалось. Повторите попытку следуя инструкциям ввода");
-                    famController.createNewFamily(newMother, newFather);
-                }catch (Exception e){
+                    familyController.createNewFamily(newMother, newFather);
+                } catch (Exception e) {
                     System.out.println(e.getMessage());
                 }
 
@@ -213,7 +214,7 @@ public class Main {
                 System.out.print("Задайте порядковый номер семьи - целое число больше нуля: ");
                 try {
                     int familyID = scanner.nextInt();
-                    famController.deleteFamilyByIndex(familyID - 1);
+                    familyController.deleteFamilyByIndex(familyID - 1);
                 } catch (InputMismatchException | ArrayIndexOutOfBoundsException e) {
                     System.out.println("!!!!! Ввод должен быть целое число больше нуля");
                 }
@@ -235,13 +236,13 @@ public class Main {
                     System.out.print("Введите порядковый номер семьи: ");
                     try {
                         int familyID = scanner.nextInt();
-                        familyBorningChild = famController.getFamilyById(familyID - 1);
+                        familyBorningChild = familyController.getFamilyById(familyID - 1);
                         System.out.print("Введите имя мальчика: ");
                         String boyName = scanner.next();
                         System.out.print("Введите имя девочки: ");
                         String girlName = scanner.next();
 
-                        famController.bornChild(familyBorningChild, girlName, boyName);
+                        familyController.bornChild(familyBorningChild, girlName, boyName);
 
                     } catch (InputMismatchException | IndexOutOfBoundsException e) {
                         System.out.println("!!!!! Ввод должен быть целое число больше нуля");
@@ -253,10 +254,10 @@ public class Main {
                     System.out.print("Введите порядковый номер семьи: ");
                     try {
                         int familyID = scanner.nextInt();
-                        familyAdoptingChild = famController.getFamilyById(familyID - 1);
+                        familyAdoptingChild = familyController.getFamilyById(familyID - 1);
                         adoptedChild = getValidHuman("приемный ребенок");
 
-                        famController.adoptChild(familyAdoptingChild, adoptedChild);
+                        familyController.adoptChild(familyAdoptingChild, adoptedChild);
 
                     } catch (InputMismatchException | IndexOutOfBoundsException |
                             DateTimeParseException | NullPointerException e) {
@@ -268,9 +269,23 @@ public class Main {
                 System.out.print("Задайте число: ");
                 try {
                     number = scanner.nextInt();
-                    famController.deleteAllChildrenOlderThan(number);
+                    familyController.deleteAllChildrenOlderThan(number);
                 } catch (InputMismatchException e) {
                     System.out.println("!!!!! Ввод должен быть целое число");
+                }
+
+            } else if (choiceNumber == 10) {
+                familyController.loadData();
+
+            } else if (choiceNumber == 11) {
+
+                String s;
+                try (BufferedReader bufferedReader = new BufferedReader(new FileReader("C:/Users/HP/IdeaProjects/Java Core/DAN.IT_Java_core_homeworks/src/main/java/homework13/families_list.txt"))) {
+                    while ((s = bufferedReader.readLine()) != null) {
+                        System.out.print(s);
+                    }
+                } catch (IOException ex) {
+                    System.out.println("Ошибка вывода");
                 }
             }
 
